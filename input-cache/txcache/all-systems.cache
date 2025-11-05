@@ -503,7 +503,6 @@ v: {
   "code" : "001",
   "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"
 }
@@ -527,7 +526,6 @@ v: {
   "code" : "001",
   "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -570,6 +568,939 @@ v: {
   "code" : "001",
   "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
   "server" : "http://tx.fhir.org/r4",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "code" : "001"
+  }]
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "World",
+  "code" : "001",
+  "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: \"urn:iso:std:iso:3166|2018\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: \"urn:iso:std:iso:3166:-2|2021 (from fhir.tx.support.r4#0.32.0)\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: \"http://unstats.un.org/unsd/methods/m49/m49.htm|\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Validate \"[http://unstats.un.org/unsd/methods/m49/m49.htm#001 (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Check \"http://unstats.un.org/unsd/methods/m49/m49.htm#001\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: http://unstats.un.org/unsd/methods/m49/m49.htm| for http://unstats.un.org/unsd/methods/m49/m49.htm\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Filter \"class = region\": Code \"001\" found in http://unstats.un.org/unsd/methods/m49/m49.htm|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/some-system",
+  "code" : "01",
+  "display" : "keyword 1"
+}, "url": "http://hl7.org/fhir/ValueSet/definition-use", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "code" : "01",
+  "system" : "http://example.org/some-system",
+  "severity" : "error",
+  "error" : "A definition for CodeSystem 'http://example.org/some-system' could not be found, so the code cannot be validated; The provided code 'http://example.org/some-system#01 ('keyword 1')' was not found in the value set 'http://hl7.org/fhir/ValueSet/definition-use|4.0.1'",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "Local Error: The local terminology server cannot handle this request. Server Error: A definition for CodeSystem 'http://example.org/some-system' could not be found, so the code cannot be validated; The provided code 'http://example.org/some-system#01 ('keyword 1')' was not found in the value set 'http://hl7.org/fhir/ValueSet/definition-use|4.0.1'",
+  "unknown-systems" : "http://example.org/some-system",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "UNKNOWN_CODESYSTEM"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "text" : "A definition for CodeSystem 'http://example.org/some-system' could not be found, so the code cannot be validated"
+    },
+    "location" : ["Coding.system"],
+    "expression" : ["Coding.system"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-in-vs"
+      }],
+      "text" : "The provided code 'http://example.org/some-system#01 ('keyword 1')' was not found in the value set 'http://hl7.org/fhir/ValueSet/definition-use|4.0.1'"
+    },
+    "location" : ["Coding.code"],
+    "expression" : ["Coding.code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://example.org/some-system",
+  "code" : "01",
+  "display" : "keyword 2"
+}, "url": "http://hl7.org/fhir/ValueSet/definition-use", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "code" : "01",
+  "system" : "http://example.org/some-system",
+  "severity" : "error",
+  "error" : "A definition for CodeSystem 'http://example.org/some-system' could not be found, so the code cannot be validated; The provided code 'http://example.org/some-system#01 ('keyword 2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/definition-use|4.0.1'",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "Local Error: The local terminology server cannot handle this request. Server Error: A definition for CodeSystem 'http://example.org/some-system' could not be found, so the code cannot be validated; The provided code 'http://example.org/some-system#01 ('keyword 2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/definition-use|4.0.1'",
+  "unknown-systems" : "http://example.org/some-system",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "UNKNOWN_CODESYSTEM"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "not-found",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-found"
+      }],
+      "text" : "A definition for CodeSystem 'http://example.org/some-system' could not be found, so the code cannot be validated"
+    },
+    "location" : ["Coding.system"],
+    "expression" : ["Coding.system"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "not-in-vs"
+      }],
+      "text" : "The provided code 'http://example.org/some-system#01 ('keyword 2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/definition-use|4.0.1'"
+    },
+    "location" : ["Coding.code"],
+    "expression" : ["Coding.code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "text/cql"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "text/cql",
+  "code" : "text/cql",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms urn:uuid:5e4417f1-8132-4cec-8c6c-9c8d6dc2fb95: Analysing\r\n0 0: 0ms urn:uuid:5e4417f1-8132-4cec-8c6c-9c8d6dc2fb95: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms urn:uuid:5e4417f1-8132-4cec-8c6c-9c8d6dc2fb95: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms urn:uuid:5e4417f1-8132-4cec-8c6c-9c8d6dc2fb95: Validate \"[#text/cql (\"\")]\" and infer system\r\n0 0: 0ms urn:uuid:5e4417f1-8132-4cec-8c6c-9c8d6dc2fb95: Check \"#text/cql\"\r\n0 0: 0ms urn:uuid:5e4417f1-8132-4cec-8c6c-9c8d6dc2fb95: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms urn:uuid:5e4417f1-8132-4cec-8c6c-9c8d6dc2fb95: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms urn:uuid:5e4417f1-8132-4cec-8c6c-9c8d6dc2fb95: Code \"text/cql\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "text/cql"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "text/cql",
+  "code" : "text/cql",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n16 16: tx-op\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Analysing\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Parameters: disp-lang=en, default-to-latest\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Validate \"[#text/cql (\"\")]\" and infer system\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Check \"#text/cql\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n16 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Code \"text/cql\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/elm+xml"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "application/elm+xml",
+  "code" : "application/elm+xml",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms urn:uuid:ef0bbf8a-89be-49ea-91ed-50783650e8bc: Analysing\r\n0 0: 0ms urn:uuid:ef0bbf8a-89be-49ea-91ed-50783650e8bc: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms urn:uuid:ef0bbf8a-89be-49ea-91ed-50783650e8bc: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms urn:uuid:ef0bbf8a-89be-49ea-91ed-50783650e8bc: Validate \"[#application/elm+xml (\"\")]\" and infer system\r\n0 0: 0ms urn:uuid:ef0bbf8a-89be-49ea-91ed-50783650e8bc: Check \"#application/elm+xml\"\r\n0 0: 0ms urn:uuid:ef0bbf8a-89be-49ea-91ed-50783650e8bc: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms urn:uuid:ef0bbf8a-89be-49ea-91ed-50783650e8bc: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms urn:uuid:ef0bbf8a-89be-49ea-91ed-50783650e8bc: Code \"application/elm+xml\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/elm+xml"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "application/elm+xml",
+  "code" : "application/elm+xml",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Validate \"[#application/elm+xml (\"\")]\" and infer system\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Check \"#application/elm+xml\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Code \"application/elm+xml\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/elm+json"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "application/elm+json",
+  "code" : "application/elm+json",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms urn:uuid:4a166990-9145-4425-a029-480391a41fef: Analysing\r\n0 0: 0ms urn:uuid:4a166990-9145-4425-a029-480391a41fef: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms urn:uuid:4a166990-9145-4425-a029-480391a41fef: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms urn:uuid:4a166990-9145-4425-a029-480391a41fef: Validate \"[#application/elm+json (\"\")]\" and infer system\r\n0 0: 0ms urn:uuid:4a166990-9145-4425-a029-480391a41fef: Check \"#application/elm+json\"\r\n0 0: 0ms urn:uuid:4a166990-9145-4425-a029-480391a41fef: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms urn:uuid:4a166990-9145-4425-a029-480391a41fef: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms urn:uuid:4a166990-9145-4425-a029-480391a41fef: Code \"application/elm+json\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/elm+json"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "application/elm+json",
+  "code" : "application/elm+json",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Validate \"[#application/elm+json (\"\")]\" and infer system\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Check \"#application/elm+json\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Code \"application/elm+json\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "image/png"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "image/png",
+  "code" : "image/png",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms urn:uuid:0e649dc7-73ad-4a73-89f2-2fa0e9a01503: Analysing\r\n0 0: 0ms urn:uuid:0e649dc7-73ad-4a73-89f2-2fa0e9a01503: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms urn:uuid:0e649dc7-73ad-4a73-89f2-2fa0e9a01503: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms urn:uuid:0e649dc7-73ad-4a73-89f2-2fa0e9a01503: Validate \"[#image/png (\"\")]\" and infer system\r\n0 0: 0ms urn:uuid:0e649dc7-73ad-4a73-89f2-2fa0e9a01503: Check \"#image/png\"\r\n0 0: 0ms urn:uuid:0e649dc7-73ad-4a73-89f2-2fa0e9a01503: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms urn:uuid:0e649dc7-73ad-4a73-89f2-2fa0e9a01503: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms urn:uuid:0e649dc7-73ad-4a73-89f2-2fa0e9a01503: Code \"image/png\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "image/png"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "image/png",
+  "code" : "image/png",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Validate \"[#image/png (\"\")]\" and infer system\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Check \"#image/png\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Code \"image/png\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "text/x-sql"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "text/x-sql",
+  "code" : "text/x-sql",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms urn:uuid:cfbc6c7c-d552-4788-8e72-65a6b1d7da30: Analysing\r\n0 0: 0ms urn:uuid:cfbc6c7c-d552-4788-8e72-65a6b1d7da30: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms urn:uuid:cfbc6c7c-d552-4788-8e72-65a6b1d7da30: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms urn:uuid:cfbc6c7c-d552-4788-8e72-65a6b1d7da30: Validate \"[#text/x-sql (\"\")]\" and infer system\r\n0 0: 0ms urn:uuid:cfbc6c7c-d552-4788-8e72-65a6b1d7da30: Check \"#text/x-sql\"\r\n0 0: 0ms urn:uuid:cfbc6c7c-d552-4788-8e72-65a6b1d7da30: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms urn:uuid:cfbc6c7c-d552-4788-8e72-65a6b1d7da30: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms urn:uuid:cfbc6c7c-d552-4788-8e72-65a6b1d7da30: Code \"text/x-sql\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "text/x-sql"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "text/x-sql",
+  "code" : "text/x-sql",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15: tx-op\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Analysing\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Parameters: disp-lang=en, default-to-latest\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Validate \"[#text/x-sql (\"\")]\" and infer system\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Check \"#text/x-sql\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Code \"text/x-sql\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "code" : "001"
+  }]
+}, "url": "http://hl7.org/fhir/5.0/ValueSet/jurisdiction", "version": "5.0.0", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "World",
+  "code" : "001",
+  "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0: Analysing\r\n0 0: 0ms http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0: CodeSystem found: \"urn:iso:std:iso:3166|2018\"\r\n0 0: 0ms http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0: CodeSystem found: \"urn:iso:std:iso:3166:-2|2021 (from fhir.tx.support.r4#0.32.0)\"\r\n0 0: 0ms http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0: CodeSystem found: \"http://unstats.un.org/unsd/methods/m49/m49.htm|\"\r\n0 0: 0ms http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0: Validate \"[http://unstats.un.org/unsd/methods/m49/m49.htm#001 (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0: Check \"http://unstats.un.org/unsd/methods/m49/m49.htm#001\"\r\n0 0: 0ms http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0: CodeSystem found: http://unstats.un.org/unsd/methods/m49/m49.htm| for http://unstats.un.org/unsd/methods/m49/m49.htm\r\n0 0: 0ms http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0: Filter \"class = region\": Code \"001\" found in http://unstats.un.org/unsd/methods/m49/m49.htm|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "MSG_DEPRECATED"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "business-rule",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "status-check"
+      }],
+      "text" : "Reference to deprecated ValueSet http://hl7.org/fhir/5.0/ValueSet/jurisdiction|5.0.0"
+    }
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/pdf"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "application/pdf",
+  "code" : "application/pdf",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15: tx-op\r\n15 0: 0ms urn:uuid:0b1a0fcf-f28d-4094-83cc-b05bac8be5d4: Analysing\r\n15 0: 0ms urn:uuid:0b1a0fcf-f28d-4094-83cc-b05bac8be5d4: Parameters: disp-lang=en, default-to-latest\r\n15 0: 0ms urn:uuid:0b1a0fcf-f28d-4094-83cc-b05bac8be5d4: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n15 0: 0ms urn:uuid:0b1a0fcf-f28d-4094-83cc-b05bac8be5d4: Validate \"[#application/pdf (\"\")]\" and infer system\r\n15 0: 0ms urn:uuid:0b1a0fcf-f28d-4094-83cc-b05bac8be5d4: Check \"#application/pdf\"\r\n15 0: 0ms urn:uuid:0b1a0fcf-f28d-4094-83cc-b05bac8be5d4: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n15 0: 0ms urn:uuid:0b1a0fcf-f28d-4094-83cc-b05bac8be5d4: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n15 0: 0ms urn:uuid:0b1a0fcf-f28d-4094-83cc-b05bac8be5d4: Code \"application/pdf\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/pdf"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "application/pdf",
+  "code" : "application/pdf",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Validate \"[#application/pdf (\"\")]\" and infer system\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Check \"#application/pdf\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Code \"application/pdf\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "code" : "01",
+    "display" : "CS1"
+  },
+  {
+    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "code" : "01",
+    "display" : "CS2"
+  },
+  {
+    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "code" : "01",
+    "display" : "VS1"
+  },
+  {
+    "system" : "http://loinc.org",
+    "code" : "85354-9"
+  },
+  {
+    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "code" : "01",
+    "display" : "VS2"
+  }]
+}, "url": "http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake", "version": "0.2.0", "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Blood pressure panel with all children optional",
+  "code" : "01",
+  "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+  "version" : "0.2.0",
+  "severity" : "warning",
+  "error" : "The provided code 'http://loinc.org#85354-9' was not found in the value set 'http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0'",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15: tx-op\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Analysing\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Parameters: disp-lang=en, default-to-latest\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: CodeSystem found: \"http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0\"\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Validate \"[http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 (\"CS1\"), http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 (\"CS2\"), http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 (\"VS1\"), http://loinc.org#85354-9 (\"\"), http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 (\"VS2\")]\"\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Check \"http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01\"\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: CodeSystem found: http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0 for http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Code \"01\" found in http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Check \"http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01\"\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: CodeSystem found: http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0 for http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Code \"01\" found in http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Check \"http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01\"\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: CodeSystem found: http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0 for http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Code \"01\" found in http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Check \"http://loinc.org#85354-9\"\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Check \"http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01\"\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: CodeSystem found: http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0 for http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake\r\n15 0: 0ms http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0: Code \"01\" found in http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://loinc.org#85354-9' was not found in the value set 'http://somewhere.org/fhir/uv/myig/ValueSet/valueset-fake|0.2.0'"
+    },
+    "location" : ["CodeableConcept.coding[3].code"],
+    "expression" : ["CodeableConcept.coding[3].code"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "code" : "01",
+    "display" : "CS1"
+  },
+  {
+    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "code" : "01",
+    "display" : "CS2"
+  },
+  {
+    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "code" : "01",
+    "display" : "VS1"
+  },
+  {
+    "system" : "http://loinc.org",
+    "code" : "85354-9"
+  },
+  {
+    "system" : "http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake",
+    "code" : "01",
+    "display" : "VS2"
+  }]
+}, "url": "http://hl7.org/fhir/ValueSet/observation-vitalsignresult", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "Blood pressure panel with all children optional",
+  "code" : "85354-9",
+  "system" : "http://loinc.org",
+  "version" : "2.81",
+  "severity" : "error",
+  "error" : "The provided code 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 ('CS1')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 ('CS2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 ('VS1')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; The provided code 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 ('VS2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'; Wrong Display Name 'VS1' for http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01. Valid display is one of 2 choices: 'CS1' or 'CS2' (for the language(s) 'en'); Wrong Display Name 'VS2' for http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01. Valid display is one of 2 choices: 'CS1' or 'CS2' (for the language(s) 'en')",
+  "class" : "UNKNOWN",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n15 15: tx-op\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: Analysing\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: Parameters: disp-lang=en, default-to-latest\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: CodeSystem found: \"http://loinc.org|2.81\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: Validate \"[http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 (\"CS1\"), http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 (\"CS2\"), http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 (\"VS1\"), http://loinc.org#85354-9 (\"\"), http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 (\"VS2\")]\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: Check \"http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: Check \"http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: Check \"http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: Check \"http://loinc.org#85354-9\"\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: CodeSystem found: http://loinc.org|2.81 for http://loinc.org\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: Code \"85354-9\" found in http://loinc.org|2.81\r\n15 0: 0ms http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1: Check \"http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01\"\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome",
+  "issue" : [{
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 ('CS1')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'"
+    },
+    "location" : ["CodeableConcept.coding[0].code"],
+    "expression" : ["CodeableConcept.coding[0].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "MSG_EXPERIMENTAL"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "business-rule",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "status-check"
+      }],
+      "text" : "Reference to experimental CodeSystem http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake|0.2.0"
+    }
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 ('CS2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'"
+    },
+    "location" : ["CodeableConcept.coding[1].code"],
+    "expression" : ["CodeableConcept.coding[1].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 ('VS1')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'"
+    },
+    "location" : ["CodeableConcept.coding[2].code"],
+    "expression" : ["CodeableConcept.coding[2].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'VS1' for http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01. Valid display is one of 2 choices: 'CS1' or 'CS2' (for the language(s) 'en')"
+    },
+    "location" : ["CodeableConcept.coding[2].display"],
+    "expression" : ["CodeableConcept.coding[2].display"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "None_of_the_provided_codes_are_in_the_value_set_one"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "information",
+    "code" : "code-invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "this-code-not-in-vs"
+      }],
+      "text" : "The provided code 'http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01 ('VS2')' was not found in the value set 'http://hl7.org/fhir/ValueSet/observation-vitalsignresult|4.0.1'"
+    },
+    "location" : ["CodeableConcept.coding[4].code"],
+    "expression" : ["CodeableConcept.coding[4].code"]
+  },
+  {
+    "extension" : [{
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-message-id",
+      "valueString" : "Display_Name_for__should_be_one_of__instead_of"
+    },
+    {
+      "url" : "http://hl7.org/fhir/StructureDefinition/operationoutcome-issue-server",
+      "valueUrl" : "https://tx.fhir.org/r4"
+    }],
+    "severity" : "error",
+    "code" : "invalid",
+    "details" : {
+      "coding" : [{
+        "system" : "http://hl7.org/fhir/tools/CodeSystem/tx-issue-type",
+        "code" : "invalid-display"
+      }],
+      "text" : "Wrong Display Name 'VS2' for http://somewhere.org/fhir/uv/myig/CodeSystem/cs-fake#01. Valid display is one of 2 choices: 'CS1' or 'CS2' (for the language(s) 'en')"
+    },
+    "location" : ["CodeableConcept.coding[4].display"],
+    "expression" : ["CodeableConcept.coding[4].display"]
+  }]
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "image/jpeg"
+}, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "include" : [{
+      "system" : "urn:ietf:bcp:13"
+    }]
+  }
+}, "langs":"en", "useServer":"true", "useClient":"false", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "image/jpeg",
+  "code" : "image/jpeg",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms urn:uuid:4ac124a1-c613-4902-9459-cf183fc4c2f8: Analysing\r\n0 0: 0ms urn:uuid:4ac124a1-c613-4902-9459-cf183fc4c2f8: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms urn:uuid:4ac124a1-c613-4902-9459-cf183fc4c2f8: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms urn:uuid:4ac124a1-c613-4902-9459-cf183fc4c2f8: Validate \"[#image/jpeg (\"\")]\" and infer system\r\n0 0: 0ms urn:uuid:4ac124a1-c613-4902-9459-cf183fc4c2f8: Check \"#image/jpeg\"\r\n0 0: 0ms urn:uuid:4ac124a1-c613-4902-9459-cf183fc4c2f8: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms urn:uuid:4ac124a1-c613-4902-9459-cf183fc4c2f8: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms urn:uuid:4ac124a1-c613-4902-9459-cf183fc4c2f8: Code \"image/jpeg\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "image/jpeg"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "langs":"en", "useServer":"true", "useClient":"true", "guessSystem":"true", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "image/jpeg",
+  "code" : "image/jpeg",
+  "system" : "urn:ietf:bcp:13",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Parameters: disp-lang=en, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: \"urn:ietf:bcp:13|\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Validate \"[#image/jpeg (\"\")]\" and infer system\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Check \"#image/jpeg\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Inferred CodeSystem = \"urn:ietf:bcp:13\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: CodeSystem found: urn:ietf:bcp:13| for urn:ietf:bcp:13\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/mimetypes|4.0.1: Code \"image/jpeg\" found in urn:ietf:bcp:13|\r\n",
+  "unknown-systems" : "",
+  "issues" : {
+  "resourceType" : "OperationOutcome"
+}
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "coding" : [{
+    "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+    "code" : "001"
+  }]
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.0.1", "langs":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "activeOnly":"false", "membershipOnly":"false", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "parameter" : [{
+    "name" : "x-system-cache-id",
+    "valueString" : "dc8fd4bc-091a-424a-8a3b-6198ef146891"
+  },
+  {
+    "name" : "defaultDisplayLanguage",
+    "valueCode" : "en"
+  }]
+}}####
+v: {
+  "display" : "World",
+  "code" : "001",
+  "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+  "server" : "https://tx.fhir.org/r4",
+  "diagnostics" : "0 0 : start\r\n0 0: tx-op\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Analysing\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Parameters: disp-lang=en-US, default-to-latest\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: \"urn:iso:std:iso:3166|2018\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: \"urn:iso:std:iso:3166:-2|2021 (from fhir.tx.support.r4#0.32.0)\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: \"http://unstats.un.org/unsd/methods/m49/m49.htm|\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Validate \"[http://unstats.un.org/unsd/methods/m49/m49.htm#001 (\"\")]\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Check \"http://unstats.un.org/unsd/methods/m49/m49.htm#001\"\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: CodeSystem found: http://unstats.un.org/unsd/methods/m49/m49.htm| for http://unstats.un.org/unsd/methods/m49/m49.htm\r\n0 0: 0ms http://hl7.org/fhir/ValueSet/jurisdiction|4.0.1: Filter \"class = region\": Code \"001\" found in http://unstats.un.org/unsd/methods/m49/m49.htm|\r\n",
   "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome"

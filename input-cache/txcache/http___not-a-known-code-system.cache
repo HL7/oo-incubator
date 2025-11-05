@@ -39,7 +39,6 @@ v: {
   "error" : "A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the code cannot be validated. Valid versions: []",
   "class" : "CODESYSTEM_UNSUPPORTED_VERSION",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -82,7 +81,6 @@ v: {
   "error" : "A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the code cannot be validated. Valid versions: []",
   "class" : "CODESYSTEM_UNSUPPORTED_VERSION",
   "server" : "http://tx.fhir.org/r4",
-  "unknown-systems" : "",
   "issues" : {
   "resourceType" : "OperationOutcome",
   "issue" : [{
@@ -131,5 +129,95 @@ e: {
 e: {
   "from-server" : true,
   "error" : "Error from http://tx.fhir.org/r4: Unable to provide support for code system http://not-a-known-code-system version 2.36"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://not-a-known-code-system",
+      "version" : "2.36",
+      "concept" : [{
+        "code" : "not-known-code"
+      },
+      {
+        "code" : "not-known-code2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "en", "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://not-a-known-code-system",
+      "version" : "2.36",
+      "concept" : [{
+        "code" : "not-known-code"
+      },
+      {
+        "code" : "not-known-code2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "de", "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://not-a-known-code-system",
+      "version" : "2.36",
+      "concept" : [{
+        "code" : "not-known-code"
+      },
+      {
+        "code" : "not-known-code2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "fr", "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : false,
+    "include" : [{
+      "system" : "http://not-a-known-code-system",
+      "version" : "2.36",
+      "concept" : [{
+        "code" : "not-known-code"
+      },
+      {
+        "code" : "not-known-code2"
+      }]
+    }]
+  }
+}}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "language": "en", "url": "http://somewhere.org/fhir/uv/myig/ValueSet/valueset-no-codesystem", "version": "0.2.0"}####
+e: {
+  "from-server" : true,
+  "error" : "Error from https://tx.fhir.org/r4: A definition for CodeSystem 'http://not-a-known-code-system' version '2.36' could not be found, so the value set cannot be expanded. No versions of this code system are known"
 }
 -------------------------------------------------------------------------------------
