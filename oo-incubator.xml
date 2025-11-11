@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="oo" url="http://hl7.org/fhir/uv/oo-incubator">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/Transport" key="StructureDefinition-Transport" name="Transport"/>
+<artifact id="CodeSystem/transport-code" key="CodeSystem-transport-code" name="Transport Code"/>
+<artifact id="CodeSystem/transport-intent" key="CodeSystem-transport-intent" name="Transport Intent"/>
+<artifact id="CodeSystem/transport-status" key="CodeSystem-transport-status" name="Transport Status"/>
+<artifact id="CodeSystem/transport-status-reason" key="CodeSystem-transport-status-reason" name="Transport Status Reason"/>
+<artifact id="ValueSet/transport-code" key="ValueSet-transport-code" name="Transport Code"/>
+<artifact id="ValueSet/transport-intent" key="ValueSet-transport-intent" name="Transport Intent"/>
+<artifact id="ValueSet/transport-status" key="ValueSet-transport-status" name="Transport Status"/>
+<artifact id="ValueSet/transport-status-reason" key="ValueSet-transport-status-reason" name="Transport Status Reason"/>
+<artifact id="ValueSet/transport-type" key="ValueSet-transport-type" name="Transport Type"/>
+<artifact id="ValueSet/transport-reason" key="ValueSet-transport-reason" name="Transport Reason"/>
+<artifact id="List/Transport-examples" key="List-Transport-examples" name="Transport-examples"/>
+<artifact id="List/Transport-operations" key="List-Transport-operations" name="Transport-operations"/>
+<artifact id="SearchParameter/Transport-identifier" key="SearchParameter-Transport-identifier" name="TransportIdentifierSearchParam"/>
+<artifact id="SearchParameter/transport-status" key="SearchParameter-transport-status" name="TransportStatusSearchParam"/>
+<artifact id="SearchParameter/Transport-patient" key="SearchParameter-Transport-patient" name="TransportPatientSearchParam"/>
+<artifact id="SearchParameter/Transport-subject" key="SearchParameter-Transport-subject" name="TransportSubjectSearchParam"/>
+<artifact id="Transport/simpledelivery" key="Transport-simpledelivery" name="Simple Delivery Example"/>
+<artifact id="Location/hospital-lab" key="Location-hospital-lab" name="Hospital Lab Location"/>
+<artifact id="Location/lab-a" key="Location-lab-a" name="Lab A Location"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="background" name="Background"/>
+<page key="changes" name="Change Log"/>
+<page key="index" name="IG Home"/>
+<page key="toc" name="Table of Contents"/>
+</specification>
