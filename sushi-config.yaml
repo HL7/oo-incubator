@@ -73,9 +73,23 @@ extension:
 parameters:
   path-resource:
     - input/resources/transport
+    - input/resources/biologicallyderivedproductdispense
+    - input/resources/devicerequest
+    - input/resources/deviceusage
+    - input/resources/inventoryitem
+    - input/resources/inventoryreport
+    - input/resources/supplydelivery
+    - input/resources/supplyrequest
 
   additional-resource:
     - input/resources/transport/StructureDefinition-Transport.xml
+    - input/resources/biologicallyderivedproductdispense/StructureDefinition-BiologicallyDerivedProductDispense.xml
+    - input/resources/devicerequest/StructureDefinition-DeviceRequest.xml
+    - input/resources/deviceusage/StructureDefinition-DeviceUsage.xml
+    - input/resources/inventoryitem/StructureDefinition-InventoryItem.xml
+    - input/resources/inventoryreport/StructureDefinition-InventoryReport.xml
+    - input/resources/supplydelivery/StructureDefinition-SupplyDelivery.xml
+    - input/resources/supplyrequest/StructureDefinition-SupplyRequest.xml
 
 pages:
   index.md:
