@@ -14,8 +14,8 @@
     <value value="urn:oid:2.16.840.1.113883.4.642.3.3036"/>
   </identifier>
   <version value="6.0.0"/>
-  <name value="SupplyItemType"/>
-  <title value="Supply Item Type"/>
+  <name value="TransportType"/>
+  <title value="Transport Type Value Set"/>
   <status value="draft"/>
   <experimental value="true"/>
   <publisher value="FHIR Project team"/>
