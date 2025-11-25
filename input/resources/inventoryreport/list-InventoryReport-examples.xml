@@ -9,7 +9,7 @@
       <valueString value="Example of inventoryreport"/>
     </extension>
     <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
-      <valueString value="inventoryreport-example"/>
+      <valueString value="InventoryReport-example"/>
     </extension>
     <item>
       <reference value="InventoryReport/example"/>

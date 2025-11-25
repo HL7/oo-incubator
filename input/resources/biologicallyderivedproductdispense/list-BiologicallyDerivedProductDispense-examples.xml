@@ -9,7 +9,7 @@
       <valueString value="General BiologicallyDerivedProductDispense Example"/>
     </extension>
     <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
-      <valueString value="biologicallyderivedproductdispense-example"/>
+      <valueString value="BiologicallyDerivedProductDispense-example"/>
     </extension>
     <item>
       <reference value="BiologicallyDerivedProductDispense/example"/>

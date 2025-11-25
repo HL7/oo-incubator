@@ -9,7 +9,7 @@
       <valueString value="The provision of a wheelchair to a patient"/>
     </extension>
     <extension url="http://hl7.org/fhir/build/StructureDefinition/title">
-      <valueString value="deviceusage-example"/>
+      <valueString value="DeviceUsage-example"/>
     </extension>
     <item>
       <reference value="DeviceUsage/example"/>
