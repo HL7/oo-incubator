@@ -5,6 +5,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.oo-incubator
 canonical: http://hl7.org/fhir/uv/oo-incubator
+url: http://hl7.org/fhir/uv/oo-incubator/ImplementationGuide/hl7.fhir.uv.oo-incubator
 name: OOIncubatorImplementationGuide
 title: OO Incubator Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
@@ -13,18 +14,22 @@ version: 0.1.0
 fhirVersion: 6.0.0-ballot3 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
 releaseLabel: ci-build
-# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
-# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: HL7 International / Public Health
-  url: http://www.hl7.org/Special/committees/oo
-  email: oo@lists.HL7.org
+  name: HL7 International / Orders and Observations 
+contact:
+  - name: HL7 Orders and Observations Workgroup
+    telecom:
+      - system: url
+        value: http://www.hl7.org/Special/committees/orders
+      - system: email
+        value: oo@lists.HL7.org
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
     valueInteger: 1
-  # EDIT: update the work group
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg
     valueCode: oo
 
@@ -51,7 +56,7 @@ extension:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
+#  pages:
 #   index.md:
 #     title: Example Home
 #   implementation.xml:
@@ -70,26 +75,32 @@ extension:
 # For parameters defined by the FHIR Tools IG see:
 # http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html
 #
+
 parameters:
   path-resource:
     - input/resources/transport
     - input/resources/biologicallyderivedproductdispense
-    - input/resources/devicerequest
+    - input/resources/devicedispense
     - input/resources/deviceusage
     - input/resources/inventoryitem
     - input/resources/inventoryreport
     - input/resources/supplydelivery
     - input/resources/supplyrequest
 
+  path-history:
+    - http://hl7.org/fhir/uv/oo-incubator/history.html
+
   additional-resource:
     - input/resources/transport/StructureDefinition-Transport.xml
     - input/resources/biologicallyderivedproductdispense/StructureDefinition-BiologicallyDerivedProductDispense.xml
-    - input/resources/devicerequest/StructureDefinition-DeviceRequest.xml
+    - input/resources/devicedispense/StructureDefinition-DeviceDispense.xml
     - input/resources/deviceusage/StructureDefinition-DeviceUsage.xml
     - input/resources/inventoryitem/StructureDefinition-InventoryItem.xml
     - input/resources/inventoryreport/StructureDefinition-InventoryReport.xml
     - input/resources/supplydelivery/StructureDefinition-SupplyDelivery.xml
     - input/resources/supplyrequest/StructureDefinition-SupplyRequest.xml
+
+  special-url-base: http://hl7.org/fhir
 
 pages:
   index.md:
@@ -157,11 +168,53 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 #
-# resources:
-#   Patient/my-example-patient:
-#     name: My Example Patient
-#     description: An example Patient
-#     exampleBoolean: true
+
+resources:
+  BiologicallyDerivedProductDispense/example:
+    name: BiologicallyDerivedProductDispense example
+    description: An example BiologicallyDerivedProductDispense resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense
+  DeviceDispense/example:
+    name: DeviceDispense example
+    description: An example DeviceDispense resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/DeviceDispense
+  DeviceUsage/example:
+    name: DeviceUsage example
+    description: An example DeviceUsage resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/DeviceUsage
+  InventoryItem/example:
+    name: InventoryItem example
+    description: An example InventoryItem resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/InventoryItem
+  InventoryReport/example:
+    name: InventoryReport example
+    description: An example InventoryReport resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/InventoryReport
+  Transport/simpledelivery:
+    name: Transport simple delivery example
+    description: An example Transport resource for a simple delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
+  SupplyDelivery/simpledelivery:
+    name: SupplyDelivery simple delivery example
+    description: An example SupplyDelivery resource for a simple delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
+  SupplyDelivery/mphodelivery:
+    name: SupplyDelivery blood product delivery example
+    description: An example SupplyDelivery resource for a blood product delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
+  SupplyDelivery/ISBT128:
+    name: SupplyDelivery blood product delivery (ISBT128) example
+    description: An example SupplyDelivery resource for a blood product (ISBT128) delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
+  SupplyDelivery/pumpdelivery:
+    name: SupplyDelivery pump delivery example
+    description: An example SupplyDelivery resource for a pump delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
+  SupplyRequest/simpleorder:
+    name: SupplyRequest simple order example
+    description: An example SupplyRequest resource for a simple order
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyRequest
+
 #   Patient/bad-example: omit
 #
 #
