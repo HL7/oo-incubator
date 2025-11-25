@@ -30,7 +30,6 @@
   </identifier>
   <version value="6.0.0"/>
   <name value="InventoryReport"/>
-  <title value="Inventory Report"/>
   <status value="draft"/>
   <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>
