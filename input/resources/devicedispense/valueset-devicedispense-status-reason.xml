@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="devicedispense-status-reason"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="oo"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ValueSet/devicedispense-status-reason"/>
+  <identifier>
+    <system value="urn:ietf:rfc:3986"/>
+    <value value="urn:oid:2.16.840.1.113883.4.642.3.3312"/>
+  </identifier>
+  <version value="6.0.0"/>
+  <name value="DeviceDispenseStatusReasonVS"/>
+  <title value="DeviceDispense Status Reason Value Set"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="FHIR Project team"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7.org/fhir"/>
+    </telecom>
+  </contact>
+  <description value="DeviceDispense Status Reason Codes"/>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/CodeSystem/devicedispense-status-reason"/>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="DeviceDispense-search-params"/>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="DeviceDispense-code"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="DeviceDispense.device.concept"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-code"/>
+        <description value="Search for devices that match this code"/>
+        <code value="code"/>
+        <type value="token"/>
+        <expression value="DeviceDispense.device.concept"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="DeviceDispense-subject"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="DeviceDispense.subject"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-subject"/>
+        <description value="The identity of a patient for whom to list dispenses"/>
+        <code value="subject"/>
+        <type value="reference"/>
+        <expression value="DeviceDispense.subject"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="DeviceDispense-patient"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="DeviceDispense.subject"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-patient"/>
+        <description value="Returns device dispenses for a specific patient"/>
+        <code value="patient"/>
+        <type value="reference"/>
+        <expression value="DeviceDispense.subject.where(resolve() is Patient)"/>
+        <processingMode value="normal"/>
+        <target value="Patient"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="DeviceDispense-identifier"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="DeviceDispense.identifier"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-identifier"/>
+        <description value="The identifier of the dispense"/>
+        <code value="identifier"/>
+        <type value="token"/>
+        <expression value="DeviceDispense.identifier"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="DeviceDispense-status"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="normative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="DeviceDispense.status"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-status"/>
+        <description value="The status of the dispense"/>
+        <code value="status"/>
+        <type value="token"/>
+        <expression value="DeviceDispense.status"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+</Bundle>
