@@ -30,7 +30,6 @@
   </identifier>
   <version value="6.0.0"/>
   <name value="Transport"/>
-  <title value="Transport"/>
   <status value="draft"/>
   <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>
@@ -257,11 +256,11 @@
       <isSummary value="true"/>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="TransportCode"/>
+          <valueString value="Transport"/>
         </extension>
         <strength value="example"/>
         <description value="Codes to identify what the transport involves.  These will typically be specific to a particular workflow."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/transport-code"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/transport"/>
       </binding>
       <mapping>
         <identity value="workflow"/>

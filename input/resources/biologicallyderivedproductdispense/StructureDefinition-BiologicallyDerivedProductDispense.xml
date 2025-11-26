@@ -20,7 +20,6 @@
   <url value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense"/>
   <version value="6.0.0"/>
   <name value="BiologicallyDerivedProductDispense"/>
-  <title value="Biologically Derived Product Dispense"/>
   <status value="draft"/>
   <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>

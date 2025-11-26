@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeSystem xmlns="http://hl7.org/fhir">
-  <id value="transport-code"/>
+  <id value="transport"/>
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
   </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo"/>
   </extension>
-  <url value="http://hl7.org/fhir/transport-code"/>
+  <url value="http://hl7.org/fhir/transport"/>
   
   <version value="6.0.0"/>
-  <name value="TransportCode"/>
-  <title value="Transport Code"/>
+  <name value="TransportCS"/>
+  <title value="Transport Code System"/>
   <status value="active"/>
   <experimental value="true"/>
   <description value="Example codes for transport events demonstrating different types of transport activities"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/transport-code"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/transport"/>
   <content value="complete"/>
   <concept>
     <code value="SpecimenTransport"/>

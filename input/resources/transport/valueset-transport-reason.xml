@@ -43,57 +43,46 @@
       <concept>
         <code value="A01"/>
         <display value="ADT/ACK - Admit/visit notification"/>
-        <definition value="ADT/ACK - Admit/visit notification"/>
       </concept>
       <concept>
         <code value="A02"/>
         <display value="ADT/ACK - Transfer a patient"/>
-        <definition value="ADT/ACK - Transfer a patient"/>
       </concept>
       <concept>
         <code value="A03"/>
         <display value="ADT/ACK - Discharge/end visit"/>
-        <definition value="ADT/ACK - Discharge/end visit"/>
       </concept>
       <concept>
         <code value="I12"/>
         <display value="REF/RRI - Patient referral"/>
-        <definition value="REF/RRI - Patient referral"/>
       </concept>
       <concept>
         <code value="O23"/>
         <display value="OMI - Imaging order"/>
-        <definition value="OMI - Imaging order"/>
       </concept>
       <concept>
         <code value="O27"/>
         <display value="OMB - Blood product order"/>
-        <definition value="OMB - Blood product order"/>
       </concept>
       <concept>
         <code value="S38"/>
         <display value="Containers Prepared for Specimen Collection"/>
-        <definition value="Describes the event before specimen collection, when containers have been prepared"/>
       </concept>
       <concept>
         <code value="R26"/>
         <display value="OSM - Unsolicited Specimen Shipment Manifest Message"/>
-        <definition value="OSM - Unsolicited Specimen Shipment Manifest Message"/>
       </concept>
       <concept>
         <code value="S47"/>
         <display value="Specimen Sent to Archive"/>
-        <definition value="Describes the event when a specimen has been moved into storage"/>
       </concept>
       <concept>
         <code value="S48"/>
         <display value="Specimen Retrieved from Archive"/>
-        <definition value="Describes the event when a specimen has been moved out of storage"/>
       </concept>
       <concept>
         <code value="U14"/>
         <display value="INR/ACK – Automated Equipment Inventory Request"/>
-        <definition value="INR/ACK – Automated Equipment Inventory Request"/>
       </concept>
     </include>
   </compose>

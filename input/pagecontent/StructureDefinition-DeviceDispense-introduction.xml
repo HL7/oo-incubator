@@ -1,0 +1,31 @@
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+
+<div>
+<a name="bnc"></a>
+<h2>Scope and Usage</h2>
+<p>
+The DeviceDispense resource is used to capture the assignment of a Device to a patient or practitioner for the purpose of care.
+The dispense may include a description of the device and the instructions for using the device. The request to initiate a DeviceDispense may be via a <a href="devicerequest.html">DeviceRequest</a> resource but may be implicitly triggered by for example a <a href="servicerequest.html">ServiceRequest</a>, or without any request.  The details of the clinical application of the dispensed device may be captured in a Procedure resource.
+<!-- Describes some of the situations/use cases intended to be managed with the resource. May include a child div for "Storyboards" and "Related Specifications". The purpose of this section is to help implementers understand why the resource is needed and how it might be used. -->
+</p>
+</div>
+
+
+<div>
+<h2>Boundaries and Relationships</h2>
+<p>
+To determine the purchase date, a search of DeviceRequest, SupplyRequest, DeviceDispense, or SupplyDelivery as defined in an implementation guide can be done , as the context of the use case actually determines which date of either resource is considered the purchase date.
+</p>
+</div>
+
+
+<!-- (optional):
+<div>
+<h2>Background and Context</h2>
+<p>
+Provides additional detail on exactly how the resource is to be used
+</p>
+</div>
+-->
+
+</div>
