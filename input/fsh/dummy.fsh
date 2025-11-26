@@ -1,0 +1,1 @@
+Alias: $dummy = http://dummy.org
