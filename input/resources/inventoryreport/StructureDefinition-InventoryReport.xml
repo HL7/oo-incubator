@@ -149,7 +149,7 @@
         </extension>
         <strength value="required"/>
         <description value="The status of the InventoryReport."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/inventoryreport-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryreport-status"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -186,7 +186,7 @@
         </extension>
         <strength value="required"/>
         <description value="The type of count."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/inventoryreport-counttype"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryreport-counttype"/>
       </binding>
     </element>
     <element id="InventoryReport.operationType">

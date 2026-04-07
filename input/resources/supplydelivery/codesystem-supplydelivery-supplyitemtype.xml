@@ -38,7 +38,7 @@
   </contact>
   <description value="Status of the supply delivery."/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/supplydelivery-supplyitemtype"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplydelivery-supplyitemtype"/>
   <content value="complete"/>
   <concept>
     <code value="medication"/>

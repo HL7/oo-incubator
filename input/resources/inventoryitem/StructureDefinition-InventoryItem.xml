@@ -104,7 +104,7 @@
         </extension>
         <strength value="required"/>
         <description value="Status of the inventory item."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/inventoryitem-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryitem-status"/>
       </binding>
     </element>
     <element id="InventoryItem.category">
@@ -159,7 +159,7 @@
         </extension>
         <strength value="preferred"/>
         <description value="Name types."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/inventoryitem-nametype"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryitem-nametype"/>
       </binding>
     </element>
     <element id="InventoryItem.name.language">

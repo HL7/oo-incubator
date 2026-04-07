@@ -188,7 +188,7 @@
         </extension>
         <strength value="required"/>
         <description value="Status of the supply delivery."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/supplydelivery-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplydelivery-status"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -236,7 +236,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="The type of supply dispense."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/supplydelivery-supplyitemtype"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplydelivery-supplyitemtype"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -264,7 +264,7 @@
         </extension>
         <strength value="extensible"/>
         <description value="The stage of supply delivery."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/supplydelivery-stage"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplydelivery-stage"/>
       </binding>
     </element>
 
@@ -319,7 +319,7 @@
         </extension>
         <strength value="example"/>
         <description value="The condition of the supplied or received item."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/supplydelivery-supplyitemcondition"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplydelivery-supplyitemcondition"/>
       </binding>
     </element>
     <element id="SupplyDelivery.suppliedItem.item[x]">
@@ -346,7 +346,7 @@
         </extension>
         <strength value="example"/>
         <description value="The item that was delivered."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/supplydelivery-supplyitemtype"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplydelivery-supplyitemtype"/>
       </binding>
       <mapping>
         <identity value="rim"/>

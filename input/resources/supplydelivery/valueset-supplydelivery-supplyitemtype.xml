@@ -14,7 +14,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/ValueSet/supplydelivery-supplyitemtype"/>
+  <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplydelivery-supplyitemtype"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.4.642.3.2988"/>

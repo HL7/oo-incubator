@@ -184,7 +184,7 @@
         </extension>
         <strength value="required"/>
         <description value="A coded concept indicating the current status of the Device Usage."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/deviceusage-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/deviceusage-status"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -348,7 +348,7 @@
         </extension>
         <strength value="required"/>
         <description value="Codes representing the usage status of the device."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/deviceusage-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/deviceusage-status"/>
       </binding>
     </element>
     <element id="DeviceUsage.usageReason">
@@ -386,7 +386,7 @@
         </extension>
         <strength value="example"/>
         <description value="Codes for adherence"/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/deviceusage-adherence-code"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/deviceusage-adherence-code"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -408,7 +408,7 @@
         </extension>
         <strength value="example"/>
         <description value="Codes for adherence reason"/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/deviceusage-adherence-reason"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/deviceusage-adherence-reason"/>
       </binding>
       <mapping>
         <identity value="rim"/>

@@ -8,7 +8,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo"/>
   </extension>
-  <url value="http://hl7.org/fhir/ValueSet/inventoryitem-nametype"/>
+  <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryitem-nametype"/>
   <version value="6.0.0"/>
   <name value="InventoryItemStatusCodes"/>
   <title value="InventoryItem Name Typess"/>

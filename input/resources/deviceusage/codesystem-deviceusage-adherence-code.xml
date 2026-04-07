@@ -38,7 +38,7 @@
   </contact>
   <description value="A coded concept indicating the usage of the device."/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/deviceusage-adherence-code"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/deviceusage-adherence-code"/>
   <content value="complete"/>
   <concept>
     <code value="always"/>

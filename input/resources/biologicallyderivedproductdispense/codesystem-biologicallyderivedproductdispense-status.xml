@@ -22,7 +22,7 @@
   <experimental value="false"/>
   <description value="Biologically Derived Product Dispense Status Codes"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-status"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/biologicallyderivedproductdispense-status"/>
   <content value="complete"/>
   <publisher value="HL7 (FHIR Project)"/>
   <contact>

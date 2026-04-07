@@ -208,7 +208,7 @@
         </extension>
         <strength value="required"/>
         <description value="Status of the transport."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/transport-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/transport-status"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -236,7 +236,7 @@
         </extension>
         <strength value="example"/>
         <description value="Codes to identify the reason for current status.  These will typically be specific to a particular workflow."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/transport-status-reason"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/transport-status-reason"/>
       </binding>
       <mapping>
         <identity value="rim"/>
@@ -260,7 +260,7 @@
         </extension>
         <strength value="example"/>
         <description value="Codes to identify what the transport involves.  These will typically be specific to a particular workflow."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/transport"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/transport"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -593,7 +593,7 @@
         </extension>
         <strength value="example"/>
         <description value="Indicates why the transport is needed.  E.g. Suspended because patient admitted to hospital."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/transport-reason"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/transport-reason"/>
       </binding>
       <mapping>
         <identity value="workflow"/>

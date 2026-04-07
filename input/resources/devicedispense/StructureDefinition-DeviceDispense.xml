@@ -171,7 +171,7 @@
         </extension>
         <strength value="required"/>
         <description value="Describes the lifecycle of the dispense."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/devicedispense-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/devicedispense-status"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -204,7 +204,7 @@
           <valueString value="A code describing why a dispense was or was not performed."/>
         </extension>
         <strength value="example"/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/devicedispense-status-reason"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/devicedispense-status-reason"/>
       </binding>
       <mapping>
         <identity value="workflow"/>

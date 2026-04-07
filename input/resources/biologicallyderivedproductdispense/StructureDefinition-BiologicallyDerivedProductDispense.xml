@@ -146,7 +146,7 @@
         </extension>
         <strength value="required"/>
         <description value="Describes the lifecycle of the dispense."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/biologicallyderivedproductdispense-status"/>
       </binding>
         <mapping>
           <identity value="workflow"/>
@@ -174,7 +174,7 @@
         </extension>
         <strength value="example"/>
         <description value="Describes the relationship between the recipient and origin of the dispensed product."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-origin-relationship"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/biologicallyderivedproductdispense-origin-relationship"/>
       </binding>
     </element>
     <element id="BiologicallyDerivedProductDispense.product">
@@ -230,7 +230,7 @@
         </extension>
         <strength value="example"/>
         <description value="Describes the type of matching between the recipient and origin of the dispensed product."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-match-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/biologicallyderivedproductdispense-match-status"/>
       </binding>
     </element>
     <element id="BiologicallyDerivedProductDispense.performer">
@@ -268,7 +268,7 @@
         </extension>
         <strength value="example"/>
         <description value="Describes the the role or function of the performer in the dispense."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-performer-function"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/biologicallyderivedproductdispense-performer-function"/>
       </binding>
     </element>
     <element id="BiologicallyDerivedProductDispense.performer.actor">

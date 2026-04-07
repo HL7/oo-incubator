@@ -38,7 +38,7 @@
   </contact>
   <description value="A coded concept indicating the current status of the Device Usage."/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/deviceusage-status"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/deviceusage-status"/>
   <content value="complete"/>
   <concept>
     <code value="preparation"/>

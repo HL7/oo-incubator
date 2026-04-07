@@ -16,7 +16,7 @@
   <experimental value="false"/>
   <description value="InventoryItem Name Type"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/inventoryitem-nametype"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryitem-nametype"/>
   <content value="complete"/>
   <concept>
     <code value="trade-name"/>

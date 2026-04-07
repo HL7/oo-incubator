@@ -38,7 +38,7 @@
   </contact>
   <description value="Stage of the supply delivery."/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/supplydelivery-stage"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplydelivery-stage"/>
   <content value="complete"/>
   <concept>
     <code value="dispatch"/>

@@ -146,7 +146,7 @@
         </extension>
         <strength value="required"/>
         <description value="Status of the supply request."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/supplyrequest-status"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplyrequest-status"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -292,7 +292,7 @@
         </extension>
         <strength value="example"/>
         <description value="Category of supply request."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/supplyrequest-kind"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplyrequest-kind"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -391,7 +391,7 @@
         </extension>
         <strength value="example"/>
         <description value="The item that was requested."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/supply-item"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supply-item"/>
       </binding>
       <mapping>
         <identity value="workflow"/>
@@ -666,7 +666,7 @@
         </extension>
         <strength value="example"/>
         <description value="The reason why the supply item was requested."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/supplyrequest-reason"/>
+        <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplyrequest-reason"/>
       </binding>
       <mapping>
         <identity value="workflow"/>

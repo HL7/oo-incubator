@@ -26,7 +26,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-origin-relationship"/>
+  <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/biologicallyderivedproductdispense-origin-relationship"/>
   <version value="6.0.0"/>
   <name value="BiologicallyDerivedProductDispenseOriginRelationship"/>
   <title value="Biologically Derived Product Dispense Origin Relationship"/>
@@ -54,7 +54,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-origin-relationship"/>
+      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/biologicallyderivedproductdispense-origin-relationship"/>
     </include>
   </compose>
 </ValueSet>

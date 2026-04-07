@@ -48,7 +48,7 @@
   </contact>
   <description value="Status of the supply request."/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/supplyrequest-status"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplyrequest-status"/>
   <content value="complete"/>
   <concept>
     <code value="draft"/>

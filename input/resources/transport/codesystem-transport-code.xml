@@ -16,7 +16,7 @@
   <experimental value="true"/>
   <description value="Example codes for transport events demonstrating different types of transport activities"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/transport-code"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/transport-code"/>
   <content value="complete"/>
   <concept>
     <code value="SpecimenTransport"/>

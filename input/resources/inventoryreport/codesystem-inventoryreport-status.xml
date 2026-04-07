@@ -38,7 +38,7 @@
   </contact>
   <description value="The status of the InventoryReport."/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/inventoryreport-status"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryreport-status"/>
   <content value="complete"/>
   <concept>
     <code value="draft"/>

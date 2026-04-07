@@ -17,7 +17,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-match-status"/>
+  <url value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/biologicallyderivedproductdispense-match-status"/>
   <version value="6.0.0"/>
   <name value="BiologicallyDerivedProductDispenseMatchStatus"/>
   <title value="Biologically Derived Product Dispense Match Status"/>
@@ -44,7 +44,7 @@
     </coding>
   </jurisdiction>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/biologicallyderivedproductdispense-match-status"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/biologicallyderivedproductdispense-match-status"/>
   <content value="complete"/>
   <count value="4"/>
   <concept>
