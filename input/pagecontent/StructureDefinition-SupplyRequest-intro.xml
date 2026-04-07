@@ -1,0 +1,54 @@
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+	<div>
+		<a name="scope"></a>
+		<h3>Scope and Usage</h3>
+
+		<p>
+			<strong>This resource is a <em>request</em> resource from a FHIR workflow perspective - see <a href="workflow.html">Workflow</a>.  It is the intent of the Orders and Observation Workgroup to align this resource with  the workflow  pattern for <a href="workflow.html">
+					<em>request</em> resources</a>.</strong>
+		</p>
+		<p>
+The SupplyRequest resource expresses the need to deliver an item, while the SupplyDelivery tracks the actual delivery.
+		</p>
+
+		<p>
+The SupplyRequest resource is meant for logistics functions only, not for associating a clinical use of the item, which would be done through the clinical resources such as ServiceRequest, DeviceRequest, MedicationRequest resources. The SupplyRequest relates to the Patient resource (in the deliverTo) but that is meant exclusively only for purposes of having a destination for delivery, not a clinical use. 
+		</p>
+		<p>
+The scope of the SupplyRequest resource is for recording the request of supplies used in the healthcare process to be delivered to a particular location. This includes supplies specifically
+used in the treatment of patients as well as supply movement within an institution e.g. transport a set of supplies from
+materials management to a service unit (nurse station).  This resource does not include the provisioning of transportation
+services.
+</p>
+		<p>
+The SupplyRequest resource allows requesting only a single item.
+If a workflow requires requesting multiple items simultaneously, this is done using multiple instances of this resource.
+These instances can be linked in different ways, depending on the needs of the workflow. For guidance, refer to <a href="request.html#compound">the Request pattern</a>
+		</p>
+	</div>
+	<div>
+		<a name="bnr"></a>
+		<h3>Boundaries and Relationships</h3>
+		<p>The SupplyRequest resource represents an authorization for a supply to be provided.</p>
+
+        <p>The <a href="supplydelivery.html">SupplyDelivery</a> resource documents the movement of supply as a result of the SupplyRequest being acted upon.</p>
+
+
+
+		<p>
+		Details of the actions performed as a result of the SupplyRequest are handled by the <a href="task.html">Task</a> resource (which may reference the SupplyRequest in `Task.focus`) or by using a messaging or workflow service where the request is explicit or implicit. For further information about this separation of responsibilities, refer to the <a href="https://www.hl7.org/fhir/request.html#fulfillment">Fulfillment/Execution</a> section of the Request pattern.
+		</p>
+		<p>The SupplyRequest resource is used for <em>inventory management</em>.  When requesting medication, substances and devices when there is a patient focus or instructions regarding their use, <a href="devicerequest.html">DeviceRequest</a> or <a href="medicationrequest.html">MedicationRequest</a> should be used instead.
+		</p>
+		<p>
+        For <a href="https://build.fhir.org/ig/HL7/oo-incubator/StructureDefinition-DeviceDispense.html">DeviceDispense</a>, 
+		<a href="medicationdispense.html">MedicationDispense</a>,
+		and <a href="biologicallyderivedproductdispense.html">BiologicallyDerivedProductDispense</a>, a SupplyRequest does not document the formal association of a device, medication, biologically derived product, or supply item to a patient.  The DeviceDispense (or MedicationDispense or BiologicallyDerivceProductDispense) is used to formally document that the device, medication, biologically derived product or supply item is to be used by or for a patient in a medical activity. 
+		</p>
+		<p>
+        To determine the purchase date, a search of DeviceRequest, SupplyRequest, DeviceDispense, or SupplyDelivery as defined in an implementation guide can be done , as the context of the use case actually determines which date of either resource is considered the purchase date.
+		</p>
+
+	</div>
+</div>
+

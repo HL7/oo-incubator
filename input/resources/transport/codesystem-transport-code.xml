@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="transport-code"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablecodesystem"/>
+  </meta>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="oo"/>
+  </extension>
+  <url value="http://hl7.org/fhir/transport-code"/>
+  
+  <version value="6.0.0"/>
+  <name value="TransportCode"/>
+  <title value="Transport Code"/>
+  <status value="active"/>
+  <experimental value="true"/>
+  <description value="Example codes for transport events demonstrating different types of transport activities"/>
+  <caseSensitive value="true"/>
+  <valueSet value="http://hl7.org/fhir/ValueSet/transport-code"/>
+  <content value="complete"/>
+  <concept>
+    <code value="SpecimenTransport"/>
+    <display value="Specimen Transport"/>
+    <definition value="Event documenting the transport of a specimen"/>
+  </concept>
+  <concept>
+    <code value="PatientMove"/>
+    <display value="Move of Patient"/>
+    <definition value="Event documenting the transport of a patient"/>
+  </concept>
+  <concept>
+    <code value="InventoryTransport"/>
+    <display value="Inventory Transport"/>
+    <definition value="Event documenting the transport of physical items from an inventory list"/>
+  </concept>
+</CodeSystem>

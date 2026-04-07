@@ -1,0 +1,35 @@
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+
+<div>
+<a name="scope"></a>
+<h3>Scope and Usage</h3>
+<div>
+<!-- Describes some of the situations/use cases intended to be managed with the resource. May include a child div for "Storyboards" and "Related Specifications". The purpose of this section is to help implementers understand why the resource is needed and how it might be used. -->
+    <p>
+        This resource records the use of a healthcare-related device by the patient, a provider or a related person, and is primarily used for patient-reported or second-hand reporting. The resource can be used to note the use of an assistive device such as a wheelchair or hearing aid, a contraceptive, or an implanted device such as a pacemaker. It may also be used, for example, to capture an approximate assertion that the patient used the device over a six month period.
+    </p>
+   <p>This resource is an <em>event</em> resource from a FHIR workflow perspective - see <a href="workflow.html">Workflow</a>.</p>
+
+</div>
+
+<div>
+<a name="bnr"></a>
+<h3>Boundaries and Relationships</h3>
+<p>
+There are several resources that can be used to represent device use events or requests. The following Resources should be used in the following manner:
+</p>
+<p> 
+<a href="devicerequest.html">DeviceRequest</a> - records a request to use the device.
+</p>
+
+<p> 
+<a href="procedure.html">Procedure</a>- records the implant or explant event of a device in a patient.
+</p>
+
+<p> 
+<a href="deviceassociation.html">DeviceAssociation</a> - If precise information (e.g., from the assigning system) about the association of the device with the patient is known, DeviceAssociation is the typical mechanism to record the information.
+</p>
+</div>
+
+</div>
+</div>
