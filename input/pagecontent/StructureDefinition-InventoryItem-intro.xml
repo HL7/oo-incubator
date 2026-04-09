@@ -1,0 +1,55 @@
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml ../../schema/fhir-xhtml.xsd" xmlns="http://www.w3.org/1999/xhtml">
+
+<div>
+<a name="bnc"></a>
+<h3>Scope and Usage</h3>
+<p>The InventoryItem is used to define and specitfy the characteristics of a material item (Product) and the relevant characteristics when handling logistics: Inventory and Supply. This resource corresponds to (and expands) the InventoryReport resource's .item backbone element, and provides a reusable data object to express and use product characteristics in the Inventory and Supply (and Transport) aspects.</p>
+<p>This resource approximately corresponds to "product" or "material" in ERP systems (e.g. SAP's MARA table) and to TradeItem in GS1 logistics standard - a core set of attributes that can be referred to when ordering, delivering, tracking or counting items, especially in situations where their clinical categorization (Medication or Device or BDP or Nutrition) is undefined or irrelevant - which is common in supply chain systems, especially in cross-realm, cross-border supplies.</p>
+<p>The InventoryItem Resource:</p>
+<ul>
+<li>is meant to be used in the logistics workflows aspects, when the specific resources cannot be used (due to indefinition, ambiguity, or need to cross-over between resources).</li>
+<li>is NOT intended be used in clinical workflows, where the specific product resources shall be used: Medication, Device, etc.</li>
+</ul>
+
+
+<p>
+The InventoryItem resource does not intend to provide a substitute for the other resources, nor overlap those in the clinical workflows, 
+as those resources have their specific core characteristics. 
+This resource is meant to contain the characteristics that are relevant for the logistics.
+If a clinical resource wishes to add such characteristics for logistics, the InventoryItem can be a placeholder for 
+these. For example, adding Storage and Handling to a NutritionProduct.
+The InventoryItem can also reference the relevant specialized product resource, if one such resource exists. 
+In the example above, the InventoryItem resource adds add inventory capabilities to the system that already uses NutritionProduct.
+The InventoryItem can also be used on its own for inventory specific purposes - one example is if the system tracks packages, specialized utensils and there is no clinical need, only inventory tracking, the InventoryItem may be used.
+
+</p>
+
+
+
+
+</div>
+
+<div>
+<h3>Boundaries and Relationships</h3>
+The InventoryItem resource can be referenced from the following resources:
+<ul>
+<li><strong><a href="inventoryreport.html">InventoryReport</a></strong> - when counting items in an inventory</li>
+<!-- <li><strong><a href="transport.html">Transport</a></strong> - for tracking the transport of inventory items</li> -->
+<li><strong><a href="supplyrequest.html">SupplyRequest</a></strong>- for requesting the supply of inventory items</li>
+<li><strong><a href="supplydelivery.html">SupplyDelivery</a></strong> - for reporting the delivery of inventory items</li>
+<!-- <li><strong><a href="servicerequest.html">ServiceRequest</a></strong> - for example for requesting transport of items</li> -->
+</ul>
+
+<p>Because the InventoryItem resource does not contain all the clinical characteristics of the products like Medication, Device, etc. the InventoryItem can refer to any of those product items.</p>
+</div>
+
+<!-- (optional):
+<div>
+<h3>Background and Context</h3>
+<p>
+Provides additional detail on exactly how the resource is to be used
+</p>
+</div>
+-->
+
+</div>

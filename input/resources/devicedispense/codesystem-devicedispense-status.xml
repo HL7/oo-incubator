@@ -5,7 +5,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo"/>
   </extension>
-  <url value="http://hl7.org/fhir/CodeSystem/devicedispense-status"/>
+  <url value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/devicedispense-status"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.4.642.4.2020"/>
@@ -17,7 +17,7 @@
   <experimental value="false"/>
   <description value="DeviceDispense Status"/>
   <caseSensitive value="true"/>
-  <valueSet value="http://hl7.org/fhir/ValueSet/devicedispense-status"/>
+  <valueSet value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/devicedispense-status"/>
   <content value="complete"/>
   <concept>
     <code value="preparation"/>
