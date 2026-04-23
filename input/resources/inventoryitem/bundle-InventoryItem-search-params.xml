@@ -14,6 +14,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-code"/>
         <description value="Search for products that match this code"/>
+        <status value="active"/>
         <code value="code"/>
         <type value="token"/>
         <expression value="InventoryItem.code"/>
@@ -33,6 +34,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-subject"/>
         <description value="The identity of a patient for whom to list associations"/>
+        <status value="active"/>
         <code value="subject"/>
         <type value="reference"/>
         <expression value="InventoryItem.instance.subject"/>
@@ -52,6 +54,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-status"/>
         <description value="The status of the item"/>
+        <status value="active"/>
         <code value="status"/>
         <type value="token"/>
         <expression value="InventoryItem.status"/>
@@ -71,6 +74,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-identifier"/>
         <description value="The identifier of the item"/>
+        <status value="active"/>
         <code value="identifier"/>
         <type value="token"/>
         <expression value="InventoryItem.identifier"/>

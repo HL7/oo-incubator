@@ -14,6 +14,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-identifier"/>
         <description value="External identifier"/>
+        <status value="active"/>
         <code value="identifier"/>
         <type value="token"/>
         <expression value="SupplyDelivery.identifier"/>
@@ -33,6 +34,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-patient"/>
         <description value="Patient for whom the item is supplied"/>
+        <status value="active"/>
         <code value="patient"/>
         <type value="reference"/>
         <expression value="SupplyDelivery.subject.where(resolve() is Patient)"/>
@@ -53,6 +55,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-subject"/>
         <description value="Individual(s) or organization for whom the item is supplied"/>
+        <status value="active"/>
         <code value="subject"/>
         <type value="reference"/>
         <expression value="SupplyDelivery.subject"/>
@@ -72,6 +75,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-receiver"/>
         <description value="Who collected the Supply"/>
+        <status value="active"/>
         <code value="receiver"/>
         <type value="reference"/>
         <expression value="SupplyDelivery.receiver"/>
@@ -91,6 +95,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-status"/>
         <description value="in-progress | completed | abandoned | entered-in-error"/>
+        <status value="active"/>
         <code value="status"/>
         <type value="token"/>
         <expression value="SupplyDelivery.status"/>
@@ -110,6 +115,7 @@
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-supplier"/>
         <description value="Dispenser"/>
+        <status value="active"/>
         <code value="supplier"/>
         <type value="reference"/>
         <expression value="SupplyDelivery.supplier"/>

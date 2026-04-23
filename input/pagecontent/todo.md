@@ -1,5 +1,6 @@
 - Address remaining build errors related to the introduction of Additional Resources in the IG-Publisher
 - Identify why template include for table-resources-en is empty. Currently index.md has to use table-structuredefinitions-en which incorrectly includes profiles.
 - Check if the canonical urls should be updated to be http://hl7.org/fhir/uv/oo-incubator. This seemed to cause more errors than it resolved last time this was tried and might indicate a tooling issue.
-- Figure out if inline example records can still be referenced (lots of errors here)
+- Figure out solution to missing images - is this a publisher issue?
+- Figure out if inline examples can still be resolved - is this a publisher issue?
 - Perform full QA of existing resource content to ensure parity with pre-Incubator state
