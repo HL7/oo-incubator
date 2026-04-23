@@ -110,6 +110,8 @@ pages:
     title: IG Home
   changes.md:
     title: Change Log
+  todo.md:
+    title: Still To Do
 
 menu:
   Home: index.html
@@ -127,6 +129,7 @@ menu:
   FHIR Artifacts:
     Artifacts: artifacts.html
     Change Log: changes.html
+    Still To Do: todo.html
 
 # ╭─────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │  Additional paths for resources                                                                 │

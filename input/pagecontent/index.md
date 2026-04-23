@@ -14,29 +14,12 @@ This IG defines the scope of exploration for the Orders & Observations Work Grou
 ## Migrated Resources
 
 <table class="grid">
-{% include table-name-structuredefinitions-en.xhtml %}
+	{% include table-structuredefinitions-en.xhtml %}
 </table>
 
-## Migrated Profiles (that do not have a parent Resource in the Incubator)
-
-{% comment %}
-<!-- This is causing IG publisher to hang, for now, render pure HTML instead. -->
-<table class="grid">
-{% include table-name-profiles-en.xhtml %}
-</table>
-{% endcomment %}
+## Migrated Profiles
+These profiles do not have a parent Resource in the Incubator and instead further extend FHIR Core resources.
 
 <table class="grid">
-  <thead>
-    <tr>
-      <th>Profile</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>MedicalProductOfHumanOrigin</td>
-      <td>This profile is designed for biologically derived products that are derived from a human donor and intended for clinical application in a human recipient. Donor and recipient might, or might not, be the same individual. Products of this nature are referred to as medical products of human origin (MPHO) and have specific traceability requirements to ensure that the bi-directional link between donor and recipient is maintained. The profile specifies the essential identifiers for traceability as required elements.</td>
-    </tr>
-  </tbody>
+	{% include table-profiles-en.xhtml %}
 </table>

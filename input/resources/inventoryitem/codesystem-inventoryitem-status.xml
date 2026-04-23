@@ -12,7 +12,7 @@
   <version value="6.0.0"/>
   <name value="InventoryItemStatus"/>
   <title value="InventoryItem Status Codes"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <description value="InventoryItem Status Codes"/>
   <caseSensitive value="true"/>

@@ -1,4 +1,4 @@
-﻿<SupplyDelivery xmlns="http://hl7.org/fhir">
+﻿<SupplyDelivery resourceDefinition="http://hl7.org/fhir/StructureDefinition/SupplyDelivery|0.1.0" xmlns="http://hl7.org/fhir">
   <id value="mphodelivery"/>
   <contained>
     <BiologicallyDerivedProduct>

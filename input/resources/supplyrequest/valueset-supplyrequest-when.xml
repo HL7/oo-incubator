@@ -5,15 +5,15 @@
   <meta>
     <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
   </meta>
-  <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/valueset-supplyrequest-when"/>
+  <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplyrequest-when"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
     <value value="urn:oid:2.16.840.1.113883.4.642.3.3193"/>
   </identifier>
-  <name value="SupplyRequestWhen"/>
-  <title value="Supply Request When"/>
-  <status value="draft"/>
-  <experimental value="true"/>
+  <name value="SupplyRequestWhenValueSet"/>
+  <title value="Supply Request When Values"/>
+  <status value="active"/>
+  <experimental value="false"/>
   <publisher value="HL7 International - Orders &amp; Observations WG"/>
   <contact>
     <telecom>
