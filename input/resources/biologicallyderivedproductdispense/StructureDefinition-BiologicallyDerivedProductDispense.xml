@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense|0.1.0">
   <id value="BiologicallyDerivedProductDispense"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
     <valueCode value="trial-use"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/>
+    <valueInteger value="1"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="patient"/>
@@ -18,9 +18,10 @@
     <valueCode value=".status = entered-in-error"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense"/>
-  <version value="6.0.0"/>
+  <type value="BiologicallyDerivedProductDispense"/>
+  <version value="0.1.0"/>
   <name value="BiologicallyDerivedProductDispense"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>
   <contact>
@@ -59,7 +60,6 @@
   </mapping>
   <kind value="resource"/>
   <abstract value="false"/>
-  <type value="BiologicallyDerivedProductDispense"/>
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
   <derivation value="specialization"/>
   <differential>
@@ -118,7 +118,7 @@
           <valueBoolean value="true"/>
         </extension>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense|0.1.0"/>
       </type>
       <mapping>
         <identity value="workflow"/>
@@ -139,7 +139,7 @@
           <valueString value="BiologicallyDerivedProductDispenseStatus"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
-          <valueString value="A coded concept specifying the state of the dispense event."/>
+          <valueMarkdown value="A coded concept specifying the state of the dispense event."/>
         </extension>
         <extension url="http://hl7.org/fhir/build/StructureDefinition/v3-map">
           <valueString value="ActStatus"/>
@@ -167,7 +167,7 @@
           <valueString value="BiologicallyDerivedProductDispenseOriginRelationship"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
-          <valueString value="A coded concept specifying the relationship between the recipient and origin of the dispensed product."/>
+          <valueMarkdown value="A coded concept specifying the relationship between the recipient and origin of the dispensed product."/>
         </extension>
         <extension url="http://hl7.org/fhir/build/StructureDefinition/v3-map">
           <valueString value="ActStatus"/>
@@ -223,7 +223,7 @@
           <valueString value="BiologicallyDerivedProductDispenseMatchStatus"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
-          <valueString value="A coded concept specifying the type of matching between the recipient and origin of the dispensed product."/>
+          <valueMarkdown value="A coded concept specifying the type of matching between the recipient and origin of the dispensed product."/>
         </extension>
         <extension url="http://hl7.org/fhir/build/StructureDefinition/v3-map">
           <valueString value="ActStatus"/>
@@ -261,7 +261,7 @@
           <valueString value="BiologicallyDerivedProductDispensPerformerFunction"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
-          <valueString value="A coded concept specifying the role or function of the performer in the dispense."/>
+          <valueMarkdown value="A coded concept specifying the role or function of the performer in the dispense."/>
         </extension>
         <extension url="http://hl7.org/fhir/build/StructureDefinition/v3-map">
           <valueString value="ActStatus"/>

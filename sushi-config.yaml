@@ -24,7 +24,7 @@ contact:
       - system: url
         value: http://www.hl7.org/Special/committees/orders
       - system: email
-        value: oo@lists.HL7.org
+        value: ord@lists.HL7.org
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
@@ -77,6 +77,9 @@ extension:
 #
 
 parameters:
+  apply-publisher: true
+  shownav: false
+  default-version: true
   path-resource:
     - input/resources/transport
     - input/resources/biologicallyderivedproductdispense
@@ -110,6 +113,17 @@ pages:
 
 menu:
   Home: index.html
+  Resources:
+    Transport: StructureDefinition-Transport.html
+    BiologicallyDerivedProductDispense: StructureDefinition-BiologicallyDerivedProductDispense.html
+    DeviceDispense: StructureDefinition-DeviceDispense.html
+    DeviceUsage: StructureDefinition-DeviceUsage.html
+    InventoryItem: StructureDefinition-InventoryItem.html
+    InventoryReport: StructureDefinition-InventoryReport.html
+    SupplyDelivery: StructureDefinition-SupplyDelivery.html
+    SupplyRequest: StructureDefinition-SupplyRequest.html
+  Profiles:
+    MedicalProductsOfHumanOrigin: StructureDefinition-medicalproductofhumanorigin.html
   FHIR Artifacts:
     Artifacts: artifacts.html
     Change Log: changes.html
