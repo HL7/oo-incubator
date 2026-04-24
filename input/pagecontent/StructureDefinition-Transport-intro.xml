@@ -3,7 +3,7 @@
 <div>
 <a name="scope"></a>
 <h3>Scope and Usage</h3>
-<p><strong>This resource is an <em>event</em> resource from a FHIR workflow perspective - see <a href="workflow.html">Workflow</a>.   It is the intent of the Orders and Observation Workgroup to align this resource with  the workflow pattern for <a href="workflow.html#event"><em>event</em> resources</a>.</strong></p>
+<p><strong>This resource is an <em>event</em> resource from a FHIR workflow perspective - see <a href="https://hl7.org/fhir/workflow.html">Workflow</a>.   It is the intent of the Orders and Observation Workgroup to align this resource with  the workflow pattern for <a href="https://hl7.org/fhir/workflow.html#event"><em>event</em> resources</a>.</strong></p>
 <p>
 The Transport resource captures the requested movement and movement history of persons and items in the healthcare spectrum. The Transport resource documents the movement of a person or item. Since it follows the event pattern, it can be used in the request of a transport event, but it can be used in conjunction with the Task resource to operationalize a movement event in a workflow. While the current use cases are focused on the lab and the movement of patients, this resource will be easily extensible to handle the movement of anything in healthcare. Sample use cases for the laboratory are as follows: 
 <ul>

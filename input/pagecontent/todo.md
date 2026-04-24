@@ -1,4 +1,5 @@
-- Figure out solution to missing images and links back to Core resources, which are currently broken
+- Figure out solution to broken links from multiple resource search parameters (likely a publisher issue)
+- Track down missing image files that are referenced from intro and note text (see Transport)
 - Address remaining build errors related to the introduction of Additional Resources in the IG-Publisher
 - Identify why template include for table-resources-en is empty. Currently index.md has to use table-structuredefinitions-en which incorrectly includes profiles.
 - Check if the canonical urls should be updated to be http://hl7.org/fhir/uv/oo-incubator. This seemed to cause more errors than it resolved last time this was tried and might indicate a tooling issue.
