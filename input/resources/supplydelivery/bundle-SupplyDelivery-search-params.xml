@@ -13,6 +13,7 @@
           <valueString value="SupplyDelivery.identifier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-identifier"/>
+        <name value="SupplyDeliveryIdentifierSearchParameter"/>
         <description value="External identifier"/>
         <status value="active"/>
         <code value="identifier"/>
@@ -33,6 +34,7 @@
           <valueString value="SupplyDelivery.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-patient"/>
+        <name value="SupplyDeliveryPatientSearchParameter"/>
         <description value="Patient for whom the item is supplied"/>
         <status value="active"/>
         <code value="patient"/>
@@ -54,6 +56,7 @@
           <valueString value="SupplyDelivery.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-subject"/>
+        <name value="SupplyDeliverySubjectSearchParameter"/>
         <description value="Individual(s) or organization for whom the item is supplied"/>
         <status value="active"/>
         <code value="subject"/>
@@ -74,6 +77,7 @@
           <valueString value="SupplyDelivery.receiver"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-receiver"/>
+        <name value="SupplyDeliveryReceiverSearchParameter"/>
         <description value="Who collected the Supply"/>
         <status value="active"/>
         <code value="receiver"/>
@@ -94,6 +98,7 @@
           <valueString value="SupplyDelivery.status"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-status"/>
+        <name value="SupplyDeliveryStatusSearchParameter"/>
         <description value="in-progress | completed | abandoned | entered-in-error"/>
         <status value="active"/>
         <code value="status"/>
@@ -114,6 +119,7 @@
           <valueString value="SupplyDelivery.supplier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-supplier"/>
+        <name value="SupplyDeliverySupplierSearchParameter"/>
         <description value="Dispenser"/>
         <status value="active"/>
         <code value="supplier"/>

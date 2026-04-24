@@ -13,6 +13,7 @@
           <valueString value="BiologicallyDerivedProductDispense.product"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/BiologicallyDerivedProductDispense-code"/>
+        <name value="BiologicallyDerivedProductDispenseProductSearchParameter"/>
         <description value="Search for products that match this code"/>
         <status value="active"/>
 		<code value="product"/>
@@ -33,6 +34,7 @@
           <valueString value="BiologicallyDerivedProductDispense.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/BiologicallyDerivedProductDispense-patient"/>
+        <name value="BiologicallyDerivedProductDispensePatientSearchParameter"/>
         <description value="The identity of a patient for whom to list dispenses"/>
         <status value="active"/>
         <code value="patient"/>
@@ -54,6 +56,7 @@
           <valueString value="BiologicallyDerivedProductDispense.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/BiologicallyDerivedProductDispense-subject"/>
+        <name value="BiologicallyDerivedProductDispenseSubjectSearchParameter"/>
         <description value="The intended recipient(s) of the dispensed product"/>
         <status value="active"/>
         <code value="subject"/>
@@ -74,6 +77,7 @@
           <valueString value="BiologicallyDerivedProductDispense.performer.actor"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/BiologicallyDerivedProductDispense-performer"/>
+        <name value="BiologicallyDerivedProductDispensePerformerSearchParameter"/>
         <description value="Who performed the action"/>
         <status value="active"/>
         <code value="performer"/>
@@ -94,6 +98,7 @@
           <valueString value="BiologicallyDerivedProductDispense.status"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/BiologicallyDerivedProductDispense-status"/>
+        <name value="BiologicallyDerivedProductDispenseStatusSearchParameter"/>
         <description value="The status of the dispense"/>
         <status value="active"/>
         <code value="status"/>
@@ -114,6 +119,7 @@
           <valueString value="BiologicallyDerivedProductDispense.identifier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/BiologicallyDerivedProductDispense-identifier"/>
+        <name value="BiologicallyDerivedProductDispenseIdentifierSearchParameter"/>
         <description value="The identifier of the dispense"/>
         <status value="active"/>
         <code value="identifier"/>
@@ -134,6 +140,7 @@
           <valueString value="BiologicallyDerivedProductDispense.basedOn"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/BiologicallyDerivedProductDispense-based-on"/>
+        <name value="BiologicallyDerivedProductDispenseBasedOnSearchParameter"/>
         <description value="The order or request that this dispense is fulfilling"/>
         <status value="active"/>
         <code value="based-on"/>
@@ -154,6 +161,7 @@
           <valueString value="BiologicallyDerivedProductDispense.partOf"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/BiologicallyDerivedProductDispense-part-of"/>
+        <name value="BiologicallyDerivedProductDispensePartOfSearchParameter"/>
         <description value="Part of referenced event"/>
         <status value="active"/>
         <code value="part-of"/>

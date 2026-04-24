@@ -745,10 +745,10 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
       </type>
-      <extension url="http://hl7.org/fhir/StructureDefinition/request-performerOrder">
+      <!--<extension url="http://hl7.org/fhir/StructureDefinition/request-performerOrder">
         <valueString value="SupplyRequestPerformerOrder"/>
       </extension>
-  <!--<mapping>
+      <mapping>
         <identity value="workflow"/>
         <map value="Event.performer.function, Request.performerType"/>
       </mapping>

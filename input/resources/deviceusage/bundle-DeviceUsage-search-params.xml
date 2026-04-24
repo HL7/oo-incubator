@@ -13,6 +13,7 @@
           <valueString value="DeviceUsage.device.concept"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-device"/>
+        <name value="DeviceUsageDeviceSearchParameter"/>
         <description value="Search by device"/>
         <status value="active"/>
         <code value="device"/>
@@ -33,6 +34,7 @@
           <valueString value="DeviceUsage.identifier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-identifier"/>
+        <name value="DeviceUsageIdentifierSearchParameter"/>
         <description value="Search by identifier"/>
         <status value="active"/>
         <code value="identifier"/>
@@ -53,6 +55,7 @@
           <valueString value="DeviceUsage.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-patient"/>
+        <name value="DeviceUsagePatientSearchParameter"/>
         <description value="Search by patient who used the device"/>
         <status value="active"/>
         <code value="patient"/>
@@ -74,6 +77,7 @@
           <valueString value="DeviceUsage.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-subject"/>
+        <name value="DeviceUsageSubjectSearchParameter"/>
         <description value="The individual(s) who used the device"/>
         <status value="active"/>
         <code value="subject"/>
@@ -94,6 +98,7 @@
           <valueString value="DeviceUsage.status"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-status"/>
+        <name value="DeviceUsageStatusSearchParameter"/>
         <description value="The status of the device usage"/>
         <status value="active"/>
         <code value="status"/>
@@ -114,6 +119,7 @@
           <valueString value="DeviceUsage.bodyStructure.reference"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-body-structure-reference"/>
+        <name value="DeviceUsageReferenceSearchParameter"/>
         <description value="Target body structure (reference)"/>
         <status value="active"/>
         <code value="reference"/>
@@ -135,6 +141,7 @@
           <valueString value="DeviceUsage.bodyStructure.concept"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-body-structure-code"/>
+        <name value="DeviceUsageBodyStructureCodeSearchParameter"/>
         <description value="Code for target body structure"/>
         <status value="active"/>
         <code value="body-structure-code"/>

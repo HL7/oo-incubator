@@ -2,7 +2,7 @@
 <!--
 This is the corresponding supply delivery from the supplye request example
 -->
-<SupplyDelivery resourceDefinition="http://hl7.org/fhir/StructureDefinition/SupplyDelivery|0.1.0" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/supplydelivery.xsd">
+<SupplyDelivery resourceDefinition="http://hl7.org/fhir/StructureDefinition/SupplyDelivery|0.1.0" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <id value="ISBT128" />
    <!--
 business identifier - in this case the same as the request id

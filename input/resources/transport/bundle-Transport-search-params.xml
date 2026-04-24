@@ -13,6 +13,7 @@
           <valueString value="Transport.identifier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/Transport-identifier"/>
+        <name value="TransportIdentifierSearchParameter"/>
         <description value="External identifier"/>
         <status value="active"/>
         <code value="identifier"/>
@@ -33,6 +34,7 @@
           <valueString value="Transport.status"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/Transport-status"/>
+        <name value="TransportStatusSearchParameter"/>
         <description value="in-progress | completed | entered-in-error"/>
         <status value="active"/>
         <code value="status"/>
@@ -53,6 +55,7 @@
           <valueString value="Transport.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/Transport-patient"/>
+        <name value="TransportPatientSearchParameter"/>
         <description value="Search by subject - a patient"/>
         <status value="active"/>
         <code value="patient"/>
@@ -74,6 +77,7 @@
           <valueString value="Transport.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/Transport-subject"/>
+        <name value="TransportSubjectSearchParameter"/>
         <description value="Search for subject"/>
         <status value="active"/>
         <code value="subject"/>

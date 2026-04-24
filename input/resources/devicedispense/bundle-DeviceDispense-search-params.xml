@@ -13,6 +13,7 @@
           <valueString value="DeviceDispense.device.concept"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-code"/>
+        <name value="DeviceDispenseCodeSearchParameter"/>
         <description value="Search for devices that match this code"/>
         <status value="active"/>
         <code value="code"/>
@@ -33,6 +34,7 @@
           <valueString value="DeviceDispense.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-subject"/>
+        <name value="DeviceDispenseSubjectSearchParameter"/>
         <description value="The identity of a patient for whom to list dispenses"/>
         <status value="active"/>
         <code value="subject"/>
@@ -53,6 +55,7 @@
           <valueString value="DeviceDispense.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-patient"/>
+        <name value="DeviceDispensePatientSearchParameter"/>
         <description value="Returns device dispenses for a specific patient"/>
         <status value="active"/>
         <code value="patient"/>
@@ -74,6 +77,7 @@
           <valueString value="DeviceDispense.identifier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-identifier"/>
+        <name value="DeviceDispenseIdentifierSearchParameter"/>
         <description value="The identifier of the dispense"/>
         <status value="active"/>
         <code value="identifier"/>
@@ -94,6 +98,7 @@
           <valueString value="DeviceDispense.status"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-status"/>
+        <name value="DeviceDispenseStatusSearchParameter"/>
         <description value="The status of the dispense"/>
         <status value="active"/>
         <code value="status"/>
