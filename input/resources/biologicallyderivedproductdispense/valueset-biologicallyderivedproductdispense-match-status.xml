@@ -28,8 +28,8 @@
   </extension>
   <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/biologicallyderivedproductdispense-match-status"/>
   <version value="6.0.0"/>
-  <name value="BiologicallyDerivedProductDispenseMatchStatus"/>
-  <title value="Biologically Derived Product Dispense Match Status"/>
+  <name value="BiologicallyDerivedProductDispenseMatchStatusValueSet"/>
+  <title value="Biologically Derived Product Dispense Match Status Values"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2023-01-29T21:19:50+01:00"/>

@@ -20,9 +20,9 @@
     <value value="urn:oid:2.16.840.1.113883.4.642.3.3035"/>
   </identifier>
   <version value="6.0.0"/>
-  <name value="TransportStatusVS"/>
-  <title value="Transport Status Value Set"/>
-  <status value="draft"/>
+  <name value="TransportStatusValueSet"/>
+  <title value="Transport Status Value Set Values"/>
+  <status value="active"/>
   <experimental value="false"/>
   <date value="2020-12-28T16:55:11+11:00"/>
   <publisher value="HL7 (FHIR Project)"/>

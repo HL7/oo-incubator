@@ -1,0 +1,8 @@
+- Figure out solution to broken links from multiple resource search parameters (likely a publisher issue)
+- Track down missing image files that are referenced from intro and note text (see Transport)
+- Address remaining build errors related to the introduction of Additional Resources in the IG-Publisher
+- Identify why template include for table-resources-en is empty. Currently index.md has to use table-structuredefinitions-en which incorrectly includes profiles.
+- Check if the canonical urls should be updated to be http://hl7.org/fhir/uv/oo-incubator. This seemed to cause more errors than it resolved last time this was tried and might indicate a tooling issue.
+- Review constraint violations such as multiple mappings violating eld-27’s uniqueness rule for mapping identities within a single element
+- Review SupplyRequest.requestedPerformer extension usage which was a carryover from Core but breaking the IG http://hl7.org/fhir/StructureDefinition/request-performerOrder
+- Perform full QA of existing resource content to ensure parity with pre-Incubator state

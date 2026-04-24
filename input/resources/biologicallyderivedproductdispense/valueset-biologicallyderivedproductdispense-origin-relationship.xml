@@ -28,8 +28,8 @@
   </extension>
   <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/biologicallyderivedproductdispense-origin-relationship"/>
   <version value="6.0.0"/>
-  <name value="BiologicallyDerivedProductDispenseOriginRelationship"/>
-  <title value="Biologically Derived Product Dispense Origin Relationship"/>
+  <name value="BiologicallyDerivedProductDispenseOriginRelationshipValueSet"/>
+  <title value="Biologically Derived Product Dispense Origin Relationship Values"/>
   <status value="active"/>
   <experimental value="false"/>
   <date value="2023-01-29T21:19:50+01:00"/>

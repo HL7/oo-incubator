@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SupplyDelivery xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/supplydelivery.xsd">
+<SupplyDelivery resourceDefinition="http://hl7.org/fhir/StructureDefinition/SupplyDelivery|0.1.0" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 <id value="pumpdelivery"/>
   <text>
     <status value="generated" />
@@ -17,9 +17,9 @@
 	</identifier>
 
 	<status value="in-progress"/>
-	<patient>
+	<subject>
 		<display value="Mr. Belpit"/>
-	</patient>
+	</subject>
 	<stage>
 		<coding>
 			<system value="http://hl7.org/fhir/supplydelivery-stage"/>

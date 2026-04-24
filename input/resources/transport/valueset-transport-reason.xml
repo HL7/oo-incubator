@@ -10,9 +10,9 @@
   </extension>
   <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/transport-reason"/>
   <version value="6.0.0"/>
-  <name value="TransportReason"/>
-  <title value="Transport Reason Codes"/>
-  <status value="draft"/>
+  <name value="TransportReasonValueSet"/>
+  <title value="Transport Reason Codes Values"/>
+  <status value="active"/>
   <experimental value="false"/>
   <date value="2025-10-24T16:55:11+11:00"/>
   <publisher value="HL7 (FHIR Project)"/>

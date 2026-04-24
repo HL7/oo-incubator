@@ -10,9 +10,9 @@
   </extension>
   <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryitem-status"/>
   <version value="6.0.0"/>
-  <name value="InventoryItemStatusCodes"/>
-  <title value="InventoryItem Status Codes"/>
-  <status value="draft"/>
+  <name value="InventoryItemStatusCodesValueSet"/>
+  <title value="InventoryItem Status Codes Values"/>
+  <status value="active"/>
   <experimental value="false"/>
   <publisher value="FHIR Project team"/>
   <contact>

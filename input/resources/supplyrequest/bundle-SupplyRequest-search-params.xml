@@ -13,7 +13,9 @@
           <valueString value="SupplyRequest.category"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyRequest-category"/>
+        <name value="SupplyRequestCategorySearchParameter"/>
         <description value="The kind of supply (central, non-stock, etc.)"/>
+        <status value="active"/>
         <code value="category"/>
         <type value="token"/>
         <expression value="SupplyRequest.category"/>
@@ -32,7 +34,9 @@
           <valueString value="SupplyRequest.authoredOn"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyRequest-date"/>
+        <name value="SupplyRequestDateSearchParameter"/>
         <description value="When the request was made"/>
+        <status value="active"/>
         <code value="date"/>
         <type value="date"/>
         <expression value="SupplyRequest.authoredOn"/>
@@ -51,7 +55,9 @@
           <valueString value="SupplyRequest.identifier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyRequest-identifier"/>
+        <name value="SupplyRequestIdentifierSearchParameter"/>
         <description value="Business Identifier for SupplyRequest"/>
+        <status value="active"/>
         <code value="identifier"/>
         <type value="token"/>
         <expression value="SupplyRequest.identifier"/>
@@ -70,7 +76,9 @@
           <valueString value="SupplyRequest.replaces"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyRequest-replaces"/>
+        <name value="SupplyRequestReplacesSearchParameter"/>
         <description value="What request replaces"/>
+        <status value="active"/>
         <code value="replaces"/>
         <type value="reference"/>
         <expression value="SupplyRequest.replaces"/>
@@ -89,7 +97,9 @@
           <valueString value="SupplyRequest.requester"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyRequest-requester"/>
+        <name value="SupplyRequestRequesterSearchParameter"/>
         <description value="Individual making the request"/>
+        <status value="active"/>
         <code value="requester"/>
         <type value="reference"/>
         <expression value="SupplyRequest.requester"/>
@@ -108,7 +118,9 @@
           <valueString value="SupplyRequest.deliverFor"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyRequest-patient"/>
+        <name value="SupplyRequestPatientSearchParameter"/>
         <description value="The patient or subject for whom the supply is destined"/>
+        <status value="active"/>
         <code value="patient"/>
         <type value="reference"/>
         <expression value="SupplyRequest.deliverFor"/>
@@ -127,7 +139,9 @@
           <valueString value="SupplyRequest.status"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyRequest-status"/>
+        <name value="SupplyRequestStatusSearchParameter"/>
         <description value="draft | active | suspended +"/>
+        <status value="active"/>
         <code value="status"/>
         <type value="token"/>
         <expression value="SupplyRequest.status"/>
@@ -146,7 +160,9 @@
           <valueString value="SupplyRequest.deliverTo"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyRequest-subject"/>
+        <name value="SupplyRequestSubjectSearchParameter"/>
         <description value="The destination of the supply"/>
+        <status value="active"/>
         <code value="subject"/>
         <type value="reference"/>
         <expression value="SupplyRequest.deliverTo"/>
@@ -165,7 +181,9 @@
           <valueString value="SupplyRequest.supplier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyRequest-supplier"/>
+        <name value="SupplyRequestSupplierSearchParameter"/>
         <description value="Who is intended to fulfill the request"/>
+        <status value="active"/>
         <code value="supplier"/>
         <type value="reference"/>
         <expression value="SupplyRequest.supplier"/>

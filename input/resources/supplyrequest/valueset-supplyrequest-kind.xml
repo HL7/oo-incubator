@@ -24,10 +24,10 @@
     <value value="urn:oid:2.16.840.1.113883.4.642.2.353"/>
   </identifier>
   <version value="6.0.0"/>
-  <name value="SupplyType"/>
-  <title value="Supply Type"/>
-  <status value="draft"/>
-  <experimental value="true"/>
+  <name value="SupplyTypeValueSet"/>
+  <title value="Supply Type Values"/>
+  <status value="active"/>
+  <experimental value="false"/>
   <publisher value="FHIR Project team"/>
   <contact>
     <telecom>

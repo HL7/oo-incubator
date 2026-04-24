@@ -13,7 +13,9 @@
           <valueString value="SupplyDelivery.identifier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-identifier"/>
+        <name value="SupplyDeliveryIdentifierSearchParameter"/>
         <description value="External identifier"/>
+        <status value="active"/>
         <code value="identifier"/>
         <type value="token"/>
         <expression value="SupplyDelivery.identifier"/>
@@ -32,7 +34,9 @@
           <valueString value="SupplyDelivery.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-patient"/>
+        <name value="SupplyDeliveryPatientSearchParameter"/>
         <description value="Patient for whom the item is supplied"/>
+        <status value="active"/>
         <code value="patient"/>
         <type value="reference"/>
         <expression value="SupplyDelivery.subject.where(resolve() is Patient)"/>
@@ -52,7 +56,9 @@
           <valueString value="SupplyDelivery.subject"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-subject"/>
+        <name value="SupplyDeliverySubjectSearchParameter"/>
         <description value="Individual(s) or organization for whom the item is supplied"/>
+        <status value="active"/>
         <code value="subject"/>
         <type value="reference"/>
         <expression value="SupplyDelivery.subject"/>
@@ -71,7 +77,9 @@
           <valueString value="SupplyDelivery.receiver"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-receiver"/>
+        <name value="SupplyDeliveryReceiverSearchParameter"/>
         <description value="Who collected the Supply"/>
+        <status value="active"/>
         <code value="receiver"/>
         <type value="reference"/>
         <expression value="SupplyDelivery.receiver"/>
@@ -90,7 +98,9 @@
           <valueString value="SupplyDelivery.status"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-status"/>
+        <name value="SupplyDeliveryStatusSearchParameter"/>
         <description value="in-progress | completed | abandoned | entered-in-error"/>
+        <status value="active"/>
         <code value="status"/>
         <type value="token"/>
         <expression value="SupplyDelivery.status"/>
@@ -109,7 +119,9 @@
           <valueString value="SupplyDelivery.supplier"/>
         </extension>
         <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-supplier"/>
+        <name value="SupplyDeliverySupplierSearchParameter"/>
         <description value="Dispenser"/>
+        <status value="active"/>
         <code value="supplier"/>
         <type value="reference"/>
         <expression value="SupplyDelivery.supplier"/>

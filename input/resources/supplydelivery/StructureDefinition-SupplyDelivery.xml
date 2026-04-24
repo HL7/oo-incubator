@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/SupplyDelivery|0.1.0">
   <id value="SupplyDelivery"/>
-  <meta>
-    <lastUpdated value="2021-01-02T08:58:31.578+11:00"/>
-  </meta>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
     <valueString value="Clinical.Request &amp;amp; Response"/>
   </extension>
@@ -24,13 +21,9 @@
     <valueCode value=".status = entered-in-error"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/SupplyDelivery"/>
-  <identifier>
-    <system value="urn:ietf:rfc:3986"/>
-    <value value="urn:oid:2.16.840.1.113883.4.642.5.1053"/>
-  </identifier>
-  <version value="6.0.0"/>
+  <version value="0.1.0"/>
   <name value="SupplyDelivery"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>
   <contact>
@@ -123,7 +116,7 @@
       <max value="*"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/SupplyRequest"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/SupplyRequest|0.1.0"/>
       </type>
       <isSummary value="true"/>
       <mapping>
@@ -152,7 +145,7 @@
           <valueBoolean value="true"/>
         </extension>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/SupplyDelivery"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/SupplyDelivery|0.1.0"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Contract"/>
       </type>
       <isSummary value="true"/>
@@ -201,7 +194,7 @@
     </element>
     <element id="SupplyDelivery.subject">
       <path value="SupplyDelivery.subject"/>
-      <short value="Individual(s) or organization  for whom the item is supplied"/>
+      <short value="Individual(s) or organization for whom the item is supplied"/>
       <definition value="A link to a resource representing the person whom the delivered item is for."/>
       <comment value="Group is only allowed in the circumstance where the group represents a family or a household, and should not represent groups of Practitioners where other more specific resources can be used instead."/>
       <min value="0"/>
@@ -338,7 +331,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionProduct"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem|0.1.0"/>
       </type>
       <binding>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">

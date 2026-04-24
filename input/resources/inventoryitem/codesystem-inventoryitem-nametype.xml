@@ -12,7 +12,7 @@
   <version value="6.0.0"/>
   <name value="InventoryItemNameType"/>
   <title value="InventoryItem Name Type"/>
-  <status value="draft"/>
+  <status value="active"/>
   <experimental value="false"/>
   <description value="InventoryItem Name Type"/>
   <caseSensitive value="true"/>

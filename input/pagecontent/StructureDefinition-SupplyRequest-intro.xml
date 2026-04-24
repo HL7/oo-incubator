@@ -4,7 +4,7 @@
 		<h3>Scope and Usage</h3>
 
 		<p>
-			<strong>This resource is a <em>request</em> resource from a FHIR workflow perspective - see <a href="workflow.html">Workflow</a>.  It is the intent of the Orders and Observation Workgroup to align this resource with  the workflow  pattern for <a href="workflow.html">
+			<strong>This resource is a <em>request</em> resource from a FHIR workflow perspective - see <a href="https://hl7.org/fhir/workflow.html">Workflow</a>.  It is the intent of the Orders and Observation Workgroup to align this resource with  the workflow  pattern for <a href="https://hl7.org/fhir/workflow.html">
 					<em>request</em> resources</a>.</strong>
 		</p>
 		<p>
@@ -23,7 +23,7 @@ services.
 		<p>
 The SupplyRequest resource allows requesting only a single item.
 If a workflow requires requesting multiple items simultaneously, this is done using multiple instances of this resource.
-These instances can be linked in different ways, depending on the needs of the workflow. For guidance, refer to <a href="request.html#compound">the Request pattern</a>
+These instances can be linked in different ways, depending on the needs of the workflow. For guidance, refer to <a href="https://hl7.org/fhir/request.html#compound">the Request pattern</a>
 		</p>
 	</div>
 	<div>
@@ -36,13 +36,13 @@ These instances can be linked in different ways, depending on the needs of the w
 
 
 		<p>
-		Details of the actions performed as a result of the SupplyRequest are handled by the <a href="task.html">Task</a> resource (which may reference the SupplyRequest in `Task.focus`) or by using a messaging or workflow service where the request is explicit or implicit. For further information about this separation of responsibilities, refer to the <a href="https://www.hl7.org/fhir/request.html#fulfillment">Fulfillment/Execution</a> section of the Request pattern.
+		Details of the actions performed as a result of the SupplyRequest are handled by the <a href="https://hl7.org/fhir/task.html">Task</a> resource (which may reference the SupplyRequest in `Task.focus`) or by using a messaging or workflow service where the request is explicit or implicit. For further information about this separation of responsibilities, refer to the <a href="https://hl7.org/fhir/request.html#fulfillment">Fulfillment/Execution</a> section of the Request pattern.
 		</p>
-		<p>The SupplyRequest resource is used for <em>inventory management</em>.  When requesting medication, substances and devices when there is a patient focus or instructions regarding their use, <a href="devicerequest.html">DeviceRequest</a> or <a href="medicationrequest.html">MedicationRequest</a> should be used instead.
+		<p>The SupplyRequest resource is used for <em>inventory management</em>.  When requesting medication, substances and devices when there is a patient focus or instructions regarding their use, <a href="https://hl7.org/fhir/devicerequest.html">DeviceRequest</a> or <a href="https://hl7.org/fhir/medicationrequest.html">MedicationRequest</a> should be used instead.
 		</p>
 		<p>
         For <a href="https://build.fhir.org/ig/HL7/oo-incubator/StructureDefinition-DeviceDispense.html">DeviceDispense</a>, 
-		<a href="medicationdispense.html">MedicationDispense</a>,
+		<a href="https://hl7.org/fhir/medicationdispense.html">MedicationDispense</a>,
 		and <a href="biologicallyderivedproductdispense.html">BiologicallyDerivedProductDispense</a>, a SupplyRequest does not document the formal association of a device, medication, biologically derived product, or supply item to a patient.  The DeviceDispense (or MedicationDispense or BiologicallyDerivceProductDispense) is used to formally document that the device, medication, biologically derived product or supply item is to be used by or for a patient in a medical activity. 
 		</p>
 		<p>

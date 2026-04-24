@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<InventoryReport xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../schema/[name].xsd">
+<InventoryReport resourceDefinition="http://hl7.org/fhir/StructureDefinition/InventoryReport|0.1.0" xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <id value="example" />
 
-    <status value="draft" />
+    <status value="active" />
     <countType value="snapshot" />
     <reportedDateTime value="2020-09-22"/>
 

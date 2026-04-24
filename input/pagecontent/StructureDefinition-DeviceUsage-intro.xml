@@ -8,7 +8,7 @@
     <p>
         This resource records the use of a healthcare-related device by the patient, a provider or a related person, and is primarily used for patient-reported or second-hand reporting. The resource can be used to note the use of an assistive device such as a wheelchair or hearing aid, a contraceptive, or an implanted device such as a pacemaker. It may also be used, for example, to capture an approximate assertion that the patient used the device over a six month period.
     </p>
-   <p>This resource is an <em>event</em> resource from a FHIR workflow perspective - see <a href="workflow.html">Workflow</a>.</p>
+   <p>This resource is an <em>event</em> resource from a FHIR workflow perspective - see <a href="https://hl7.org/fhir/workflow.html">Workflow</a>.</p>
 
 </div>
 
@@ -19,15 +19,15 @@
 There are several resources that can be used to represent device use events or requests. The following Resources should be used in the following manner:
 </p>
 <p> 
-<a href="devicerequest.html">DeviceRequest</a> - records a request to use the device.
+<a href="https://hl7.org/fhir/devicerequest.html">DeviceRequest</a> - records a request to use the device.
 </p>
 
 <p> 
-<a href="procedure.html">Procedure</a>- records the implant or explant event of a device in a patient.
+<a href="https://hl7.org/fhir/procedure.html">Procedure</a>- records the implant or explant event of a device in a patient.
 </p>
 
 <p> 
-<a href="deviceassociation.html">DeviceAssociation</a> - If precise information (e.g., from the assigning system) about the association of the device with the patient is known, DeviceAssociation is the typical mechanism to record the information.
+<a href="https://hl7.org/fhir/deviceassociation.html">DeviceAssociation</a> - If precise information (e.g., from the assigning system) about the association of the device with the patient is known, DeviceAssociation is the typical mechanism to record the information.
 </p>
 </div>
 

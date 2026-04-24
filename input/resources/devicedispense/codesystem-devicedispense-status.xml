@@ -11,9 +11,9 @@
     <value value="urn:oid:2.16.840.1.113883.4.642.4.2020"/>
   </identifier>
   <version value="6.0.0"/>
-  <name value="DeviceDispenseStatusCS"/>
-  <title value="DeviceDispense Status Code System"/>
-  <status value="draft"/>
+  <name value="DeviceDispenseStatus"/>
+  <title value="DeviceDispense Status"/>
+  <status value="active"/>
   <experimental value="false"/>
   <description value="DeviceDispense Status"/>
   <caseSensitive value="true"/>

@@ -1,0 +1,1 @@
+The OO Incubator contains a direct port of content as it existed before the FHIR R6 1st Full Ballot (6.0.0-ballot4). Further work has since been applied to transform and adjust the Incubator content.

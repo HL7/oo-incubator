@@ -10,9 +10,9 @@
     <value value="urn:oid:2.16.840.1.113883.4.642.4.2110"/>
   </identifier>
   <version value="6.0.0"/>
-  <name value="DeviceDispenseStatusReasonCS"/>
-  <title value="DeviceDispense Status Reason Code System"/>
-  <status value="draft"/>
+  <name value="DeviceDispenseStatusReason"/>
+  <title value="DeviceDispense Status Reason"/>
+  <status value="active"/>
   <experimental value="false"/>
   <description value="DeviceDispense Status Reason Codes"/>
   <caseSensitive value="true"/>

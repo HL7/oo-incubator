@@ -5,14 +5,15 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: hl7.fhir.uv.oo-incubator
 canonical: http://hl7.org/fhir/uv/oo-incubator
+packageId: hl7.fhir.uv.oo-incubator
 url: http://hl7.org/fhir/uv/oo-incubator/ImplementationGuide/hl7.fhir.uv.oo-incubator
 name: OOIncubatorImplementationGuide
 title: OO Incubator Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
-status: draft # draft | active | retired | unknown
+status: active # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 6.0.0-ballot3 # https://www.hl7.org/fhir/valueset-FHIR-version.html
-copyrightYear: 2025+
+copyrightYear: 2026+
 releaseLabel: ci-build
 license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 # https://www.hl7.org/fhir/valueset-jurisdiction.html
@@ -24,7 +25,7 @@ contact:
       - system: url
         value: http://www.hl7.org/Special/committees/orders
       - system: email
-        value: oo@lists.HL7.org
+        value: ord@lists.HL7.org
 extension:
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
     valueCode: trial-use
@@ -77,6 +78,14 @@ extension:
 #
 
 parameters:
+  apply-publisher: true
+  shownav: false
+  default-version: true
+  special-url-base: http://hl7.org/fhir
+  pin-canonicals: pin-multiples
+  path-history:
+    - http://hl7.org/fhir/uv/oo-incubator/history.html
+    
   path-resource:
     - input/resources/transport
     - input/resources/biologicallyderivedproductdispense
@@ -87,9 +96,10 @@ parameters:
     - input/resources/supplydelivery
     - input/resources/supplyrequest
 
-  path-history:
-    - http://hl7.org/fhir/uv/oo-incubator/history.html
-
+# Need to explicitly include the structure definitions as an additional-resource
+# otherwise you get an ambiguous type error. It is possible this is caused by 
+# FHIR Core 6.0.0-ballot3 still containing the resources, meaning in a future 
+# release we could potentially eliminate this configuration.
   additional-resource:
     - input/resources/transport/StructureDefinition-Transport.xml
     - input/resources/biologicallyderivedproductdispense/StructureDefinition-BiologicallyDerivedProductDispense.xml
@@ -99,24 +109,80 @@ parameters:
     - input/resources/inventoryreport/StructureDefinition-InventoryReport.xml
     - input/resources/supplydelivery/StructureDefinition-SupplyDelivery.xml
     - input/resources/supplyrequest/StructureDefinition-SupplyRequest.xml
-
-  special-url-base: http://hl7.org/fhir
+    
+# Need to include specific reference to the resource examples otherwise 
+# they do not end up on the Examples tab on the resource page
+resources:
+  BiologicallyDerivedProductDispense/example:
+    name: BiologicallyDerivedProductDispense example
+    description: An example BiologicallyDerivedProductDispense resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense
+  DeviceDispense/example:
+    name: DeviceDispense example
+    description: An example DeviceDispense resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/DeviceDispense
+  DeviceUsage/example:
+    name: DeviceUsage example
+    description: An example DeviceUsage resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/DeviceUsage
+  InventoryItem/example:
+    name: InventoryItem example
+    description: An example InventoryItem resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/InventoryItem
+  InventoryReport/example:
+    name: InventoryReport example
+    description: An example InventoryReport resource
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/InventoryReport
+  Transport/simpledelivery:
+    name: Transport simple delivery example
+    description: An example Transport resource for a simple delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
+  SupplyDelivery/simpledelivery:
+    name: SupplyDelivery simple delivery example
+    description: An example SupplyDelivery resource for a simple delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
+  SupplyDelivery/mphodelivery:
+    name: SupplyDelivery blood product delivery example
+    description: An example SupplyDelivery resource for a blood product delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
+  SupplyDelivery/ISBT128:
+    name: SupplyDelivery blood product delivery (ISBT128) example
+    description: An example SupplyDelivery resource for a blood product (ISBT128) delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
+  SupplyDelivery/pumpdelivery:
+    name: SupplyDelivery pump delivery example
+    description: An example SupplyDelivery resource for a pump delivery
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
+  SupplyRequest/simpleorder:
+    name: SupplyRequest simple order example
+    description: An example SupplyRequest resource for a simple order
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyRequest
+    
+menu:
+  Home: index.html
+  Resources:
+    Transport: StructureDefinition-Transport.html
+    BiologicallyDerivedProductDispense: StructureDefinition-BiologicallyDerivedProductDispense.html
+    DeviceDispense: StructureDefinition-DeviceDispense.html
+    DeviceUsage: StructureDefinition-DeviceUsage.html
+    InventoryItem: StructureDefinition-InventoryItem.html
+    InventoryReport: StructureDefinition-InventoryReport.html
+    SupplyDelivery: StructureDefinition-SupplyDelivery.html
+    SupplyRequest: StructureDefinition-SupplyRequest.html
+  Profiles:
+    MedicalProductsOfHumanOrigin: StructureDefinition-medicalproductofhumanorigin.html
+  FHIR Artifacts:
+    Artifacts: artifacts.html
+    Change Log: changes.html
+    Still To Do: todo.html
 
 pages:
   index.md:
     title: IG Home
   changes.md:
     title: Change Log
-
-menu:
-  Home: index.html
-  FHIR Artifacts:
-    Artifacts: artifacts.html
-    Change Log: changes.html
-
-# ╭─────────────────────────────────────────────────────────────────────────────────────────────────╮
-# │  Additional paths for resources                                                                 │
-# ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+  todo.md:
+    title: Still To Do
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
@@ -168,53 +234,6 @@ menu:
 # The following are simple examples to demonstrate what this might
 # look like:
 #
-
-resources:
-  BiologicallyDerivedProductDispense/example:
-    name: BiologicallyDerivedProductDispense example
-    description: An example BiologicallyDerivedProductDispense resource
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense
-  DeviceDispense/example:
-    name: DeviceDispense example
-    description: An example DeviceDispense resource
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/DeviceDispense
-  DeviceUsage/example:
-    name: DeviceUsage example
-    description: An example DeviceUsage resource
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/DeviceUsage
-  InventoryItem/example:
-    name: InventoryItem example
-    description: An example InventoryItem resource
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/InventoryItem
-  InventoryReport/example:
-    name: InventoryReport example
-    description: An example InventoryReport resource
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/InventoryReport
-  Transport/simpledelivery:
-    name: Transport simple delivery example
-    description: An example Transport resource for a simple delivery
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
-  SupplyDelivery/simpledelivery:
-    name: SupplyDelivery simple delivery example
-    description: An example SupplyDelivery resource for a simple delivery
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
-  SupplyDelivery/mphodelivery:
-    name: SupplyDelivery blood product delivery example
-    description: An example SupplyDelivery resource for a blood product delivery
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
-  SupplyDelivery/ISBT128:
-    name: SupplyDelivery blood product delivery (ISBT128) example
-    description: An example SupplyDelivery resource for a blood product (ISBT128) delivery
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
-  SupplyDelivery/pumpdelivery:
-    name: SupplyDelivery pump delivery example
-    description: An example SupplyDelivery resource for a pump delivery
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyDelivery
-  SupplyRequest/simpleorder:
-    name: SupplyRequest simple order example
-    description: An example SupplyRequest resource for a simple order
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyRequest
-
 #   Patient/bad-example: omit
 #
 #

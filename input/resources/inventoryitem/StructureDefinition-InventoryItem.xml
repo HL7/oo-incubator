@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir">
+<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/InventoryItem|0.1.0">
   <id value="InventoryItem"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
     <valueCode value="draft"/>
@@ -18,9 +18,9 @@
     <valueCode value=".status = entered-in-error"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/InventoryItem"/>
-  <version value="6.0.0"/>
+  <version value="0.1.0"/>
   <name value="InventoryItem"/>
-  <status value="draft"/>
+  <status value="active"/>
   <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>
   <contact>
@@ -100,7 +100,7 @@
           <valueString value="InventoryItemStatus"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
-          <valueString value="A coded concept specifying the status of the inventory item."/>
+          <valueMarkdown value="A coded concept specifying the status of the inventory item."/>
         </extension>
         <strength value="required"/>
         <description value="Status of the inventory item."/>
@@ -155,7 +155,7 @@
           <valueString value="NameType"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
-          <valueString value="The type of name for the item"/>
+          <valueMarkdown value="The type of name for the item"/>
         </extension>
         <strength value="preferred"/>
         <description value="Name types."/>
@@ -177,7 +177,7 @@
           <valueString value="NameLanguage"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
-          <valueString value="The languages for an item name"/>
+          <valueMarkdown value="The languages for an item name"/>
         </extension>
         <strength value="required"/>
         <description value="Name languages."/>
@@ -250,7 +250,7 @@
           <valueString value="ItemDescriptionLanguage"/>
         </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
-          <valueString value="The languages for a description of an item"/>
+          <valueMarkdown value="The languages for a description of an item"/>
         </extension>
         <strength value="required"/>
         <description value="Description languages."/>
@@ -390,7 +390,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem|0.1.0"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationKnowledge"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
