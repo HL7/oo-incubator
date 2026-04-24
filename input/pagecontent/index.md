@@ -23,3 +23,5 @@ These profiles do not have a parent Resource in the Incubator and instead furthe
 <table class="grid">
 	{% include table-profiles-en.xhtml %}
 </table>
+
+{% include ip-statements.xhtml %}

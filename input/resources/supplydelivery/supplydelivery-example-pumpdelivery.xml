@@ -17,9 +17,9 @@
 	</identifier>
 
 	<status value="in-progress"/>
-	<patient>
+	<subject>
 		<display value="Mr. Belpit"/>
-	</patient>
+	</subject>
 	<stage>
 		<coding>
 			<system value="http://hl7.org/fhir/supplydelivery-stage"/>

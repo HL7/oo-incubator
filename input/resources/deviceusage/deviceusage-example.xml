@@ -7,7 +7,7 @@
 	</identifier>
 	<status value="active"/>
 	<subject>
-		<reference value="Patient/example"/>
+		<reference value="Patient/pat-example"/>
 	</subject>
 	<device>
 		<concept>
@@ -16,7 +16,7 @@
 	</device>
 	<reason>
     <reference>
-  		<reference value="Condition/example"/>
+  		<reference value="Condition/cond-example"/>
 	  	<display value="PHx of Appendectomy (surgery)"/>
     </reference>
 	</reason>
