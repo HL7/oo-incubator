@@ -6,7 +6,7 @@ Description: "This profile is designed for biologically derived products that ar
 
 * ^url = "http://hl7.org/fhir/StructureDefinition/medicalproductofhumanorigin"
 * ^version = "6.0.0"
-* ^status = #draft
+* ^status = #active
 * ^experimental = false
 * ^date = "2024-10-08T00:00:00+00:00"
 * ^publisher = "HL7 International / Orders and Observations"
@@ -16,7 +16,7 @@ Description: "This profile is designed for biologically derived products that ar
 
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm].valueInteger = 1
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-wg].valueCode = #oo
-* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #draft
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status].valueCode = #trial-use
 
 * ^mapping[0].identity = "workflow"
 * ^mapping[=].uri = "http://hl7.org/fhir/workflow"
