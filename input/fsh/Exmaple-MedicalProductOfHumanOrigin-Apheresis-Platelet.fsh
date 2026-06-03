@@ -4,18 +4,18 @@ Usage: #example
 Description: "Example of a Medical Product of Human Origin representing an irradiated leukocyte-reduced apheresis platelet product identified using ISBT 128 coding."
 * meta.profile = "http://hl7.org/fhir/StructureDefinition/medicalproductofhumanorigin"
 
-* productCategory[MPHOCode].coding.system = "http://hl7.org/fhir/product-category"
-* productCategory[MPHOCode].coding.code = #mpho
-* productCategory[MPHOCode].text = "Medical Product of Human Origin"
+* productCategory[0].coding.system = "http://hl7.org/fhir/product-category"
+* productCategory[0].coding.code = #mpho
+* productCategory[0].text = "Medical Product of Human Origin"
 
-* productCode.coding.system = "https://www.isbt128.org/uri/ProductDescriptionCode"
+* productCode.coding.system = "https://www.isbt128.org/uri/productdescriptioncode"
 * productCode.coding.code = #E3046
 * productCode.text = "Apheresis Platelets, Irradiated, Leukocyte reduced"
 
-* identifier.system = "https://www.isbt128.org/uri/MPHOUniqueIdentifier"
-* identifier.value = "00000E3046A999924123457000000"
+* identifier[MPHOUniqueIdentifier].system = "https://www.isbt128.org/uri/mphouniqueidentifier"
+* identifier[MPHOUniqueIdentifier].value = "00000E3046A999924123457000000"
 
-* biologicalSourceEvent.system = "https://www.isbt128.org/uri/DonationIdentificationNumber"
+* biologicalSourceEvent.system = "https://www.isbt128.org/uri/donationidentificationnumber"
 * biologicalSourceEvent.value = "A999924123457"
 
 * division = "000000"
