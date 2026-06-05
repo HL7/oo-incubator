@@ -4,7 +4,7 @@ Id: medicalproductofhumanorigin
 Title: "MedicalProductOfHumanOrigin"
 Description: "This profile is designed for biologically derived products that are derived from a human donor and intended for clinical application in a human recipient. Donor and recipient might, or might not, be the same individual. Products of this nature are referred to as medical products of human origin (MPHO) and have specific traceability requirements to ensure that the bi-directional link between donor and recipient is maintained. The profile specifies the essential identifiers for traceability as required elements."
 
-* ^url = "http://hl7.org/fhir/StructureDefinition/medicalproductofhumanorigin"
+* ^url = "http://hl7.org/fhir/uv/oo-incubator/StructureDefinition/medicalproductofhumanorigin"
 * ^version = "6.0.0"
 * ^status = #active
 * ^experimental = false

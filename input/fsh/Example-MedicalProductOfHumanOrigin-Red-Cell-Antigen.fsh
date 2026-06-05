@@ -2,7 +2,7 @@ Instance: example-red-cell-antigen
 InstanceOf: MedicalProductOfHumanOrigin
 Usage: #example
 Description: "Example of a Medical Product of Human Origin representing an irradiated red blood cell product with ISBT 128 coding and red cell antigen characterization."
-* meta.profile = "http://hl7.org/fhir/StructureDefinition/medicalproductofhumanorigin"
+* meta.profile = "http://hl7.org/fhir/uv/oo-incubator/StructureDefinition/medicalproductofhumanorigin"
 
 * productCategory[0].coding.system = "http://hl7.org/fhir/product-category"
 * productCategory[0].coding.code = #mpho
