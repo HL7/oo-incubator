@@ -157,6 +157,10 @@ resources:
     name: SupplyRequest simple order example
     description: An example SupplyRequest resource for a simple order
     exampleCanonical: http://hl7.org/fhir/StructureDefinition/SupplyRequest
+  Observation/compound-numeric-blood-pressure:
+    name: Compound numeric blood pressure example
+    description: An Observation example for compound numeric blood pressure conforming to the FHIR Vital Signs Base and Blood Pressure profiles.
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/bp
     
 menu:
   Home: index.html
