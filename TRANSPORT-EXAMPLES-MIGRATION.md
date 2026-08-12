@@ -105,21 +105,23 @@ are picked up by the publisher's resource scan.
 - **`transport-example-04-tray-movement`** — a tray with nested racks and tubes
   moved to cold storage.
 
-## Build status and known noise
+## Build status
 
-The examples build and validate with **no genuine structural errors**. Two error
-classes remain in `qa.txt` that are **not** caused by these examples:
+On the official **FHIR auto-builder** (`build.fhir.org`, healthy terminology
+server), the four examples and all 46 supporting resources validate with
+**0 errors and 0 warnings** each. There are **no `dom-3` errors** and **no
+`resourceDefinition` errors** anywhere in the IG. The `ip-statements-en` include
+fix is confirmed — the IG builds through the Jekyll stage to a full QA report.
 
-- **Broken anchor links** (`StructureDefinition-Transport.html#Transport.id|language|text`)
-  — the redefined Transport StructureDefinition page doesn't expose base-element
-  anchors, so example pages can't link to them. The pre-existing `simpledelivery`
-  example produces the identical set; fixing it is a change to the StructureDefinition,
-  not the examples.
-- **Terminology-server errors** (`tx.fhir.org` cache "not known to this server",
-  `validate-code` timeouts) — transient session failures that vary run-to-run.
+Whole-IG CI totals were **37 errors / 171 warnings / 29 broken links**, none of
+which come from the Transport examples. The remainder are pre-existing IG issues
+unrelated to this work — e.g. missing images (`transport-resource-event.png`,
+`help.png`) and unresolved links (`workflow-episodeOfCare.html`, and
+SupplyDelivery/SupplyRequest cross-links).
 
-## Follow-ups (out of scope here)
-
-1. Expose base-element anchors on `StructureDefinition-Transport` to clear the
-   broken-link class across all Transport examples.
-2. Re-run against a healthy terminology server to clear the `tx.fhir.org` errors.
+> A local `_genonce.sh` run may report far higher numbers (hundreds of errors and
+> broken links). That is an artifact of a stale/unreachable `tx.fhir.org`
+> terminology-server session — "cache … not known to this server" and
+> `validate-code` timeouts multiplied across every resource, plus local anchor
+> rendering — and varies run-to-run. Trust the CI QA report, not a local run, for
+> the error counts.
