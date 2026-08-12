@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns="http://hl7.org/fhir"><id value="t02-truck-0815"/><status value="active"/><type><text value="Specimen courier vehicle"/></type><location><reference value="Location/t02-reference-laboratory"/></location></Device>

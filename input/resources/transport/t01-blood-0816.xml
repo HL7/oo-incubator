@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Specimen xmlns="http://hl7.org/fhir"><id value="t01-blood-0816"/><status value="available"/><type><text value="Blood specimen"/></type><subject><reference value="Patient/t01-patient-0816"/></subject><container><device><reference value="Device/t01-tube-61"/></device></container></Specimen>

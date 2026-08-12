@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transport resourceDefinition="http://hl7.org/fhir/StructureDefinition/Transport|0.1.0" xmlns="http://hl7.org/fhir">
+  <id value="transport-example-04-tray-movement"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Tray 42, containing two racks and their specimen tubes, was moved from Desk 7-21 to cold storage.</div></text>
+  <identifier><system value="http://example.org/transports"/><value value="TR-TRAY-42-COLD"/></identifier>
+  <status value="completed"/><code><text value="Laboratory tray movement"/></code>
+  <description value="Tray 42, with Rack 4 and Rack 9 and their contained tubes, was moved from Desk 7-21 to cold storage."/>
+  <focus><reference value="Device/t04-tray-42"/></focus>
+  <period><end value="2026-08-10T14:10:00-05:00"/></period>
+  <note><text value="Movement of the racks and tubes is inferred from the Device.parent hierarchy."/></note>
+  <to><reference value="Location/t04-cold-storage"/></to>
+  <from><reference value="Location/t04-desk-7-21"/></from>
+</Transport>

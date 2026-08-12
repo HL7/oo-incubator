@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns="http://hl7.org/fhir"><id value="t02-shipping-container-42"/><status value="active"/><type><text value="Shipping container"/></type><parent><reference value="Device/t02-truck-0815"/></parent></Device>

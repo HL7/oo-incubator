@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Device xmlns="http://hl7.org/fhir"><id value="t04-rack-9"/><status value="active"/><type><text value="Laboratory specimen rack"/></type><parent><reference value="Device/t04-tray-42"/></parent></Device>
