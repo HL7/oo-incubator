@@ -145,29 +145,25 @@ resources:
     name: Transport - external cooler shipment with temperature readings
     description: A multi-patient temperature-controlled cooler shipment between facilities, with in-transit temperature Observations linked back to the Transport.
     exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
-  Transport/transport-example-03-laboratory-workflow:
-    name: Transport - in-laboratory movement workflow
-    description: An overall in-laboratory specimen route composed of four chained transport legs (priorTransport).
+  Transport/transport-example-03-leg-1-reception-loader:
+    name: Transport - lab workflow leg 1 (reception to bulk loader)
+    description: First leg of the in-laboratory specimen workflow; a self-contained Transport chained to the next leg via priorTransport.
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
+  Transport/transport-example-03-leg-2-loader-buffer:
+    name: Transport - lab workflow leg 2 (bulk loader to buffer)
+    description: Second leg of the in-laboratory specimen workflow; references the prior leg via priorTransport.
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
+  Transport/transport-example-03-leg-3-buffer-analyzer:
+    name: Transport - lab workflow leg 3 (buffer to analyzer)
+    description: Third leg of the in-laboratory specimen workflow; references the prior leg via priorTransport.
+    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
+  Transport/transport-example-03-leg-4-analyzer-fridge:
+    name: Transport - lab workflow leg 4 (analyzer to refrigerated storage)
+    description: Fourth leg of the in-laboratory specimen workflow; references the prior leg via priorTransport.
     exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
   Transport/transport-example-04-tray-movement:
     name: Transport - tray movement with nested racks and tubes
     description: A laboratory tray with nested racks and tubes moved to cold storage, with containment expressed via the Device.parent hierarchy.
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
-  Transport/t03-leg-1-reception-loader:
-    name: Transport leg 1 - reception to bulk loader
-    description: First leg of the in-laboratory specimen route (reception to automation bulk loader).
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
-  Transport/t03-leg-2-loader-buffer:
-    name: Transport leg 2 - bulk loader to buffer
-    description: Second leg of the in-laboratory specimen route (bulk loader to automation buffer).
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
-  Transport/t03-leg-3-buffer-analyzer:
-    name: Transport leg 3 - buffer to analyzer
-    description: Third leg of the in-laboratory specimen route (automation buffer to analyzer hand-off).
-    exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
-  Transport/t03-leg-4-analyzer-fridge:
-    name: Transport leg 4 - analyzer to refrigerated storage
-    description: Fourth leg of the in-laboratory specimen route (analyzer hand-off to refrigerated storage).
     exampleCanonical: http://hl7.org/fhir/StructureDefinition/Transport
   SupplyDelivery/simpledelivery:
     name: SupplyDelivery simple delivery example

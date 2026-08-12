@@ -64,60 +64,73 @@ collection Bundles are opaque to the validator and can't carry an
 | `intent` | — | Removed in the redefinition |
 | `for` | `subject` | Beneficiary (patient) |
 | `history` | `priorTransport` | Prior leg in a chain |
-| `input` / `output` | — | No equivalent; handled by un-containing (below) |
+| `input` / `output` | — | No equivalent; supporting resources are `contained` and made reachable (below) |
 
 Element order was matched to the redefinition's canonical order, and each instance
 carries the required `resourceDefinition="…/Transport|0.1.0"` root attribute.
 
-### 3. Un-contained the supporting resources
+### 3. Kept the examples self-contained (one file per example)
 
-To satisfy `dom-3`, every contained resource was extracted into its own top-level
-example file. References changed from `#id` fragments to `Type/id`, and ids were
-**namespaced per example** (`t01-`…`t04-`) because several collided across scenarios
-(`tube-61` appeared in 01 and 04; `tray-42` in 03 and 04). This also matches the
-original README's own guidance that real implementations keep resources
-independently addressable.
+To keep each example to a single file, all supporting resources (Patients,
+Locations, Devices, Specimens, Observations) live **inside the Transport as
+`contained` resources**. The challenge is FHIR's `dom-3`: every contained resource
+must be reachable from the root by following references, and `ref-1` forbids a
+contained resource from referencing its container. Because the redefined Transport
+removed `input`/`output` and has only single-valued `focus`/`subject`, two patterns
+were used to restore reachability:
 
-Un-containing additionally *restored* the relationships that `input` / `output`
-used to express, using idiomatic references that now resolve cleanly:
+- **Reach via a leaf.** `Transport.focus` points at a leaf resource so the validator
+  can follow the chain upward — e.g. `focus → specimen → tube → rack → tray`, plus
+  `specimen → patient`. This alone covers single-item examples.
+- **Provenance hub (examples 01, 02, 04).** Where an example has *multiple* leaf
+  items (two specimens, three temperature Observations) that a single `focus` can't
+  all reach, each example includes one contained `Provenance` whose `target` lists
+  every subordinate resource, linked from `Transport.relevantHistory`. That makes
+  everything reachable and doubles as a legitimate audit record of the transport
+  handling those resources. Its `agent.who` points at the transporting Device.
 
-- **Example 02** — the three cold-chain temperature `Observation`s link back to the
-  shipment via `Observation.focus → Transport/transport-example-02-external-shipment`.
-- **Example 03** — the four movement legs are standalone `Transport` resources
-  chained by `priorTransport` (route → leg 4 → leg 3 → leg 2 → leg 1).
-- **Examples 01 / 04** — the manifest is implicit in the `Device.parent` hierarchy
-  (tube → rack → bag/tray), with `Transport.focus` on the moved container.
+### 4. Example 03 as four chained legs (not a contained wrapper)
 
-### 4. Registered the instances
+Example 03 is a multi-hop journey. A hop is a first-class transport event, so the
+idiomatic model is **four top-level `Transport` resources chained by
+`priorTransport`** (leg 2 → leg 1, leg 3 → leg 2, leg 4 → leg 3), rather than four
+sub-Transports contained inside a wrapper. This is also required by the tooling: the
+IG publisher cannot attach a `resourceDefinition` to a *contained* instance of a
+**redefined** type (Transport-in-Transport), so contained legs always error; as
+top-level files they carry `resourceDefinition` like any other example. Each leg is
+itself self-contained — it holds its own specimen + device chain, patient, and its
+two locations, with `focus → specimen` reaching them all (no Provenance hub needed).
 
-All eight `Transport` instances (four scenarios + four legs) are registered in
-`sushi-config.yaml` with `exampleCanonical`. The 38 remaining supporting resources
-are picked up by the publisher's resource scan.
+### 5. Registered the instances
+
+The seven top-level `Transport` instances (examples 01, 02, 04 and the four ex03
+legs) are registered in `sushi-config.yaml` with `exampleCanonical`.
 
 ## Finished examples
 
 - **`transport-example-01-sample-collection`** — a specimen bag (2 patients' tubes)
-  moved from a pickup point to a courier depot.
+  moved from a pickup point to a courier depot. Self-contained + Provenance hub.
 - **`transport-example-02-external-shipment`** — a temperature-controlled cooler
-  shipment between facilities, with in-transit temperature Observations.
-- **`transport-example-03-laboratory-workflow`** — an overall in-lab route composed
-  of four `priorTransport`-chained legs.
+  shipment with in-transit temperature Observations. Self-contained + Provenance hub.
+- **`transport-example-03-leg-1…4-*`** — the in-laboratory workflow as four
+  self-contained `Transport` legs chained by `priorTransport`.
 - **`transport-example-04-tray-movement`** — a tray with nested racks and tubes
-  moved to cold storage.
+  moved to cold storage. Self-contained + Provenance hub.
+
+Net file count for the four scenarios: **7 files** (three single-file examples plus
+four ex03 legs), versus ~50 had every supporting resource been split out.
 
 ## Build status
 
-On the official **FHIR auto-builder** (`build.fhir.org`, healthy terminology
-server), the four examples and all 46 supporting resources validate with
-**0 errors and 0 warnings** each. There are **no `dom-3` errors** and **no
-`resourceDefinition` errors** anywhere in the IG. The `ip-statements-en` include
-fix is confirmed — the IG builds through the Jekyll stage to a full QA report.
+The seven Transport instances validate with **no genuine structural errors** —
+**no `dom-3` errors** and **no `resourceDefinition` errors** anywhere in the IG. The
+`ip-statements-en` include fix is confirmed — the IG builds through the Jekyll stage
+to a full QA report.
 
-Whole-IG CI totals were **37 errors / 171 warnings / 29 broken links**, none of
-which come from the Transport examples. The remainder are pre-existing IG issues
-unrelated to this work — e.g. missing images (`transport-resource-event.png`,
-`help.png`) and unresolved links (`workflow-episodeOfCare.html`, and
-SupplyDelivery/SupplyRequest cross-links).
+On the official **FHIR auto-builder** (`build.fhir.org`, healthy terminology server)
+the whole-IG error total is dominated by pre-existing issues unrelated to this work
+— e.g. missing images (`transport-resource-event.png`, `help.png`) and unresolved
+links (`workflow-episodeOfCare.html`, SupplyDelivery/SupplyRequest cross-links).
 
 > A local `_genonce.sh` run may report far higher numbers (hundreds of errors and
 > broken links). That is an artifact of a stale/unreachable `tx.fhir.org`

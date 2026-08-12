@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Device xmlns="http://hl7.org/fhir"><id value="t02-cooler-2"/><status value="active"/><type><text value="Temperature-controlled specimen cooler"/></type><parent><reference value="Device/t02-shipping-container-42"/></parent></Device>

@@ -2,16 +2,55 @@
 <Transport resourceDefinition="http://hl7.org/fhir/StructureDefinition/Transport|0.1.0" xmlns="http://hl7.org/fhir">
   <id value="transport-example-02-external-shipment"/>
   <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Shipping Container 42 transported Cooler 2 and specimens from two patients from the collection center to the reference laboratory. The cooler temperature logger recorded 4.2 °C at departure, 5.1 °C in transit, and 4.8 °C at arrival, within the required 2 °C to 8 °C range.</div></text>
+  <contained><Device><id value="t02-box-1"/><status value="active"/><type><text value="Secondary specimen box"/></type><parent><reference value="#t02-cooler-2"/></parent></Device></contained>
+  <contained><Location><id value="t02-collection-center"/><status value="active"/><name value="Community Collection Center"/></Location></contained>
+  <contained><Device><id value="t02-cooler-2"/><status value="active"/><type><text value="Temperature-controlled specimen cooler"/></type><parent><reference value="#t02-shipping-container-42"/></parent></Device></contained>
+  <contained><Patient><id value="t02-patient-1001"/></Patient></contained>
+  <contained><Patient><id value="t02-patient-1002"/></Patient></contained>
+  <contained><Location><id value="t02-reference-laboratory"/><status value="active"/><name value="Reference Laboratory Receiving"/></Location></contained>
+  <contained><Device><id value="t02-shipping-container-42"/><status value="active"/><type><text value="Shipping container"/></type><parent><reference value="#t02-truck-0815"/></parent></Device></contained>
+  <contained><Specimen><id value="t02-specimen-1001"/><status value="available"/><type><text value="Serum specimen"/></type><subject><reference value="#t02-patient-1001"/></subject><container><device><reference value="#t02-tube-1001"/></device></container></Specimen></contained>
+  <contained><Specimen><id value="t02-specimen-1002"/><status value="available"/><type><text value="Plasma specimen"/></type><subject><reference value="#t02-patient-1002"/></subject><container><device><reference value="#t02-tube-1002"/></device></container></Specimen></contained>
+  <contained><Device><id value="t02-temp-logger-42"/><status value="active"/><type><text value="Transport temperature data logger"/></type><parent><reference value="#t02-cooler-2"/></parent></Device></contained>
+  <contained><Observation>
+      <id value="t02-temperature-arrival"/><status value="final"/>
+      <code><coding><system value="http://example.org/codes/observation"/><code value="transport-container-temperature"/><display value="Transport container temperature"/></coding><text value="Cooler temperature at arrival"/></code>
+      <subject><reference value="#t02-cooler-2"/></subject><effectiveDateTime value="2026-08-10T12:25:00-05:00"/>
+      <valueQuantity><value value="4.8"/><unit value="°C"/><system value="http://unitsofmeasure.org"/><code value="Cel"/></valueQuantity>
+      <device><reference value="#t02-temp-logger-42"/></device>
+      <referenceRange><low><value value="2"/><unit value="°C"/><system value="http://unitsofmeasure.org"/><code value="Cel"/></low><high><value value="8"/><unit value="°C"/><system value="http://unitsofmeasure.org"/><code value="Cel"/></high><text value="Required transport range: 2 °C to 8 °C"/></referenceRange>
+    </Observation></contained>
+  <contained><Observation>
+      <id value="t02-temperature-midpoint"/><status value="final"/>
+      <code><coding><system value="http://example.org/codes/observation"/><code value="transport-container-temperature"/><display value="Transport container temperature"/></coding><text value="Cooler temperature in transit"/></code>
+      <subject><reference value="#t02-cooler-2"/></subject><effectiveDateTime value="2026-08-10T11:15:00-05:00"/>
+      <valueQuantity><value value="5.1"/><unit value="°C"/><system value="http://unitsofmeasure.org"/><code value="Cel"/></valueQuantity>
+      <device><reference value="#t02-temp-logger-42"/></device>
+      <referenceRange><low><value value="2"/><unit value="°C"/><system value="http://unitsofmeasure.org"/><code value="Cel"/></low><high><value value="8"/><unit value="°C"/><system value="http://unitsofmeasure.org"/><code value="Cel"/></high><text value="Required transport range: 2 °C to 8 °C"/></referenceRange>
+    </Observation></contained>
+  <contained><Observation>
+      <id value="t02-temperature-start"/><status value="final"/>
+      <code><coding><system value="http://example.org/codes/observation"/><code value="transport-container-temperature"/><display value="Transport container temperature"/></coding><text value="Cooler temperature at departure"/></code>
+      <subject><reference value="#t02-cooler-2"/></subject><effectiveDateTime value="2026-08-10T10:00:00-05:00"/>
+      <valueQuantity><value value="4.2"/><unit value="°C"/><system value="http://unitsofmeasure.org"/><code value="Cel"/></valueQuantity>
+      <device><reference value="#t02-temp-logger-42"/></device>
+      <referenceRange><low><value value="2"/><unit value="°C"/><system value="http://unitsofmeasure.org"/><code value="Cel"/></low><high><value value="8"/><unit value="°C"/><system value="http://unitsofmeasure.org"/><code value="Cel"/></high><text value="Required transport range: 2 °C to 8 °C"/></referenceRange>
+    </Observation></contained>
+  <contained><Device><id value="t02-truck-0815"/><status value="active"/><type><text value="Specimen courier vehicle"/></type><location><reference value="#t02-reference-laboratory"/></location></Device></contained>
+  <contained><Device><id value="t02-tube-1001"/><status value="active"/><type><text value="Specimen tube"/></type><parent><reference value="#t02-box-1"/></parent></Device></contained>
+  <contained><Device><id value="t02-tube-1002"/><status value="active"/><type><text value="Specimen tube"/></type><parent><reference value="#t02-box-1"/></parent></Device></contained>
+  <contained><Provenance><id value="t02-provenance"/><target><reference value="#t02-box-1"/></target><target><reference value="#t02-collection-center"/></target><target><reference value="#t02-cooler-2"/></target><target><reference value="#t02-patient-1001"/></target><target><reference value="#t02-patient-1002"/></target><target><reference value="#t02-reference-laboratory"/></target><target><reference value="#t02-shipping-container-42"/></target><target><reference value="#t02-specimen-1001"/></target><target><reference value="#t02-specimen-1002"/></target><target><reference value="#t02-temp-logger-42"/></target><target><reference value="#t02-temperature-arrival"/></target><target><reference value="#t02-temperature-midpoint"/></target><target><reference value="#t02-temperature-start"/></target><target><reference value="#t02-truck-0815"/></target><target><reference value="#t02-tube-1001"/></target><target><reference value="#t02-tube-1002"/></target><recorded value="2026-08-10T12:00:00-05:00"/><agent><who><reference value="#t02-truck-0815"/></who></agent></Provenance></contained>
   <identifier><system value="http://example.org/transports"/><value value="SHIPMENT-42"/></identifier>
   <status value="completed"/>
   <code><text value="Inter-facility specimen shipment"/></code>
   <description value="Shipping Container 42, containing Cooler 2, was transported from the collection center to the reference laboratory; logged cooler temperatures remained within the required 2 °C to 8 °C range."/>
-  <focus><reference value="Device/t02-shipping-container-42"/></focus>
+  <focus><reference value="#t02-shipping-container-42"/></focus>
   <period>
     <start value="2026-08-10T10:00:00-05:00"/>
     <end value="2026-08-10T12:30:00-05:00"/>
   </period>
   <authoredOn value="2026-08-10T10:00:00-05:00"/>
-  <to><reference value="Location/t02-reference-laboratory"/></to>
-  <from><reference value="Location/t02-collection-center"/></from>
+  <relevantHistory><reference value="#t02-provenance"/></relevantHistory>
+  <to><reference value="#t02-reference-laboratory"/></to>
+  <from><reference value="#t02-collection-center"/></from>
 </Transport>

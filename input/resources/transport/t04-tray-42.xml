@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Device xmlns="http://hl7.org/fhir"><id value="t04-tray-42"/><status value="active"/><type><text value="Laboratory tray"/></type><location><reference value="Location/t04-cold-storage"/></location></Device>

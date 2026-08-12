@@ -5,16 +5,27 @@
     <status value="generated"/>
     <div xmlns="http://www.w3.org/1999/xhtml">Bag 4, containing specimens from patients 0815 and 0816, was moved from Pickup X to the courier depot.</div>
   </text>
+  <contained><Device><id value="t01-bag-4"/><status value="active"/><type><text value="Specimen transport bag"/></type><location><reference value="#t01-courier-depot"/></location></Device></contained>
+  <contained><Specimen><id value="t01-blood-0816"/><status value="available"/><type><text value="Blood specimen"/></type><subject><reference value="#t01-patient-0816"/></subject><container><device><reference value="#t01-tube-61"/></device></container></Specimen></contained>
+  <contained><Location><id value="t01-courier-depot"/><status value="active"/><name value="Courier Depot"/></Location></contained>
+  <contained><Patient><id value="t01-patient-0815"/></Patient></contained>
+  <contained><Patient><id value="t01-patient-0816"/></Patient></contained>
+  <contained><Location><id value="t01-pickup-x"/><status value="active"/><name value="Specimen Pickup X"/></Location></contained>
+  <contained><Device><id value="t01-tube-11"/><status value="active"/><type><text value="Specimen tube"/></type><parent><reference value="#t01-bag-4"/></parent></Device></contained>
+  <contained><Device><id value="t01-tube-61"/><status value="active"/><type><text value="Specimen tube"/></type><parent><reference value="#t01-bag-4"/></parent></Device></contained>
+  <contained><Specimen><id value="t01-urine-0815"/><status value="available"/><type><text value="Urine specimen"/></type><subject><reference value="#t01-patient-0815"/></subject><container><device><reference value="#t01-tube-11"/></device></container></Specimen></contained>
+  <contained><Provenance><id value="t01-provenance"/><target><reference value="#t01-bag-4"/></target><target><reference value="#t01-blood-0816"/></target><target><reference value="#t01-courier-depot"/></target><target><reference value="#t01-patient-0815"/></target><target><reference value="#t01-patient-0816"/></target><target><reference value="#t01-pickup-x"/></target><target><reference value="#t01-tube-11"/></target><target><reference value="#t01-tube-61"/></target><target><reference value="#t01-urine-0815"/></target><recorded value="2026-08-10T12:00:00-05:00"/><agent><who><reference value="#t01-bag-4"/></who></agent></Provenance></contained>
   <identifier><system value="http://example.org/transports"/><value value="TR-PICKUP-BAG-4"/></identifier>
   <status value="completed"/>
   <code><text value="Courier pickup of specimen bag"/></code>
   <description value="Bag 4, containing specimens from different patients, was moved from Pickup X to the courier depot."/>
-  <focus><reference value="Device/t01-bag-4"/></focus>
+  <focus><reference value="#t01-bag-4"/></focus>
   <period>
     <start value="2026-08-10T09:00:00-05:00"/>
     <end value="2026-08-10T09:20:00-05:00"/>
   </period>
   <authoredOn value="2026-08-10T09:00:00-05:00"/>
-  <to><reference value="Location/t01-courier-depot"/></to>
-  <from><reference value="Location/t01-pickup-x"/></from>
+  <relevantHistory><reference value="#t01-provenance"/></relevantHistory>
+  <to><reference value="#t01-courier-depot"/></to>
+  <from><reference value="#t01-pickup-x"/></from>
 </Transport>

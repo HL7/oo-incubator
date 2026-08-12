@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Device xmlns="http://hl7.org/fhir"><id value="t03-tube-2001"/><status value="active"/><type><text value="Specimen tube"/></type><parent><reference value="Device/t03-rack-3"/></parent></Device>
