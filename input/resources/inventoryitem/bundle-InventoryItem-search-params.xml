@@ -47,6 +47,27 @@
   <entry>
     <resource>
       <SearchParameter>
+        <id value="InventoryItem-type"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="InventoryItem.classification.type"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-type"/>
+        <name value="InventoryItemTypeSearchParameter"/>
+        <description value="The type of inventory item"/>
+        <status value="active"/>
+        <code value="type"/>
+        <type value="token"/>
+        <expression value="InventoryItem.classification.type"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
         <id value="InventoryItem-status"/>
         <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
           <valueCode value="trial-use"/>

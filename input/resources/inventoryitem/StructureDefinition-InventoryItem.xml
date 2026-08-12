@@ -118,6 +118,39 @@
       </type>
       <isSummary value="true"/>
     </element>
+    <element id="InventoryItem.classification">
+      <path value="InventoryItem.classification"/>
+      <short value="What kind of inventory item this is"/>
+      <comment value="In this element various classifications can be used."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="InventoryItem.classification.type">
+      <path value="InventoryItem.classification.type"/>
+      <short value="A classification of the inventory item"/>
+      <definition value="A classification or nomenclature for the inventory item."/>
+      <comment value="In this element various classification systems may be used."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <isSummary value="true"/>
+    </element>
+    <element id="InventoryItem.classification.justification">
+      <path value="InventoryItem.classification.justification"/>
+      <short value="Further information qualifying this classification of the inventoryItem"/>
+      <definition value="Additional information supporting the classification of the inventoryItem."/>
+      <min value="0"/>
+      <max value="*"/>
+      <type>
+        <code value="RelatedArtifact"/>
+      </type>
+    </element>
     <element id="InventoryItem.code">
       <path value="InventoryItem.code"/>
       <short value="Code designating the specific type of item"/>
@@ -179,9 +212,9 @@
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
           <valueMarkdown value="The languages for an item name"/>
         </extension>
-        <strength value="required"/>
+        <strength value="preferred"/>
         <description value="Name languages."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/languages"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/all-languages"/>
       </binding>
     </element>
     <element id="InventoryItem.name.name">
@@ -252,9 +285,9 @@
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/binding-definition">
           <valueMarkdown value="The languages for a description of an item"/>
         </extension>
-        <strength value="required"/>
+        <strength value="preferred"/>
         <description value="Description languages."/>
-        <valueSet value="http://hl7.org/fhir/ValueSet/languages"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/all-languages"/>
       </binding>
     </element>
     <element id="InventoryItem.description.description">
