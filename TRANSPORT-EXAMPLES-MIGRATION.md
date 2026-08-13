@@ -122,15 +122,18 @@ four ex03 legs), versus ~50 had every supporting resource been split out.
 
 ## Build status
 
-The seven Transport instances validate with **no genuine structural errors** —
-**no `dom-3` errors** and **no `resourceDefinition` errors** anywhere in the IG. The
-`ip-statements-en` include fix is confirmed — the IG builds through the Jekyll stage
-to a full QA report.
+Confirmed on the official **FHIR auto-builder** (`build.fhir.org`, healthy
+terminology server): the seven Transport instances validate with **0 errors and
+0 warnings** each, and there are **no `dom-3` errors** and **no `resourceDefinition`
+errors** anywhere in the IG. The `ip-statements-en` include fix is confirmed — the
+IG builds through the Jekyll stage to a full QA report.
 
-On the official **FHIR auto-builder** (`build.fhir.org`, healthy terminology server)
-the whole-IG error total is dominated by pre-existing issues unrelated to this work
-— e.g. missing images (`transport-resource-event.png`, `help.png`) and unresolved
-links (`workflow-episodeOfCare.html`, SupplyDelivery/SupplyRequest cross-links).
+Whole-IG CI totals: **37 errors / 129 warnings / 29 broken links** — none from the
+Transport examples. The 37 errors are pre-existing issues unrelated to this work —
+missing images (`transport-resource-event.png`, `help.png`) and unresolved links
+(`workflow-episodeOfCare.html`, SupplyDelivery/SupplyRequest cross-links). Moving to
+the self-contained layout (7 files rather than ~50) also reduced whole-IG warnings
+from 171 to 129.
 
 > A local `_genonce.sh` run may report far higher numbers (hundreds of errors and
 > broken links). That is an artifact of a stale/unreachable `tx.fhir.org`
