@@ -31,7 +31,7 @@ These instances can be linked in different ways, depending on the needs of the w
 		<h3>Boundaries and Relationships</h3>
 		<p>The SupplyRequest resource represents an authorization for a supply to be provided.</p>
 
-        <p>The <a href="supplydelivery.html">SupplyDelivery</a> resource documents the movement of supply as a result of the SupplyRequest being acted upon.</p>
+        <p>The <a href="StructureDefinition-SupplyDelivery.html">SupplyDelivery</a> resource documents the movement of supply as a result of the SupplyRequest being acted upon.</p>
 
 
 
@@ -43,7 +43,7 @@ These instances can be linked in different ways, depending on the needs of the w
 		<p>
         For <a href="https://build.fhir.org/ig/HL7/oo-incubator/StructureDefinition-DeviceDispense.html">DeviceDispense</a>, 
 		<a href="https://hl7.org/fhir/medicationdispense.html">MedicationDispense</a>,
-		and <a href="biologicallyderivedproductdispense.html">BiologicallyDerivedProductDispense</a>, a SupplyRequest does not document the formal association of a device, medication, biologically derived product, or supply item to a patient.  The DeviceDispense (or MedicationDispense or BiologicallyDerivceProductDispense) is used to formally document that the device, medication, biologically derived product or supply item is to be used by or for a patient in a medical activity. 
+		and <a href="StructureDefinition-BiologicallyDerivedProductDispense.html">BiologicallyDerivedProductDispense</a>, a SupplyRequest does not document the formal association of a device, medication, biologically derived product, or supply item to a patient.  The DeviceDispense (or MedicationDispense or BiologicallyDerivceProductDispense) is used to formally document that the device, medication, biologically derived product or supply item is to be used by or for a patient in a medical activity. 
 		</p>
 		<p>
         To determine the purchase date, a search of DeviceRequest, SupplyRequest, DeviceDispense, or SupplyDelivery as defined in an implementation guide can be done , as the context of the use case actually determines which date of either resource is considered the purchase date.

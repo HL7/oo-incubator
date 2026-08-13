@@ -33,10 +33,10 @@ The InventoryItem can also be used on its own for inventory specific purposes - 
 <h3>Boundaries and Relationships</h3>
 The InventoryItem resource can be referenced from the following resources:
 <ul>
-<li><strong><a href="inventoryreport.html">InventoryReport</a></strong> - when counting items in an inventory</li>
-<!-- <li><strong><a href="transport.html">Transport</a></strong> - for tracking the transport of inventory items</li> -->
-<li><strong><a href="supplyrequest.html">SupplyRequest</a></strong>- for requesting the supply of inventory items</li>
-<li><strong><a href="supplydelivery.html">SupplyDelivery</a></strong> - for reporting the delivery of inventory items</li>
+<li><strong><a href="StructureDefinition-InventoryReport.html">InventoryReport</a></strong> - when counting items in an inventory</li>
+<!-- <li><strong><a href="StructureDefinition-Transport.html">Transport</a></strong> - for tracking the transport of inventory items</li> -->
+<li><strong><a href="StructureDefinition-SupplyRequest.html">SupplyRequest</a></strong>- for requesting the supply of inventory items</li>
+<li><strong><a href="StructureDefinition-SupplyDelivery.html">SupplyDelivery</a></strong> - for reporting the delivery of inventory items</li>
 <!-- <li><strong><a href="https://hl7.org/fhir/servicerequest.html">ServiceRequest</a></strong> - for example for requesting transport of items</li> -->
 </ul>
 
