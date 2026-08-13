@@ -121,6 +121,7 @@
     <element id="InventoryItem.classification">
       <path value="InventoryItem.classification"/>
       <short value="What kind of inventory item this is"/>
+      <definition value="A classification or nomenclature for the inventory item."/>
       <comment value="In this element various classifications can be used."/>
       <min value="0"/>
       <max value="*"/>

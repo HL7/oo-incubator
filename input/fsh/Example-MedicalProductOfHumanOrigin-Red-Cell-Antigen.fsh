@@ -10,7 +10,7 @@ Description: "Example of a Medical Product of Human Origin representing an irrad
 
 * productCode.coding.system = "https://www.isbt128.org/uri/productdescriptioncode"
 * productCode.coding.code = #E0398
-* productCode.text = " RED BLOOD CELLS|CPD-AS5/450mL/refg|Irradiated|ResLeu: Less than 5E6"
+* productCode.text = "RED BLOOD CELLS|CPD-AS5/450mL/refg|Irradiated|ResLeu: Less than 5E6"
 
 * identifier[MPHOUniqueIdentifier].system = "https://www.isbt128.org/uri/mphouniqueidentifier"
 * identifier[MPHOUniqueIdentifier].value = "00000E0398A999924123456A00000"
