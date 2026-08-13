@@ -214,6 +214,10 @@
         <code value="dateTime"/>
       </type>
       <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.occurrenceDateTime"/>
+      </mapping>
     </element>
     <element id="InventoryReport.reporter">
       <path value="InventoryReport.reporter"/>
@@ -228,6 +232,10 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
       </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.reportedReference"/>
+      </mapping>
     </element>
     <element id="InventoryReport.reportingPeriod">
       <path value="InventoryReport.reportingPeriod"/>
@@ -238,6 +246,10 @@
       <type>
         <code value="Period"/>
       </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.occurrencePeriod"/>
+      </mapping>
     </element>
     <element id="InventoryReport.inventoryListing">
       <path value="InventoryReport.inventoryListing"/>
@@ -260,6 +272,10 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
       </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.location"/>
+      </mapping>
     </element>
     <element id="InventoryReport.inventoryListing.itemStatus">
       <path value="InventoryReport.inventoryListing.itemStatus"/>
@@ -330,6 +346,10 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"/>
       </type>
       <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.product"/>
+      </mapping>
     </element>
     <element id="InventoryReport.note">
       <path value="InventoryReport.note"/>

@@ -12,7 +12,7 @@ title: OO Incubator Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown
 version: 0.1.0
-fhirVersion: 6.0.0-ballot3 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+fhirVersion: 6.0.0-ballot5 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: ci-build
 license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
