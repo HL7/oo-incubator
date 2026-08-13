@@ -120,6 +120,49 @@ legs) are registered in `sushi-config.yaml` with `exampleCanonical`.
 Net file count for the four scenarios: **7 files** (three single-file examples plus
 four ex03 legs), versus ~50 had every supporting resource been split out.
 
+## Search parameters
+
+The examples were reviewed against the existing search parameters. Before this work
+only four were defined (`identifier`, `status`, `patient`, `subject`): `identifier`
+and `status` match every example, but `patient`/`subject` apply only where a
+`subject` is present (the ex03 legs), and the transport-defining elements every
+example populates — `from`, `to`, `period`, `focus`, `code` (and ex03's
+`priorTransport`) — had **no** search coverage at all. Base R6 Transport ships only
+`identifier` and `status`, and its location parameters can't be reused because the
+redefinition renamed `currentLocation`/`requestedLocation` to `from`/`to`.
+
+`bundle-Transport-search-params.xml` now defines ten search parameters — the two
+base parameters plus eight for the redefined R6 elements the examples exercise:
+
+| Code | Type | Expression |
+|------|------|------------|
+| `identifier` | token | `Transport.identifier` |
+| `status` | token | `Transport.status` |
+| `code` | token | `Transport.code` |
+| `date` | date | `Transport.period` |
+| `patient` | reference | `Transport.subject.where(resolve() is Patient)` |
+| `subject` | reference | `Transport.subject` |
+| `from` | reference → Location | `Transport.from` |
+| `to` | reference → Location | `Transport.to` |
+| `focus` | reference | `Transport.focus` |
+| `prior-transport` | reference → Transport | `Transport.priorTransport` |
+
+The location rename in the redefinition (`currentLocation`/`requestedLocation` →
+`from`/`to`) means the base Transport location search parameters do not apply here;
+`from`/`to` replace them.
+
+**Disclaimer — contained examples vs. referenceable search.** The search parameters
+are defined for the **production model**, where the referenced resources (Patients,
+Locations, the transported focus item, prior Transports) are independent,
+server-addressable resources (e.g. `Patient/123`, `Location/456`). The examples in
+this IG instead **contain** those supporting resources so each example is a single
+file, so the reference-based parameters (`patient`, `subject`, `from`, `to`, `focus`,
+`prior-transport`) will **not** resolve to searchable targets *within the examples* —
+their referents are contained (`#local`) resources with no independent identity. This
+is a property of the example packaging only; against production data where those
+resources are referenceable, the parameters resolve and search normally. The same
+note is embedded as a comment in `bundle-Transport-search-params.xml`.
+
 ## Build status
 
 Confirmed on the official **FHIR auto-builder** (`build.fhir.org`, healthy

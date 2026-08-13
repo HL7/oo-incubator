@@ -2,6 +2,21 @@
 
 <Bundle xmlns="http://hl7.org/fhir">
   <id value="Transport-search-params"/>
+  <!--
+    Search parameters are defined for the PRODUCTION model of Transport, in which
+    the referenced resources (Patients, Locations, the transported focus item,
+    prior Transports) are independent, server-addressable resources
+    (e.g. Patient/123, Location/456).
+
+    The Transport EXAMPLES in this IG instead package those supporting resources as
+    *contained* resources so each example is a single self-contained file. As a
+    result, the reference-based parameters below (patient, subject, from, to, focus,
+    prior-transport) will not resolve to searchable targets within the examples,
+    because their referents are contained (#local) resources with no independent
+    identity. This is a property of the example packaging only, not of the search
+    parameters: against production data where these resources are referenceable,
+    the parameters resolve and search normally.
+  -->
   <entry>
     <resource>
       <SearchParameter>
@@ -85,6 +100,135 @@
         <expression value="Transport.subject"/>
         <target value="Group"/>
         <target value="Patient"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="Transport-from"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="Transport.from"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/Transport-from"/>
+        <name value="TransportFromSearchParameter"/>
+        <description value="Originating location the item is transported from"/>
+        <status value="active"/>
+        <code value="from"/>
+        <type value="reference"/>
+        <expression value="Transport.from"/>
+        <target value="Location"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="Transport-to"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="Transport.to"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/Transport-to"/>
+        <name value="TransportToSearchParameter"/>
+        <description value="Destination location the item is transported to"/>
+        <status value="active"/>
+        <code value="to"/>
+        <type value="reference"/>
+        <expression value="Transport.to"/>
+        <target value="Location"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="Transport-focus"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="Transport.focus"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/Transport-focus"/>
+        <name value="TransportFocusSearchParameter"/>
+        <description value="The item the transport is acting on (e.g. a specimen, device, or container)"/>
+        <status value="active"/>
+        <code value="focus"/>
+        <type value="reference"/>
+        <expression value="Transport.focus"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="Transport-date"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="Transport.period"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/Transport-date"/>
+        <name value="TransportDateSearchParameter"/>
+        <description value="The period during which the transport occurred"/>
+        <status value="active"/>
+        <code value="date"/>
+        <type value="date"/>
+        <expression value="Transport.period"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="Transport-code"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="Transport.code"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/Transport-code"/>
+        <name value="TransportCodeSearchParameter"/>
+        <description value="Search by transport code"/>
+        <status value="active"/>
+        <code value="code"/>
+        <type value="token"/>
+        <expression value="Transport.code"/>
+        <processingMode value="normal"/>
+      </SearchParameter>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <SearchParameter>
+        <id value="Transport-prior-transport"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="trial-use"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
+          <valueString value="Transport.priorTransport"/>
+        </extension>
+        <url value="http://hl7.org/fhir/build/SearchParameter/Transport-prior-transport"/>
+        <name value="TransportPriorTransportSearchParameter"/>
+        <description value="The prior transport in a chain of transport legs"/>
+        <status value="active"/>
+        <code value="prior-transport"/>
+        <type value="reference"/>
+        <expression value="Transport.priorTransport"/>
+        <target value="Transport"/>
         <processingMode value="normal"/>
       </SearchParameter>
     </resource>
