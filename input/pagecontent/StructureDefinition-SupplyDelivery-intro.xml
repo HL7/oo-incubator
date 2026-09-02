@@ -32,14 +32,14 @@ Those associations are done in dedicated resources such as the MedicationDispens
 <a name="bnr"></a>
 <h3>Boundaries and Relationships</h3>
 <p>
-The <a href="https://build.fhir.org/ig/HL7/oo-incubator/StructureDefinition-DeviceDispense.html">DeviceDispense</a> and <a href="https://hl7.org/fhir/medicationdispense.html">MedicationDispense</a> resources are used to associate the device or medication with the specific patient for their use, while <a href="supplydelivery.html">SupplyDelivery</a> is solely focused on location and movement 
+The <a href="https://build.fhir.org/ig/HL7/oo-incubator/StructureDefinition-DeviceDispense.html">DeviceDispense</a> and <a href="https://hl7.org/fhir/medicationdispense.html">MedicationDispense</a> resources are used to associate the device or medication with the specific patient for their use, while <a href="StructureDefinition-SupplyDelivery.html">SupplyDelivery</a> is solely focused on location and movement 
 where the targeted patient or other person (e.g., devices used by a clinician), if included, are for delivery context only.</p>
 
 <p>
-To determine the purchase date, a search of <a href="https://hl7.org/fhir/devicerequest.html">DeviceRequest</a>, <a href="supplyrequest.html">SupplyRequest</a>, DeviceDispense, or SupplyDelivery as defined in an implementation guide can be done, as the context of the use case actually determines which date of either resource is considered the purchase date.
+To determine the purchase date, a search of <a href="https://hl7.org/fhir/devicerequest.html">DeviceRequest</a>, <a href="StructureDefinition-SupplyRequest.html">SupplyRequest</a>, DeviceDispense, or SupplyDelivery as defined in an implementation guide can be done, as the context of the use case actually determines which date of either resource is considered the purchase date.
 </p>
 <p>
-The <a href="transport.html">Transport</a> resource documents the movement of the supplies, people, patients, etc. between dispatch and receipt including, e.g., time of movement, transporter, average temperature during transport.
+The <a href="StructureDefinition-Transport.html">Transport</a> resource documents the movement of the supplies, people, patients, etc. between dispatch and receipt including, e.g., time of movement, transporter, average temperature during transport.
 </p>
 </div>
 
