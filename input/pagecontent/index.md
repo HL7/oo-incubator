@@ -26,4 +26,4 @@ These profiles do not have a parent Resource in the Incubator and instead furthe
 
 ### IP Statements
 
-{% include ip-statements.xhtml %}
+{% include ip-statements-en.xhtml %}
