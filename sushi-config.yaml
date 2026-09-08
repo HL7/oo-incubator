@@ -98,7 +98,7 @@ parameters:
 
 # Need to explicitly include the structure definitions as an additional-resource
 # otherwise you get an ambiguous type error. It is possible this is caused by 
-# FHIR Core 6.0.0-ballot3 still containing the resources, meaning in a future 
+# FHIR Core 6.0.0-ballot5 still containing the resources, meaning in a future 
 # release we could potentially eliminate this configuration.
   additional-resource:
     - input/resources/transport/StructureDefinition-Transport.xml
