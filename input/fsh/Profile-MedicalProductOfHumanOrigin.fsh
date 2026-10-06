@@ -52,7 +52,7 @@ Description: "This profile is designed for biologically derived products that ar
 * productCode 1..1
 * productCode ^short = "A code that identifies the kind of this biologically derived product. This should be an ISBT 128 Product Description Code or an approved local code."
 * productCode ^binding.strength = #extensible
-* productCode ^binding.valueSet = "https://www.isbt128.org/uri/productdescriptioncode"
+* productCode ^binding.valueSet = "http://hl7.org/fhir/ValueSet/biologicallyderived-productcodes"
 * productCode.coding 1..*
 * productCode.coding.system 1..1
 * productCode.coding.code 1..1
@@ -69,7 +69,7 @@ Description: "This profile is designed for biologically derived products that ar
 * identifier contains MPHOUniqueIdentifier 1..1
 
 * identifier[MPHOUniqueIdentifier] ^short = "MPHO Unique Identifier"
-* identifier[MPHOUniqueIdentifier].system = "https://www.isbt128.org/uri/mphouniqueidentifier"
+* identifier[MPHOUniqueIdentifier].system = "urn:oid:2.16.840.1.113883.6.18.3.1"
 
 * identifier.system 1..1
 * identifier.system ^short = "Identity of the Issuing Agency responsible for the allocation of unique identifiers"
@@ -81,14 +81,14 @@ Description: "This profile is designed for biologically derived products that ar
 * biologicalSourceEvent ^short = "An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled. This should be an ISBT 128 Donation Identification Number."
 
 * biologicalSourceEvent.system 1..1
-* biologicalSourceEvent.system = "https://www.isbt128.org/uri/donationidentificationnumber"
+* biologicalSourceEvent.system = "urn:oid:2.16.840.1.113883.6.18.2.1"
 * biologicalSourceEvent.system ^short = "Identity of the Issuing Agency responsible for the allocation of unique identifiers"
 
 * biologicalSourceEvent.value 1..1
 * biologicalSourceEvent.value ^short = "Unique identifier of the donation, collection or pooling event from which the MPHO item was derived"
 
 * property.type ^binding.strength = #extensible
-* property.type ^binding.valueSet = "https://www.isbt128.org/uri"
+* property.type ^binding.valueSet = "http://hl7.org/fhir/ValueSet/biologicallyderived-product-property-type-codes"
 
 * extension contains http://hl7.org/fhir/StructureDefinition/biologicallyderivedproduct-intendedRecipient named intendedRecipient 0..1
 * extension[intendedRecipient] ^comment = "Recommended to be specified for designated or directed products."

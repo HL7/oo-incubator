@@ -146,7 +146,6 @@
         </extension>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/SupplyDelivery|0.1.0"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Contract"/>
       </type>
       <isSummary value="true"/>
       <mapping>

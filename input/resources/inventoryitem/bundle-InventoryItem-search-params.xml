@@ -20,6 +20,8 @@
         <type value="token"/>
         <expression value="InventoryItem.code"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -41,6 +43,8 @@
         <type value="reference"/>
         <expression value="InventoryItem.instance.subject"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -62,6 +66,8 @@
         <type value="token"/>
         <expression value="InventoryItem.classification.type"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -83,6 +89,8 @@
         <type value="token"/>
         <expression value="InventoryItem.status"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -104,6 +112,8 @@
         <type value="token"/>
         <expression value="InventoryItem.identifier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>

@@ -79,6 +79,8 @@ extension:
 
 parameters:
   apply-publisher: true
+  auto-oid-root: 2.16.840.1.113883.4.642.40.54
+#  incubator-ig: hl7.fhir.uv.oo-incubator
   shownav: false
   default-version: true
   special-url-base: http://hl7.org/fhir
@@ -98,7 +100,7 @@ parameters:
 
 # Need to explicitly include the structure definitions as an additional-resource
 # otherwise you get an ambiguous type error. It is possible this is caused by 
-# FHIR Core 6.0.0-ballot5 still containing the resources, meaning in a future 
+# FHIR Core 6.0.0-ballot5 still containing the resources, meaning in a future
 # release we could potentially eliminate this configuration.
   additional-resource:
     - input/resources/transport/StructureDefinition-Transport.xml
@@ -113,6 +115,75 @@ parameters:
 # Need to include specific reference to the resource examples otherwise 
 # they do not end up on the Examples tab on the resource page
 resources:
+  BiologicallyDerivedProduct/bdp-example:
+    name: BiologicallyDerivedProduct example
+    description: An example BiologicallyDerivedProduct resource
+  Condition/cond-example:
+    name: Condition example
+    description: An example Condition resource
+  Location/location-hospitalLab:
+    name: Hospital laboratory location example
+    description: An example Location resource for a hospital laboratory
+  Location/location-labA:
+    name: Laboratory location example
+    description: An example Location resource for a laboratory
+  Organization/A9999:
+    name: Example processing facility
+    description: An example Organization representing an ISBT 128 processing facility
+  Patient/pat-example:
+    name: Patient example
+    description: An example Patient resource
+  Patient/pat1:
+    name: Patient pat1 example
+    description: An example Patient resource
+  List/BiologicallyDerivedProductDispense-examples:
+    name: BiologicallyDerivedProductDispense examples
+    description: Example BiologicallyDerivedProductDispense resources
+  List/BiologicallyDerivedProductDispense-operations:
+    name: BiologicallyDerivedProductDispense operations
+    description: Operations associated with BiologicallyDerivedProductDispense
+  List/DeviceDispense-examples:
+    name: DeviceDispense examples
+    description: Example DeviceDispense resources
+  List/DeviceDispense-operations:
+    name: DeviceDispense operations
+    description: Operations associated with DeviceDispense
+  List/DeviceUsage-examples:
+    name: DeviceUsage examples
+    description: Example DeviceUsage resources
+  List/DeviceUsage-operations:
+    name: DeviceUsage operations
+    description: Operations associated with DeviceUsage
+  List/InventoryItem-examples:
+    name: InventoryItem examples
+    description: Example InventoryItem resources
+  List/InventoryItem-operations:
+    name: InventoryItem operations
+    description: Operations associated with InventoryItem
+  List/InventoryReport-examples:
+    name: InventoryReport examples
+    description: Example InventoryReport resources
+  List/InventoryReport-operations:
+    name: InventoryReport operations
+    description: Operations associated with InventoryReport
+  List/SupplyDelivery-examples:
+    name: SupplyDelivery examples
+    description: Example SupplyDelivery resources
+  List/SupplyDelivery-operations:
+    name: SupplyDelivery operations
+    description: Operations associated with SupplyDelivery
+  List/SupplyRequest-examples:
+    name: SupplyRequest examples
+    description: Example SupplyRequest resources
+  List/SupplyRequest-operations:
+    name: SupplyRequest operations
+    description: Operations associated with SupplyRequest
+  List/Transport-examples:
+    name: Transport examples
+    description: Example Transport resources
+  List/Transport-operations:
+    name: Transport operations
+    description: Operations associated with Transport
   BiologicallyDerivedProductDispense/example:
     name: BiologicallyDerivedProductDispense example
     description: An example BiologicallyDerivedProductDispense resource
@@ -174,15 +245,12 @@ menu:
   FHIR Artifacts:
     Artifacts: artifacts.html
     Change Log: changes.html
-    Still To Do: todo.html
 
 pages:
   index.md:
     title: IG Home
   changes.md:
     title: Change Log
-  todo.md:
-    title: Still To Do
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

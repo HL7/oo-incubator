@@ -10,7 +10,6 @@
         <code value="MR"/>
       </coding>
     </type>
-    <system value="urn:oid:0.1.2.3.4.5.6.7"/>
     <value value="654321"/>
   </identifier>
   <active value="true"/>

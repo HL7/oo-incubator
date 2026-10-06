@@ -20,6 +20,8 @@
         <type value="reference"/>
         <expression value="BiologicallyDerivedProductDispense.product"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -41,6 +43,8 @@
         <type value="reference"/>
         <expression value="BiologicallyDerivedProductDispense.subject.where(resolve() is Patient)"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
         <target value="Patient"/>
       </SearchParameter>
     </resource>
@@ -63,6 +67,8 @@
         <type value="reference"/>
         <expression value="BiologicallyDerivedProductDispense.subject"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -84,6 +90,8 @@
         <type value="reference"/>
         <expression value="BiologicallyDerivedProductDispense.performer.actor"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>  
@@ -105,6 +113,8 @@
         <type value="token"/>
         <expression value="BiologicallyDerivedProductDispense.status"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>  
@@ -126,6 +136,8 @@
         <type value="token"/>
         <expression value="BiologicallyDerivedProductDispense.identifier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>  
@@ -147,6 +159,8 @@
         <type value="reference"/>
         <expression value="BiologicallyDerivedProductDispense.basedOn"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>  
@@ -168,6 +182,8 @@
         <type value="reference"/>
         <expression value="BiologicallyDerivedProductDispense.partOf"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>  

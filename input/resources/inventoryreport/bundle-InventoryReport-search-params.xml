@@ -21,6 +21,8 @@
         <type value="token"/>
         <expression value="InventoryReport.identifier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -42,6 +44,8 @@
         <type value="token"/>
         <expression value="InventoryReport.status"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -63,6 +67,8 @@
         <type value="token"/>
         <expression value="InventoryReport.inventoryListing.item.item.concept"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -84,6 +90,8 @@
         <type value="reference"/>
         <expression value="InventoryReport.inventoryListing.item.item.reference"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>

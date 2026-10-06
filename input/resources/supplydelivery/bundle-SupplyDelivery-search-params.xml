@@ -20,6 +20,8 @@
         <type value="token"/>
         <expression value="SupplyDelivery.identifier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -41,6 +43,8 @@
         <type value="reference"/>
         <expression value="SupplyDelivery.subject.where(resolve() is Patient)"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
         <target value="Patient"/>
       </SearchParameter>
     </resource>
@@ -63,6 +67,8 @@
         <type value="reference"/>
         <expression value="SupplyDelivery.subject"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -84,6 +90,8 @@
         <type value="reference"/>
         <expression value="SupplyDelivery.receiver"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -105,6 +113,8 @@
         <type value="token"/>
         <expression value="SupplyDelivery.status"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -126,6 +136,8 @@
         <type value="reference"/>
         <expression value="SupplyDelivery.supplier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>

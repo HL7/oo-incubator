@@ -20,6 +20,8 @@
         <type value="token"/>
         <expression value="SupplyRequest.category"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -41,6 +43,8 @@
         <type value="date"/>
         <expression value="SupplyRequest.authoredOn"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -62,6 +66,8 @@
         <type value="token"/>
         <expression value="SupplyRequest.identifier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -83,6 +89,8 @@
         <type value="reference"/>
         <expression value="SupplyRequest.replaces"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -104,6 +112,8 @@
         <type value="reference"/>
         <expression value="SupplyRequest.requester"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -125,6 +135,8 @@
         <type value="reference"/>
         <expression value="SupplyRequest.deliverFor"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -146,6 +158,8 @@
         <type value="token"/>
         <expression value="SupplyRequest.status"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -167,6 +181,8 @@
         <type value="reference"/>
         <expression value="SupplyRequest.deliverTo"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -188,6 +204,8 @@
         <type value="reference"/>
         <expression value="SupplyRequest.supplier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>

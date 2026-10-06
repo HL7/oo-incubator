@@ -20,6 +20,8 @@
         <type value="token"/>
         <expression value="DeviceDispense.device.concept"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -41,6 +43,8 @@
         <type value="reference"/>
         <expression value="DeviceDispense.subject"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -62,6 +66,8 @@
         <type value="reference"/>
         <expression value="DeviceDispense.subject.where(resolve() is Patient)"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
         <target value="Patient"/>
       </SearchParameter>
     </resource>
@@ -84,6 +90,8 @@
         <type value="token"/>
         <expression value="DeviceDispense.identifier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -105,6 +113,8 @@
         <type value="token"/>
         <expression value="DeviceDispense.status"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>

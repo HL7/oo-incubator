@@ -6,6 +6,7 @@ set -e
 dlurl="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar"
 publisher_jar="publisher.jar"
 input_cache_path="$(pwd)/input-cache/"
+publisher_home="${FHIR_PUBLISHER_HOME:-$HOME/.fhir/tools/publisher}"
 skipPrompts=false
 upper_path="../"
 scriptdlroot="https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main"
@@ -19,9 +20,12 @@ function check_jar_location() {
   elif [ -f "${upper_path}${publisher_jar}" ]; then
     jar_location="${upper_path}${publisher_jar}"
     echo "Found publisher.jar in parent folder"
+  elif [ -f "${publisher_home}/${publisher_jar}" ]; then
+    jar_location="${publisher_home}/${publisher_jar}"
+    echo "Found publisher.jar in FHIR publisher home"
   else
     jar_location="not_found"
-    echo "publisher.jar not found in input-cache or parent folder"
+    echo "publisher.jar not found in input-cache, parent folder, or FHIR publisher home"
   fi
 }
 
@@ -103,7 +107,8 @@ function run_publisher() {
     fi
     java $JAVA_OPTS -jar "$jar_location" -ig . "${extra_flags[@]}"
   else
-    echo "IG Publisher NOT FOUND in input-cache or parent folder. Please run update. Aborting..."
+    echo "IG Publisher NOT FOUND in input-cache, parent folder, or FHIR publisher home. Please run update. Aborting..."
+    return 1
   fi
 }
 
@@ -152,9 +157,9 @@ extraArgs=()
 if [ $# -gt 0 ]; then
   case "$1" in
     update)  shift; extraArgs=("$@"); update_publisher; exit 0 ;;
-    build)   shift; extraArgs=("$@"); check_internet_connection; build_ig "${extraArgs[@]}"; exit 0 ;;
-    nosushi) shift; extraArgs=("$@"); check_internet_connection; build_nosushi "${extraArgs[@]}"; exit 0 ;;
-    notx)    shift; extraArgs=("$@"); build_notx "${extraArgs[@]}"; exit 0 ;;
+    build)   shift; extraArgs=("$@"); check_internet_connection; build_ig "${extraArgs[@]}"; exit $? ;;
+    nosushi) shift; extraArgs=("$@"); check_internet_connection; build_nosushi "${extraArgs[@]}"; exit $? ;;
+    notx)    shift; extraArgs=("$@"); build_notx "${extraArgs[@]}"; exit $? ;;
     jekyll)  jekyll_build; exit 0 ;;
     clean)   cleanup; exit 0 ;;
     exit)    exit 0 ;;
@@ -162,7 +167,7 @@ if [ $# -gt 0 ]; then
       # Unknown first arg - default to build, pass all args through
       extraArgs=("$@")
       run_publisher "${extraArgs[@]}"
-      exit 0
+      exit $?
       ;;
   esac
 fi

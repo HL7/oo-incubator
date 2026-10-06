@@ -4,6 +4,11 @@ setlocal enabledelayedexpansion
 SET "dlurl=https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar"
 SET "publisher_jar=publisher.jar"
 SET "input_cache_path=%CD%\input-cache\"
+IF DEFINED FHIR_PUBLISHER_HOME (
+    SET "publisher_home=%FHIR_PUBLISHER_HOME%"
+) ELSE (
+    SET "publisher_home=%USERPROFILE%\.fhir\tools\publisher"
+)
 SET "skipPrompts=false"
 SET "upper_path=..\"
 SET "scriptdlroot=https://raw.githubusercontent.com/HL7/ig-publisher-scripts/main"
@@ -23,10 +28,16 @@ IF EXIST "%input_cache_path%%publisher_jar%" (
         SET "jar_location=%upper_path%%publisher_jar%"
         ECHO Found publisher.jar in parent folder
     ) ELSE (
-        SET "jar_location=not_found"
-        SET "default_choice=1"
-        SET "default_reason=publisher not found"
-        ECHO publisher.jar not found in input-cache or parent folder
+        ECHO Checking for publisher.jar in %publisher_home%
+        IF EXIST "%publisher_home%\%publisher_jar%" (
+            SET "jar_location=%publisher_home%\%publisher_jar%"
+            ECHO Found publisher.jar in FHIR publisher home
+        ) ELSE (
+            SET "jar_location=not_found"
+            SET "default_choice=1"
+            SET "default_reason=publisher not found"
+            ECHO publisher.jar not found in input-cache, parent folder, or FHIR publisher home
+        )
     )
 )
 
@@ -184,10 +195,13 @@ FOR %%x IN ("%CD%") DO SET upper_path=%%~dpx
 ECHO.
 IF NOT EXIST "%input_cache_path%%publisher_jar%" (
 	IF NOT EXIST "%upper_path%%publisher_jar%" (
-		SET jarlocation="%input_cache_path%%publisher_jar%"
-		SET jarlocationname=Input Cache
-		ECHO IG Publisher is not yet in input-cache or parent folder.
-		REM we don't use jarlocation below because it will be empty because we're in a bracketed if statement
+		SET "jarlocation=%publisher_home%\%publisher_jar%"
+		SET "jarlocationname=FHIR Publisher Home"
+		IF EXIST "%publisher_home%\%publisher_jar%" (
+			ECHO IG Publisher FOUND in FHIR publisher home
+			GOTO upgrade
+		)
+		ECHO IG Publisher is not yet in input-cache, parent folder, or FHIR publisher home.
 		GOTO create
 	) ELSE (
 		ECHO IG Publisher FOUND in parent folder
@@ -327,7 +341,7 @@ IF NOT "%jar_location%"=="not_found" (
 	ECHO IG Publisher FOUND, Publishing...
 	java %JAVA_OPTS% -jar "%jar_location%" -ig . %txoption% %extraArgs%
 ) ELSE (
-	ECHO IG Publisher NOT FOUND in input-cache or parent folder.  Please run the script and update the publisher.  Aborting...
+	ECHO IG Publisher NOT FOUND in input-cache, parent folder, or FHIR publisher home.  Please run the script and update the publisher.  Aborting...
 )
 
 GOTO endscript
@@ -343,7 +357,7 @@ ECHO jar_location is: %jar_location%
 IF NOT "%jar_location%"=="not_found" (
 	java %JAVA_OPTS% -jar "%jar_location%" -ig . %txoption% -no-sushi %extraArgs%
 ) ELSE (
-	ECHO IG Publisher NOT FOUND in input-cache or parent folder. Please run the script and update the publisher.  Aborting...
+	ECHO IG Publisher NOT FOUND in input-cache, parent folder, or FHIR publisher home. Please run the script and update the publisher.  Aborting...
 )
 
 GOTO endscript
@@ -359,7 +373,7 @@ ECHO jar_location is: %jar_location%
 IF NOT "%jar_location%"=="not_found" (
 	java %JAVA_OPTS% -jar "%jar_location%" -ig . %txoption% %extraArgs%
 ) ELSE (
-	ECHO IG Publisher NOT FOUND in input-cache or parent folder.  Please run the script and update the publisher.  Aborting...
+	ECHO IG Publisher NOT FOUND in input-cache, parent folder, or FHIR publisher home.  Please run the script and update the publisher.  Aborting...
 )
 
 GOTO endscript
@@ -373,7 +387,7 @@ ECHO jar_location is: %jar_location%
 IF NOT "%jar_location%"=="not_found" (
 	java %JAVA_OPTS% -jar "%jar_location%" -ig . %txoption% -watch %extraArgs%
 ) ELSE (
-	ECHO IG Publisher NOT FOUND in input-cache or parent folder.  Please run the script and update the publisher.  Aborting...
+	ECHO IG Publisher NOT FOUND in input-cache, parent folder, or FHIR publisher home.  Please run the script and update the publisher.  Aborting...
 )
 
 GOTO endscript
