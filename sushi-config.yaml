@@ -79,8 +79,8 @@ extension:
 
 parameters:
   apply-publisher: true
-  auto-oid-root: 2.16.840.1.113883.4.642.40.54
-#  incubator-ig: hl7.fhir.uv.oo-incubator
+  auto-oid-root: 2.16.840.1.113883.4.642.40.98
+# incubator-ig: hl7.fhir.uv.oo-incubator
   shownav: false
   default-version: true
   special-url-base: http://hl7.org/fhir
