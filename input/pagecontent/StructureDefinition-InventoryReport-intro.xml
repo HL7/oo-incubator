@@ -18,6 +18,7 @@ The inventory status can be available as a response to a request, or can be done
 
 
 <div>
+<a name="bnr"></a>
 <h3>Boundaries and Relationships</h3>
 <p>
 The InventoryReport resource is associated with consumable items - typically resources like Medication, Devices.

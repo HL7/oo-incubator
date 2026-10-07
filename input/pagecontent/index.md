@@ -11,19 +11,27 @@ Implementers may choose to use these artifacts for trial use, pilot testing, or 
 
 This IG defines the scope of exploration for the Orders & Observations Work Group and provides early visibility into emerging content. Implementers are encouraged to assess their risk tolerance, track updates regularly, and participate in the standards development process where possible.
 
-#### Migrated Resources
+#### Incubator Resources
 
 <table class="grid">
 	{% include table-structuredefinitions-en.xhtml %}
 </table>
 
-#### Migrated Profiles
+#### Incubator Profiles
 These profiles do not have a parent Resource in the Incubator and instead further extend FHIR Core resources.
 
 <table class="grid">
 	{% include table-profiles-en.xhtml %}
 </table>
 
+#### Incubator Extensions
+
+None present
+
 ### IP Statements
 
 {% include ip-statements.xhtml %}
+
+### IG Dependencies
+
+{% include dependency-table.xhtml %}

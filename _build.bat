@@ -190,35 +190,25 @@ IF DEFINED ARG (
 	GOTO processflags
 )
 
-FOR %%x IN ("%CD%") DO SET upper_path=%%~dpx
-
 ECHO.
-IF NOT EXIST "%input_cache_path%%publisher_jar%" (
-	IF NOT EXIST "%upper_path%%publisher_jar%" (
-		SET "jarlocation=%publisher_home%\%publisher_jar%"
-		SET "jarlocationname=FHIR Publisher Home"
-		IF EXIST "%publisher_home%\%publisher_jar%" (
-			ECHO IG Publisher FOUND in FHIR publisher home
-			GOTO upgrade
-		)
-		ECHO IG Publisher is not yet in input-cache, parent folder, or FHIR publisher home.
-		GOTO create
-	) ELSE (
-		ECHO IG Publisher FOUND in parent folder
-		SET jarlocation="%upper_path%%publisher_jar%"
-		SET jarlocationname=Parent folder
-		GOTO upgrade
-	)
-) ELSE (
+IF EXIST "%input_cache_path%%publisher_jar%" (
 	ECHO IG Publisher FOUND in input-cache
-	SET jarlocation="%input_cache_path%%publisher_jar%"
-	SET jarlocationname=Input Cache
+	SET "jarlocation=%input_cache_path%%publisher_jar%"
+	SET "jarlocationname=Input Cache"
 	GOTO upgrade
 )
+SET "jarlocation=%publisher_home%\%publisher_jar%"
+SET "jarlocationname=FHIR Publisher Home"
+IF EXIST "%publisher_home%\%publisher_jar%" (
+	ECHO IG Publisher FOUND in FHIR publisher home
+	GOTO upgrade
+)
+ECHO IG Publisher is not yet in input-cache or FHIR publisher home.
+GOTO create
 
 :create
 IF DEFINED FORCE (
-	MKDIR "%input_cache_path%" 2> NUL
+	MKDIR "%publisher_home%" 2> NUL
 	GOTO download
 )
 
@@ -228,8 +218,8 @@ IF "%skipPrompts%"=="true" (
 	SET /p create="Download? (Y/N) "
 )
 IF /I "%create%"=="Y" (
-	ECHO Will place publisher jar here: %input_cache_path%%publisher_jar%
-	MKDIR "%input_cache_path%" 2> NUL
+	ECHO Will place publisher jar here: %jarlocation%
+	MKDIR "%publisher_home%" 2> NUL
 	GOTO download
 )
 GOTO done

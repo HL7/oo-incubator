@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/Transport|0.1.0">
+<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/Transport">
   <id value="Transport"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
     <valueString value="Clinical.Request &amp;amp; Response"/>
@@ -21,10 +21,7 @@
     <valueCode value=".status = entered-in-error"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/Transport"/>
-  <version value="0.1.0"/>
   <name value="Transport"/>
-  <status value="active"/>
-  <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>
   <contact>
     <telecom>
@@ -141,7 +138,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceRequest"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RequestOrchestration"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/SupplyRequest|0.1.0"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/SupplyRequest"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/VisionPrescription"/>
       </type>
       <isSummary value="true"/>
@@ -167,7 +164,7 @@
           <valueBoolean value="true"/>
         </extension>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Transport|0.1.0"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Transport"/>
       </type>
       <isSummary value="true"/>
       <mapping>
@@ -609,7 +606,7 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Transport|0.1.0"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Transport"/>
       </type>
       <mapping>
         <identity value="w5"/>
