@@ -12,7 +12,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="SupplyDelivery.identifier"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-identifier"/>
+        <url value="http://hl7.org/fhir/SearchParameter/SupplyDelivery-identifier"/>
         <name value="SupplyDeliveryIdentifierSearchParameter"/>
         <description value="External identifier"/>
         <status value="active"/>
@@ -35,7 +35,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="SupplyDelivery.subject"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-patient"/>
+        <url value="http://hl7.org/fhir/SearchParameter/SupplyDelivery-patient"/>
         <name value="SupplyDeliveryPatientSearchParameter"/>
         <description value="Patient for whom the item is supplied"/>
         <status value="active"/>
@@ -59,7 +59,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="SupplyDelivery.subject"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-subject"/>
+        <url value="http://hl7.org/fhir/SearchParameter/SupplyDelivery-subject"/>
         <name value="SupplyDeliverySubjectSearchParameter"/>
         <description value="Individual(s) or organization for whom the item is supplied"/>
         <status value="active"/>
@@ -82,7 +82,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="SupplyDelivery.receiver"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-receiver"/>
+        <url value="http://hl7.org/fhir/SearchParameter/SupplyDelivery-receiver"/>
         <name value="SupplyDeliveryReceiverSearchParameter"/>
         <description value="Who collected the Supply"/>
         <status value="active"/>
@@ -105,7 +105,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="SupplyDelivery.status"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-status"/>
+        <url value="http://hl7.org/fhir/SearchParameter/SupplyDelivery-status"/>
         <name value="SupplyDeliveryStatusSearchParameter"/>
         <description value="in-progress | completed | abandoned | entered-in-error"/>
         <status value="active"/>
@@ -128,7 +128,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="SupplyDelivery.supplier"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/SupplyDelivery-supplier"/>
+        <url value="http://hl7.org/fhir/SearchParameter/SupplyDelivery-supplier"/>
         <name value="SupplyDeliverySupplierSearchParameter"/>
         <description value="Dispenser"/>
         <status value="active"/>

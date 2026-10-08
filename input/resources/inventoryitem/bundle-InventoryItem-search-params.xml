@@ -12,7 +12,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="InventoryItem.code"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-code"/>
+        <url value="http://hl7.org/fhir/SearchParameter/InventoryItem-code"/>
         <name value="InventoryItemCodeSearchParameter"/>
         <description value="Search for products that match this code"/>
         <status value="active"/>
@@ -35,7 +35,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="InventoryItem.instance.subject"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-subject"/>
+        <url value="http://hl7.org/fhir/SearchParameter/InventoryItem-subject"/>
         <name value="InventoryItemSubjectSearchParameter"/>
         <description value="The identity of a patient for whom to list associations"/>
         <status value="active"/>
@@ -58,7 +58,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="InventoryItem.classification.type"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-type"/>
+        <url value="http://hl7.org/fhir/SearchParameter/InventoryItem-type"/>
         <name value="InventoryItemTypeSearchParameter"/>
         <description value="The type of inventory item"/>
         <status value="active"/>
@@ -81,7 +81,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="InventoryItem.status"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-status"/>
+        <url value="http://hl7.org/fhir/SearchParameter/InventoryItem-status"/>
         <name value="InventoryItemStatusSearchParameter"/>
         <description value="The status of the item"/>
         <status value="active"/>
@@ -104,7 +104,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="InventoryItem.identifier"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryItem-identifier"/>
+        <url value="http://hl7.org/fhir/SearchParameter/InventoryItem-identifier"/>
         <name value="InventoryItemIdentifierSearchParameter"/>
         <description value="The identifier of the item"/>
         <status value="active"/>

@@ -12,7 +12,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceDispense.device.concept"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-code"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceDispense-code"/>
         <name value="DeviceDispenseCodeSearchParameter"/>
         <description value="Search for devices that match this code"/>
         <status value="active"/>
@@ -35,7 +35,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceDispense.subject"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-subject"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceDispense-subject"/>
         <name value="DeviceDispenseSubjectSearchParameter"/>
         <description value="The identity of a patient for whom to list dispenses"/>
         <status value="active"/>
@@ -58,7 +58,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceDispense.subject"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-patient"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceDispense-patient"/>
         <name value="DeviceDispensePatientSearchParameter"/>
         <description value="Returns device dispenses for a specific patient"/>
         <status value="active"/>
@@ -82,7 +82,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceDispense.identifier"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-identifier"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceDispense-identifier"/>
         <name value="DeviceDispenseIdentifierSearchParameter"/>
         <description value="The identifier of the dispense"/>
         <status value="active"/>
@@ -105,7 +105,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceDispense.status"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceDispense-status"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceDispense-status"/>
         <name value="DeviceDispenseStatusSearchParameter"/>
         <description value="The status of the dispense"/>
         <status value="active"/>
