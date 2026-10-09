@@ -38,9 +38,9 @@ None presently
 
 #### IG Dependencies
 
-{% include dependency-table.xhtml %}
+{% include dependency-table-en.xhtml %}
 
 
 #### IP Statements
 
-{% include ip-statements.xhtml %}
+{% include ip-statements-en.xhtml %}

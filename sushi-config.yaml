@@ -245,7 +245,7 @@ menu:
     Overview: profiles.html
     MedicalProductsOfHumanOrigin: StructureDefinition-medicalproductofhumanorigin.html
   Extensions: extensions.html
-  Terminologies: terminologies.html
+#  Terminologies: terminologies.html
   Examples: examples.html
 
   Artifacts: artifacts.html
@@ -258,7 +258,7 @@ pages:
   resources.md:
   profiles.md:
   extensions.md:
-  terminologies.md:
+#  terminologies.md:
   examples.md:
   artifacts.html:
   downloads.md:
