@@ -231,7 +231,8 @@ resources:
     
 menu:
   Home: index.html
-  Resources:
+  Resources: 
+    Overview: resources.html
     Transport: StructureDefinition-Transport.html
     BiologicallyDerivedProductDispense: StructureDefinition-BiologicallyDerivedProductDispense.html
     DeviceDispense: StructureDefinition-DeviceDispense.html
@@ -240,17 +241,28 @@ menu:
     InventoryReport: StructureDefinition-InventoryReport.html
     SupplyDelivery: StructureDefinition-SupplyDelivery.html
     SupplyRequest: StructureDefinition-SupplyRequest.html
-  Profiles:
+  Profiles: 
+    Overview: profiles.html
     MedicalProductsOfHumanOrigin: StructureDefinition-medicalproductofhumanorigin.html
-  FHIR Artifacts:
-    Artifacts: artifacts.html
-    Change Log: changes.html
+  Extensions: extensions.html
+  Terminologies: terminologies.html
+  Examples: examples.html
+
+  Artifacts: artifacts.html
+  Downloads: downloads.html
+  Changes: changes.html
 
 pages:
   index.md:
     title: IG Home
+  resources.md:
+  profiles.md:
+  extensions.md:
+  terminologies.md:
+  examples.md:
+  artifacts.html:
+  downloads.md:
   changes.md:
-    title: Change Log
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │

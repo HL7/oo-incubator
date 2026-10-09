@@ -1,4 +1,4 @@
-### OO Incubator
+### OO Incubator IG
 
 The Orders & Observations (OO) Incubator Implementation Guide serves as a consolidated workspace for emerging specifications, including FHIR resources, profiles, operations, vocabularies, and artifacts developed by the [HL7 Orders & Observations Work Group](https://www.hl7.org/Special/committees/orders/index.cfm). It includes resources that are actively evolving and have not yet reached normative status under the [FHIR Maturity Model](https://build.fhir.org/versions.html#std-process), but may still be suitable for trial use, pilot implementations, and even production deployments where appropriate. These artifacts reflect the current direction of ongoing work but should not be interpreted as stable normative specifications.
 
@@ -13,6 +13,8 @@ This IG defines the scope of exploration for the Orders & Observations Work Grou
 
 #### Incubator Resources
 
+<!-- TODO: This table presently includes profiles and may need to be changed to a different template. -->
+
 <table class="grid">
 	{% include table-structuredefinitions-en.xhtml %}
 </table>
@@ -26,12 +28,19 @@ These profiles do not have a parent Resource in the Incubator and instead furthe
 
 #### Incubator Extensions
 
-None present
+<table class="grid">
+	{% include table-extensions-en.xhtml %}
+</table>
 
-### IP Statements
+None presently
 
-{% include ip-statements.xhtml %}
+### Dependencies and Statements
 
-### IG Dependencies
+#### IG Dependencies
 
 {% include dependency-table.xhtml %}
+
+
+#### IP Statements
+
+{% include ip-statements.xhtml %}
