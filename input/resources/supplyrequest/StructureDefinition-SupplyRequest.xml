@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/SupplyRequest|0.1.0">
+<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/SupplyRequest">
   <id value="SupplyRequest"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
     <valueString value="Clinical.Request &amp;amp; Response"/>
@@ -21,10 +21,7 @@
     <valueCode value=".status = entered-in-error"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/SupplyRequest"/>
-  <version value="0.1.0"/>
   <name value="SupplyRequest"/>
-  <status value="active"/>
-  <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>
   <contact>
     <telecom>
@@ -228,7 +225,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/CommunicationRequest"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/VisionPrescription"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/SupplyRequest|0.1.0"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/SupplyRequest"/>
       </type>
       <isSummary value="true"/>
       <mapping>
@@ -375,7 +372,7 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceDefinition"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionProduct"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem|0.1.0"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem"/>
       </type>
       <isSummary value="true"/>
       <binding>

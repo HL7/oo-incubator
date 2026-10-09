@@ -12,6 +12,7 @@ The dispense may include a description of the device and the instructions for us
 
 
 <div>
+<a name="bnr"></a>
 <h3>Boundaries and Relationships</h3>
 <p>
 To determine the purchase date, a search of DeviceRequest, SupplyRequest, DeviceDispense, or SupplyDelivery as defined in an implementation guide can be done , as the context of the use case actually determines which date of either resource is considered the purchase date.

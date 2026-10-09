@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/DeviceDispense|0.1.0">
+<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/DeviceDispense">
   <id value="DeviceDispense"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
     <valueString value="Clinical.Device"/>
@@ -21,10 +21,7 @@
     <valueCode value=".status = entered-in-error"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/DeviceDispense"/>
-  <version value="0.1.0"/>
   <name value="DeviceDispense"/>
-  <status value="active"/>
-  <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Pharmacy"/>
   <contact>
     <telecom>

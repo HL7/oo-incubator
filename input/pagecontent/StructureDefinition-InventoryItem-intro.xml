@@ -30,6 +30,7 @@ The InventoryItem can also be used on its own for inventory specific purposes - 
 </div>
 
 <div>
+<a name="bnr"></a>
 <h3>Boundaries and Relationships</h3>
 The InventoryItem resource can be referenced from the following resources:
 <ul>

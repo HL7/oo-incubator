@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/InventoryItem|0.1.0">
+<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/InventoryItem">
   <id value="InventoryItem"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-    <valueCode value="draft"/>
+    <valueCode value="trial-use"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/>
+    <valueInteger value="1"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="business"/>
@@ -18,10 +18,7 @@
     <valueCode value=".status = entered-in-error"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/InventoryItem"/>
-  <version value="0.1.0"/>
   <name value="InventoryItem"/>
-  <status value="active"/>
-  <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>
   <contact>
     <telecom>
@@ -424,9 +421,8 @@
       <max value="1"/>
       <type>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem|0.1.0"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationKnowledge"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/DeviceDefinition"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionProduct"/>

@@ -3,13 +3,10 @@
 <div>
 <a name="scope"></a>
 <h3>Scope and Usage</h3>
-
-[%stu-note dstu%]
+<p>
 This resource can represent different stages of supply delivery. After a request to create two separate resources to address dispatch vs. reception, current discussion concluded that one resource with multiple, extensible stages provided a better approach to support the variety of needs to document the different steps.
 HL7 seeks specific feedback on the implementability of one resource type with multiple stages (likely represented in a future IG with specific profiles to determine specific attributes/value sets applicable to each stage - see <a href="valueset-supplydelivery-stage.html">valueset-supplydelivery-stage</a>), or whether two (or more) resource types would be more adequate.
-[%end-note%]
-
-
+</p>
 <p><strong>This resource is an <em>event</em> resource from a FHIR workflow perspective - see <a href="https://hl7.org/fhir/workflow.html">Workflow</a>.   It is the intent of the Orders and Observation Workgroup to align this resource with  the workflow pattern for <a href="https://hl7.org/fhir/workflow.html#event"><em>event</em> resources</a>.</strong></p>
 <p>
 The SupplyDelivery is used to document the dispatch (e.g., time of dispatch, content) and/or receipt (e.g., time or receipt, content) of, e.g., supplies, people, devices, patients, biologically derived products.

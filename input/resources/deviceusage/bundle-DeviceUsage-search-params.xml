@@ -12,7 +12,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceUsage.device.concept"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-device"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceUsage-device"/>
         <name value="DeviceUsageDeviceSearchParameter"/>
         <description value="Search by device"/>
         <status value="active"/>
@@ -20,6 +20,8 @@
         <type value="token"/>
         <expression value="DeviceUsage.device.concept"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -33,7 +35,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceUsage.identifier"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-identifier"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceUsage-identifier"/>
         <name value="DeviceUsageIdentifierSearchParameter"/>
         <description value="Search by identifier"/>
         <status value="active"/>
@@ -41,6 +43,8 @@
         <type value="token"/>
         <expression value="DeviceUsage.identifier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -54,7 +58,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceUsage.subject"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-patient"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceUsage-patient"/>
         <name value="DeviceUsagePatientSearchParameter"/>
         <description value="Search by patient who used the device"/>
         <status value="active"/>
@@ -62,6 +66,8 @@
         <type value="reference"/>
         <expression value="DeviceUsage.subject.where(resolve() is Patient)"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
         <target value="Patient"/>
       </SearchParameter>
     </resource>
@@ -76,7 +82,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceUsage.subject"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-subject"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceUsage-subject"/>
         <name value="DeviceUsageSubjectSearchParameter"/>
         <description value="The individual(s) who used the device"/>
         <status value="active"/>
@@ -84,6 +90,8 @@
         <type value="reference"/>
         <expression value="DeviceUsage.subject"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -97,7 +105,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceUsage.status"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-status"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceUsage-status"/>
         <name value="DeviceUsageStatusSearchParameter"/>
         <description value="The status of the device usage"/>
         <status value="active"/>
@@ -105,6 +113,8 @@
         <type value="token"/>
         <expression value="DeviceUsage.status"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -118,14 +128,16 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceUsage.bodyStructure.reference"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-body-structure-reference"/>
-        <name value="DeviceUsageReferenceSearchParameter"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceUsage-body-structure-reference"/>
+        <name value="DeviceUsageBodyStructureReferenceSearchParameter"/>
         <description value="Target body structure (reference)"/>
         <status value="active"/>
-        <code value="reference"/>
+        <code value="body-structure-reference"/>
         <type value="reference"/>
         <expression value="DeviceUsage.bodyStructure.reference"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
         <target value="BodyStructure"/>
       </SearchParameter>
     </resource>
@@ -140,7 +152,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="DeviceUsage.bodyStructure.concept"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/DeviceUsage-body-structure-code"/>
+        <url value="http://hl7.org/fhir/SearchParameter/DeviceUsage-body-structure-code"/>
         <name value="DeviceUsageBodyStructureCodeSearchParameter"/>
         <description value="Code for target body structure"/>
         <status value="active"/>
@@ -148,6 +160,8 @@
         <type value="token"/>
         <expression value="DeviceUsage.bodyStructure.concept"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
