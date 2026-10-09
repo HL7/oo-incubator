@@ -43,4 +43,4 @@ None presently
 
 #### IP Statements
 
-{% include ip-statements.xhtml %}
+{% include ip-statements-en.xhtml %}

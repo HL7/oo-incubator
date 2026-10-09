@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transport resourceDefinition="http://hl7.org/fhir/StructureDefinition/Transport|0.1.0" xmlns="http://hl7.org/fhir">
+  <id value="transport-example-04-tray-movement"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Tray 42, containing two racks and their specimen tubes, was moved from Desk 7-21 to cold storage.</div></text>
+  <contained><Location><id value="t04-cold-storage"/><status value="active"/><name value="Cold Storage Room"/></Location></contained>
+  <contained><Location><id value="t04-desk-7-21"/><status value="active"/><name value="Desk 7-21"/></Location></contained>
+  <contained><Device><id value="t04-rack-4"/><status value="active"/><type><text value="Laboratory specimen rack"/></type><parent><reference value="#t04-tray-42"/></parent></Device></contained>
+  <contained><Device><id value="t04-rack-9"/><status value="active"/><type><text value="Laboratory specimen rack"/></type><parent><reference value="#t04-tray-42"/></parent></Device></contained>
+  <contained><Device><id value="t04-tray-42"/><status value="active"/><type><text value="Laboratory tray"/></type><location><reference value="#t04-cold-storage"/></location></Device></contained>
+  <contained><Device><id value="t04-tube-61"/><status value="active"/><type><text value="Specimen tube"/></type><parent><reference value="#t04-rack-4"/></parent></Device></contained>
+  <contained><Device><id value="t04-tube-81"/><status value="active"/><type><text value="Specimen tube"/></type><parent><reference value="#t04-rack-9"/></parent></Device></contained>
+  <contained><Provenance><id value="t04-provenance"/><target><reference value="#t04-cold-storage"/></target><target><reference value="#t04-desk-7-21"/></target><target><reference value="#t04-rack-4"/></target><target><reference value="#t04-rack-9"/></target><target><reference value="#t04-tray-42"/></target><target><reference value="#t04-tube-61"/></target><target><reference value="#t04-tube-81"/></target><recorded value="2026-08-10T12:00:00-05:00"/><agent><who><reference value="#t04-tray-42"/></who></agent></Provenance></contained>
+  <identifier><system value="http://example.org/transports"/><value value="TR-TRAY-42-COLD"/></identifier>
+  <status value="completed"/><code><text value="Laboratory tray movement"/></code>
+  <description value="Tray 42, with Rack 4 and Rack 9 and their contained tubes, was moved from Desk 7-21 to cold storage."/>
+  <focus><reference value="#t04-tray-42"/></focus>
+  <period><end value="2026-08-10T14:10:00-05:00"/></period>
+  <note><text value="Movement of the racks and tubes is inferred from the Device.parent hierarchy."/></note>
+  <relevantHistory><reference value="#t04-provenance"/></relevantHistory>
+  <to><reference value="#t04-cold-storage"/></to>
+  <from><reference value="#t04-desk-7-21"/></from>
+</Transport>
