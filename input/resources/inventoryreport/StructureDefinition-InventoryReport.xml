@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/InventoryReport|0.1.0">
+<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/InventoryReport">
   <id value="InventoryReport"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
     <valueString value="Clinical.Request &amp;amp; Response"/>
@@ -9,7 +9,7 @@
     <valueCode value="trial-use"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/>
+    <valueInteger value="1"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
     <valueCode value="business"/>
@@ -21,10 +21,7 @@
     <valueCode value=".status = entered-in-error"/>
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/InventoryReport"/>
-  <version value="0.1.0"/>
   <name value="InventoryReport"/>
-  <status value="active"/>
-  <date value="2021-01-02T08:58:31+11:00"/>
   <publisher value="HL7 International / Orders and Observations"/>
   <contact>
     <telecom>
@@ -214,6 +211,10 @@
         <code value="dateTime"/>
       </type>
       <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.occurrenceDateTime"/>
+      </mapping>
     </element>
     <element id="InventoryReport.reporter">
       <path value="InventoryReport.reporter"/>
@@ -228,6 +229,10 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
       </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.reportedReference"/>
+      </mapping>
     </element>
     <element id="InventoryReport.reportingPeriod">
       <path value="InventoryReport.reportingPeriod"/>
@@ -238,6 +243,10 @@
       <type>
         <code value="Period"/>
       </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.occurrencePeriod"/>
+      </mapping>
     </element>
     <element id="InventoryReport.inventoryListing">
       <path value="InventoryReport.inventoryListing"/>
@@ -260,6 +269,10 @@
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
       </type>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.location"/>
+      </mapping>
     </element>
     <element id="InventoryReport.inventoryListing.itemStatus">
       <path value="InventoryReport.inventoryListing.itemStatus"/>
@@ -326,10 +339,14 @@
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Medication"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionProduct"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem|0.1.0"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/InventoryItem"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProduct"/>
       </type>
       <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.product"/>
+      </mapping>
     </element>
     <element id="InventoryReport.note">
       <path value="InventoryReport.note"/>

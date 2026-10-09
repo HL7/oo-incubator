@@ -13,7 +13,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="InventoryReport.identifier"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryReport-identifier"/>
+        <url value="http://hl7.org/fhir/SearchParameter/InventoryReport-identifier"/>
         <name value="InventoryReportIdentifierSearchParameter"/>
         <description value="Search by identifier"/>
         <status value="active"/>
@@ -21,6 +21,8 @@
         <type value="token"/>
         <expression value="InventoryReport.identifier"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -34,7 +36,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="InventoryReport.status"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryReport-status"/>
+        <url value="http://hl7.org/fhir/SearchParameter/InventoryReport-status"/>
         <name value="InventoryReportStatusSearchParameter"/>
         <description value="Search by status"/>
         <status value="active"/>
@@ -42,6 +44,8 @@
         <type value="token"/>
         <expression value="InventoryReport.status"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -55,7 +59,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="InventoryReport.inventoryListing.item.item.concept"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryReport-item"/>
+        <url value="http://hl7.org/fhir/SearchParameter/InventoryReport-item"/>
         <name value="InventoryReportItemSearchParameter"/>
         <description value="Search by items in inventory report"/>
         <status value="active"/>
@@ -63,6 +67,8 @@
         <type value="token"/>
         <expression value="InventoryReport.inventoryListing.item.item.concept"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>
@@ -76,7 +82,7 @@
         <extension url="http://hl7.org/fhir/build/StructureDefinition/path">
           <valueString value="InventoryReport.inventoryListing.item.item.reference"/>
         </extension>
-        <url value="http://hl7.org/fhir/build/SearchParameter/InventoryReport-item-reference"/>
+        <url value="http://hl7.org/fhir/SearchParameter/InventoryReport-item-reference"/>
         <name value="InventoryReportItemReferenceSearchParameter"/>
         <description value="Search by items in inventory report"/>
         <status value="active"/>
@@ -84,6 +90,8 @@
         <type value="reference"/>
         <expression value="InventoryReport.inventoryListing.item.item.reference"/>
         <processingMode value="normal"/>
+        <multipleOr value="true"/>
+        <multipleAnd value="true"/>
       </SearchParameter>
     </resource>
   </entry>

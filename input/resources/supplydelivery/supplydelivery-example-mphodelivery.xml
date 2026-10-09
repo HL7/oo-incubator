@@ -1,4 +1,4 @@
-﻿<SupplyDelivery resourceDefinition="http://hl7.org/fhir/StructureDefinition/SupplyDelivery|0.1.0" xmlns="http://hl7.org/fhir">
+<SupplyDelivery resourceDefinition="http://hl7.org/fhir/StructureDefinition/SupplyDelivery|0.1.0" xmlns="http://hl7.org/fhir">
   <id value="mphodelivery"/>
   <contained>
     <BiologicallyDerivedProduct>
@@ -9,11 +9,11 @@
         </coding>
       </productCode>
       <identifier>
-        <system value="https://www.isbt128.org/uri/MPHOUniqueIdentifier"/>
+        <system value="urn:oid:2.16.840.1.113883.6.18.3.1"/>
         <value value="A9999E0398A999921123456000001"/>
       </identifier>
       <biologicalSourceEvent>
-        <system value="https://www.isbt128.org/uri/DonationIdentificationNumber"/>
+        <system value="urn:oid:2.16.840.1.113883.6.18.2.1"/>
         <value value="A999921123456"/>
       </biologicalSourceEvent>
       <processingFacility>
@@ -32,7 +32,7 @@
         </type>
         <valueCodeableConcept>
           <coding>
-            <system value="https://www.isbt128.org/uri/ABORhD"/>
+            <system value="urn:oid:2.16.840.1.113883.6.18.2.3"/>
             <code value="62"/>
             <display value="A RhD Positive"/>
           </coding>
@@ -46,7 +46,7 @@
         </type>
         <valueCodeableConcept>
           <coding>
-            <system value="https://www.isbt128.org/uri/CollectionType"/>
+            <system value="urn:oid:2.16.840.1.113883.6.18.2.7"/>
             <code value="V"/>
             <display value="Volunteer"/>
           </coding>
@@ -63,11 +63,11 @@
         </coding>
       </productCode>
       <identifier>
-        <system value="https://www.isbt128.org/uri/MPHOUniqueIdentifier"/>
+        <system value="urn:oid:2.16.840.1.113883.6.18.3.1"/>
         <value value="A9999E0398A999921123457000001"/>
       </identifier>
       <biologicalSourceEvent>
-        <system value="https://www.isbt128.org/uri/DonationIdentificationNumber"/>
+        <system value="urn:oid:2.16.840.1.113883.6.18.2.1"/>
         <value value="A999921123457"/>
       </biologicalSourceEvent>
       <processingFacility>
@@ -86,7 +86,7 @@
         </type>
         <valueCodeableConcept>
           <coding>
-            <system value="https://www.isbt128.org/uri/ABORhD"/>
+            <system value="urn:oid:2.16.840.1.113883.6.18.2.3"/>
             <code value="51"/>
             <display value="O RhD Positive"/>
           </coding>
@@ -100,7 +100,7 @@
         </type>
         <valueCodeableConcept>
           <coding>
-            <system value="https://www.isbt128.org/uri/CollectionType"/>
+            <system value="urn:oid:2.16.840.1.113883.6.18.2.7"/>
             <code value="V"/>
             <display value="Volunteer"/>
           </coding>
@@ -117,11 +117,11 @@
         </coding>
       </productCode>
       <identifier>
-        <system value="https://www.isbt128.org/uri/MPHOUniqueIdentifier"/>
+        <system value="urn:oid:2.16.840.1.113883.6.18.3.1"/>
         <value value="A9999E0398A999921123458000001"/>
       </identifier>
       <biologicalSourceEvent>
-        <system value="https://www.isbt128.org/uri/DonationIdentificationNumber"/>
+        <system value="urn:oid:2.16.840.1.113883.6.18.2.1"/>
         <value value="A999921123458"/>
       </biologicalSourceEvent>
       <processingFacility>
@@ -140,7 +140,7 @@
         </type>
         <valueCodeableConcept>
           <coding>
-            <system value="https://www.isbt128.org/uri/ABORhD"/>
+            <system value="urn:oid:2.16.840.1.113883.6.18.2.3"/>
             <code value="51"/>
             <display value="O RhD Positive"/>
           </coding>
@@ -154,7 +154,7 @@
         </type>
         <valueCodeableConcept>
           <coding>
-            <system value="https://www.isbt128.org/uri/CollectionType"/>
+            <system value="urn:oid:2.16.840.1.113883.6.18.2.7"/>
             <code value="V"/>
             <display value="Volunteer"/>
           </coding>

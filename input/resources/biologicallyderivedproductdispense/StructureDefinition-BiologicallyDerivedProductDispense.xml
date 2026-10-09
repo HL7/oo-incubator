@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense|0.1.0">
+<StructureDefinition xmlns="http://hl7.org/fhir" resourceDefinition="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense">
   <id value="BiologicallyDerivedProductDispense"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
     <valueCode value="trial-use"/>
@@ -19,10 +19,9 @@
   </extension>
   <url value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense"/>
   <type value="BiologicallyDerivedProductDispense"/>
-  <version value="0.1.0"/>
+  
   <name value="BiologicallyDerivedProductDispense"/>
-  <status value="active"/>
-  <date value="2021-01-02T08:58:31+11:00"/>
+
   <publisher value="HL7 International / Orders and Observations"/>
   <contact>
     <telecom>
@@ -118,7 +117,7 @@
           <valueBoolean value="true"/>
         </extension>
         <code value="Reference"/>
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense|0.1.0"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/BiologicallyDerivedProductDispense"/>
       </type>
       <mapping>
         <identity value="workflow"/>

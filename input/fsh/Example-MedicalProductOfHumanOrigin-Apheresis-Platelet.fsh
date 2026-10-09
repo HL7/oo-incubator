@@ -8,14 +8,14 @@ Description: "Example of a Medical Product of Human Origin representing an irrad
 * productCategory[0].coding.code = #mpho
 * productCategory[0].text = "Medical Product of Human Origin"
 
-* productCode.coding.system = "https://www.isbt128.org/uri/productdescriptioncode"
+* productCode.coding.system = "urn:oid:2.16.840.1.113883.6.18.2.6"
 * productCode.coding.code = #E3046
 * productCode.text = "Apheresis Platelets, Irradiated, Leukocyte reduced"
 
-* identifier[MPHOUniqueIdentifier].system = "https://www.isbt128.org/uri/mphouniqueidentifier"
+* identifier[MPHOUniqueIdentifier].system = "urn:oid:2.16.840.1.113883.6.18.3.1"
 * identifier[MPHOUniqueIdentifier].value = "00000E3046A999924123457000000"
 
-* biologicalSourceEvent.system = "https://www.isbt128.org/uri/donationidentificationnumber"
+* biologicalSourceEvent.system = "urn:oid:2.16.840.1.113883.6.18.2.1"
 * biologicalSourceEvent.value = "A999924123457"
 
 * division = "000000"
