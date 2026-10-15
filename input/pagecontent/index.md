@@ -13,26 +13,34 @@ This IG defines the scope of exploration for the Orders & Observations Work Grou
 
 #### Incubator Resources
 
-<!-- TODO: This table presently includes profiles and may need to be changed to a different template. -->
-
-<table class="grid">
-	{% include table-structuredefinitions-en.xhtml %}
-</table>
+{% sql {
+  "query": "SELECT Name, Description, Web FROM Resources WHERE Type = 'StructureDefinition' AND kind = 'resource' AND derivation = 'specialization' ORDER BY Name",
+  "columns": [
+    { "source": "Name", "title": "Resource", "type": "link", "target": "Web" },
+    { "source": "Description", "type": "markdown" }
+  ]
+} %}
 
 #### Incubator Profiles
 These profiles do not have a parent Resource in the Incubator and instead further extend FHIR Core resources.
 
-<table class="grid">
-	{% include table-profiles-en.xhtml %}
-</table>
+{% sql {
+  "query": "SELECT Name, Description, Web FROM Resources WHERE Type = 'StructureDefinition' AND kind = 'resource' AND derivation = 'constraint' ORDER BY Name",
+  "columns": [
+    { "source": "Name", "title": "Profile", "type": "link", "target": "Web" },
+    { "source": "Description", "type": "markdown" }
+  ]
+} %}
 
 #### Incubator Extensions
 
-<table class="grid">
-	{% include table-extensions-en.xhtml %}
-</table>
-
-None presently
+{% sql {
+  "query": "SELECT Name, Description, Web FROM Resources WHERE Type = 'StructureDefinition' AND sdType = 'Extension' AND derivation = 'constraint' ORDER BY Name",
+  "columns": [
+    { "source": "Name", "title": "Extension", "type": "link", "target": "Web" },
+    { "source": "Description", "type": "markdown" }
+  ]
+} %}
 
 ### Dependencies and Statements
 
