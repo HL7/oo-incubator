@@ -11,7 +11,7 @@ name: OOIncubatorImplementationGuide
 title: OO Incubator Implementation Guide
 # description: Example Implementation Guide for getting started with SUSHI
 status: active # draft | active | retired | unknown
-version: 0.1.0
+version: 0.1.0-snapshot
 fhirVersion: 6.0.0-snapshot1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2026+
 releaseLabel: ci-build
@@ -245,7 +245,7 @@ menu:
     Overview: profiles.html
     MedicalProductsOfHumanOrigin: StructureDefinition-medicalproductofhumanorigin.html
   Extensions: extensions.html
-  Terminologies: terminologies.html
+#  Terminologies: terminologies.html
   Examples: examples.html
 
   Artifacts: artifacts.html
@@ -258,7 +258,7 @@ pages:
   resources.md:
   profiles.md:
   extensions.md:
-  terminologies.md:
+#  terminologies.md:
   examples.md:
   artifacts.html:
   downloads.md:
