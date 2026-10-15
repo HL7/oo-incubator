@@ -4,7 +4,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo"/>
   </extension>
-  <url value="http://hl7.org/fhir/transport"/>
+  <url value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/transport"/>
   
   <version value="6.0.0"/>
   <name value="TransportCS"/>

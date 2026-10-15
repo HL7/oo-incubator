@@ -170,14 +170,14 @@
 
   <type>
     <coding>
-      <system value="http://hl7.org/fhir/supplydelivery-supplyitemtype"/>
+      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/supplydelivery-supplyitemtype"/>
       <code value="biologicallyderivedproduct"/>
     </coding>
     <text value="Blood Dispatch"/>
   </type>
   <stage>
     <coding>
-      <system value="http://hl7.org/fhir/supplydelivery-stage"/>
+      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/supplydelivery-stage"/>
       <code value="dispatch"/>
       <display value="Dispatch"/>
     </coding>
