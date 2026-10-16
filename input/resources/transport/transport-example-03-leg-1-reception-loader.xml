@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Transport resourceDefinition="http://hl7.org/fhir/StructureDefinition/Transport|0.1.0" xmlns="http://hl7.org/fhir">
+  <id value="transport-example-03-leg-1-reception-loader"/>
+  <text><status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">Specimen 2001 was moved from laboratory reception to the automation line bulk loader.</div></text>
+  <contained><Patient><id value="patient-2001"/></Patient></contained>
+  <contained><Location><id value="reception"/><status value="active"/><name value="Laboratory Reception"/></Location></contained>
+  <contained><Location><id value="bulk-loader"/><status value="active"/><name value="Automation Line Bulk Loader"/></Location></contained>
+  <contained><Device><id value="tray-42"/><status value="active"/><type><text value="Laboratory specimen tray"/></type></Device></contained>
+  <contained><Device><id value="rack-3"/><status value="active"/><type><text value="Laboratory specimen rack"/></type><parent><reference value="#tray-42"/></parent></Device></contained>
+  <contained><Device><id value="tube-2001"/><status value="active"/><type><text value="Specimen tube"/></type><parent><reference value="#rack-3"/></parent></Device></contained>
+  <contained><Specimen><id value="specimen-2001"/><status value="available"/><type><text value="Blood specimen"/></type><subject><reference value="#patient-2001"/></subject><container><device><reference value="#tube-2001"/></device></container></Specimen></contained>
+  <identifier><system value="http://example.org/transports"/><value value="LAB-ROUTE-2001-LEG-1"/></identifier>
+  <status value="completed"/>
+  <code><text value="Laboratory hand-off movement"/></code>
+  <focus><reference value="#specimen-2001"/></focus>
+  <subject><reference value="#patient-2001"/></subject>
+  <period><end value="2026-08-10T10:05:00-05:00"/></period>
+  <to><reference value="#bulk-loader"/></to>
+  <from><reference value="#reception"/></from>
+</Transport>
