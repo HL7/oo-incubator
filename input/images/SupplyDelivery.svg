@@ -144,7 +144,7 @@
    id="n318"
    xlink:href="datatypes.html#code">code</a> [0..1] « <a
    id="n319"
-   xlink:href="valueset-supplydelivery-status.html"><title
+   xlink:href="ValueSet-supplydelivery-status.html"><title
    id="n320">null (Strength=Required)</title>SupplyDeliveryStatus</a>! »</text>
     <text
        id="n326"
@@ -171,7 +171,7 @@
    id="n336"
    xlink:href="datatypes.html#CodeableConcept">CodeableConcept</a> [0..1] « <a
    id="n337"
-   xlink:href="valueset-supplydelivery-supplyitemtype.html"><title
+   xlink:href="ValueSet-supplydelivery-supplyitemtype.html"><title
    id="n338">null (Strength=Required)</title>SupplyDeliverySupplyItemType</a>! »</text>
     <text
        id="n344"
@@ -329,7 +329,7 @@
    id="n413"
    xlink:href="inventoryitem.html#InventoryItem">InventoryItem</a>); <a
    id="n414"
-   xlink:href="valueset-supplydelivery-supplyitemtype.html"><title
+   xlink:href="ValueSet-supplydelivery-supplyitemtype.html"><title
    id="n415">null (Strength=Example)</title>SupplyDeliverySupplyItemType</a>?? »</text>
   </g>
   <line
