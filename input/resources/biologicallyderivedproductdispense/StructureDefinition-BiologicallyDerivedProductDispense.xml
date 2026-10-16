@@ -272,13 +272,14 @@
     </element>
     <element id="BiologicallyDerivedProductDispense.performer.actor">
       <path value="BiologicallyDerivedProductDispense.performer.actor"/>
-      <short value="Who performed the action"/>
-      <definition value="Identifies the person responsible for the action."/>
+      <short value="Who or what performed the action"/>
+      <definition value="Identifies the practitioner or device responsible for the action."/>
       <min value="1"/>
       <max value="1"/>
       <type>
         <code value="Reference"/>
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
       </type>
     </element>
     <element id="BiologicallyDerivedProductDispense.location">
