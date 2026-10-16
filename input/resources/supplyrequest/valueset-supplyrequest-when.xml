@@ -2,6 +2,9 @@
 
 <ValueSet xmlns="http://hl7.org/fhir">
   <id value="supplyrequest-when"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="informative"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/supplyrequest-when"/>
   <identifier>
     <system value="urn:ietf:rfc:3986"/>
