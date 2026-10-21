@@ -7,7 +7,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
     <valueCode value="informative"/>
   </extension>
-  <url value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/transport"/>
+  <url value="http://hl7.org/fhir/CodeSystem/transport"/>
   
   <version value="6.0.0"/>
   <name value="TransportCS"/>

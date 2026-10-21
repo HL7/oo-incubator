@@ -8,6 +8,7 @@
   <intent value="order"/>
   <category>
     <coding>
+      <system value="http://example.org/CodeSystem/supply-request-category"/>
       <code value="central"/>
       <display value="Central Stock Resupply"/>
     </coding>
@@ -16,6 +17,7 @@
   <item>
 	<concept>
       <coding>
+        <system value="http://example.org/CodeSystem/supply-item"/>
         <code value="BlueTubes"/>
         <display value="Blood collect tubes blue cap"/>
       </coding>
@@ -35,6 +37,7 @@
   <reason>
     <concept>
         <coding>
+          <system value="http://example.org/CodeSystem/supply-request-reason"/>
           <code value="stock_low"/>
           <display value="Refill due to low stock"/>
         </coding>

@@ -37,7 +37,7 @@
   <immutable value="true"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/deviceusage-adherence-code"/>
+      <system value="http://hl7.org/fhir/CodeSystem/deviceusage-adherence-code"/>
     </include>
   </compose>
 </ValueSet>

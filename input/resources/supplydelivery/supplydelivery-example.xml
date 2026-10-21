@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!--
 This is the corresponding supply delivery from the supplye request example
 -->
@@ -19,14 +19,14 @@ business identifier - in this case the same as the request id
 	<status value="completed"/>
 	<type>
 		<coding>
-			<system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/supplydelivery-supplyitemtype"/>
+			<system value="http://hl7.org/fhir/CodeSystem/supplydelivery-supplyitemtype"/>
 			<code value="device"/>
 		</coding>
 		<text value="Blood collect tubes blue cap"/>
 	</type>
 	<stage>
 		<coding>
-			<system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/supplydelivery-stage"/>
+			<system value="http://hl7.org/fhir/CodeSystem/supplydelivery-stage"/>
   	  		<code value="dispatch"/>
 			<display value="Dispatch"/>
 		</coding>
@@ -37,6 +37,7 @@ business identifier - in this case the same as the request id
 		</quantity>
 		<itemCodeableConcept>
 			<coding>
+				<system value="http://example.org/CodeSystem/supply-item"/>
 				<code value="BlueTubes"/>
 				<display value="Blood collect tubes blue cap"/>
 			</coding>

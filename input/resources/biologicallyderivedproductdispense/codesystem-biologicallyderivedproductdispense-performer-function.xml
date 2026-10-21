@@ -11,7 +11,7 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
     <valueInteger value="1"/>
   </extension>
-  <url value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/biologicallyderivedproductdispense-performer-function"/>
+  <url value="http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-performer-function"/>
   <version value="6.0.0"/>
   <name value="BiologicallyDerivedProductDispensePerformerFunction"/>
   <title value="Biologically Derived Product Dispense Performer Function"/>

@@ -24,7 +24,7 @@
   <description value="InventoryItem Status Codes"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/inventoryitem-status"/>
+      <system value="http://hl7.org/fhir/CodeSystem/inventoryitem-status"/>
     </include>
   </compose>
 </ValueSet>

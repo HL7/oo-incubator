@@ -28,7 +28,7 @@
   <description value="DeviceDispense Status Reason Codes"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/devicedispense-status-reason"/>
+      <system value="http://hl7.org/fhir/CodeSystem/devicedispense-status-reason"/>
     </include>
   </compose>
 </ValueSet>

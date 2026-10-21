@@ -22,7 +22,7 @@
 	</subject>
 	<stage>
 		<coding>
-			<system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/supplydelivery-stage"/>
+			<system value="http://hl7.org/fhir/CodeSystem/supplydelivery-stage"/>
   	  		<code value="dispatch"/>
 			<display value="Dispatch"/>
 		</coding>
