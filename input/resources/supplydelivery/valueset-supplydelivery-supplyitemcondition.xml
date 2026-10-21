@@ -31,7 +31,7 @@
   <description value="This value sets refers to the condition of a specific supply item."/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/CodeSystem/supplydelivery-supplyitemcondition"/>
+      <system value="http://hl7.org/fhir/supplydelivery-supplyitemcondition"/>
     </include>
   </compose>
 </ValueSet>

@@ -39,7 +39,7 @@
   </jurisdiction>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/CodeSystem/biologicallyderivedproductdispense-match-status"/>
+      <system value="http://hl7.org/fhir/biologicallyderivedproductdispense-match-status"/>
     </include>
   </compose>
 </ValueSet>

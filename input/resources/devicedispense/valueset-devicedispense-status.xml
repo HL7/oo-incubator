@@ -27,7 +27,7 @@
   <description value="Value set to describe the device dispense status."/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/CodeSystem/devicedispense-status"/>
+      <system value="http://hl7.org/fhir/devicedispense-status"/>
     </include>
   </compose>
 </ValueSet>

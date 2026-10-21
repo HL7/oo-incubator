@@ -21,7 +21,7 @@
   <description value="InventoryItem Name Types"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/CodeSystem/inventoryitem-nametype"/>
+      <system value="http://hl7.org/fhir/inventoryitem-nametype"/>
     </include>
   </compose>
 </ValueSet>
