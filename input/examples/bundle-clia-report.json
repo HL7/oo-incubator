@@ -1,0 +1,372 @@
+{
+  "resourceType": "Bundle",
+  "id": "clia-report",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "https://example.org/fhir/Observation/clia-potassium",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "clia-potassium",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alex Example (MRN CLIA-001): serum potassium 5.4 mmol/L; reference interval 3.5-5.1 mmol/L. Collected 22 October 2026 at 08:15 -04:00; result issued at 10:00 -04:00. Performed by Example Referral Laboratory. Slight hemolysis; potassium may be falsely increased.</p></div>"
+        },
+        "basedOn": [
+          {
+            "reference": "https://example.org/fhir/ServiceRequest/clia-order"
+          }
+        ],
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "https://example.org/fhir/Patient/clia-patient"
+        },
+        "effectiveDateTime": "2026-10-22T08:15:00-04:00",
+        "issued": "2026-10-22T10:00:00-04:00",
+        "performer": [
+          {
+            "reference": "https://example.org/fhir/Organization/clia-referral-lab"
+          }
+        ],
+        "valueQuantity": {
+          "value": 5.4,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "H",
+                "display": "High"
+              }
+            ]
+          }
+        ],
+        "note": [
+          {
+            "text": "Slight hemolysis; potassium may be falsely increased."
+          }
+        ],
+        "specimen": {
+          "reference": "https://example.org/fhir/Specimen/clia-serum"
+        },
+        "referenceRange": [
+          {
+            "low": {
+              "value": 3.5,
+              "unit": "mmol/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "mmol/L"
+            },
+            "high": {
+              "value": 5.1,
+              "unit": "mmol/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "mmol/L"
+            }
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/oo-incubator/StructureDefinition/laboratory-result-content"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/sid/result",
+            "value": "RESULT-001"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/DiagnosticReport/clia-report",
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "clia-report",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Final potassium report for Alex Example (MRN CLIA-001), ordered by Dr. Jordan Example.</p><p>Serum collected 22 October 2026 at 08:15 -04:00. Potassium: 5.4 mmol/L (high); reference interval: 3.5-5.1 mmol/L. Slight hemolysis; potassium may be falsely increased.</p><p>Testing laboratory: Example Referral Laboratory, 200 Laboratory Avenue, Baltimore, MD 21201, USA (fictional CLIA identifier 21D0000002).</p><p>Referring and reporting laboratory: Example Referring Laboratory, 100 Clinic Road, Baltimore, MD 21201, USA (fictional CLIA identifier 21D0000001).</p><p>Report released 22 October 2026 at 10:05 -04:00.</p></div>"
+        },
+        "basedOn": [
+          {
+            "reference": "https://example.org/fhir/ServiceRequest/clia-order"
+          }
+        ],
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "https://example.org/fhir/Patient/clia-patient"
+        },
+        "effectiveDateTime": "2026-10-22T08:15:00-04:00",
+        "issued": "2026-10-22T10:05:00-04:00",
+        "performer": [
+          {
+            "reference": "https://example.org/fhir/Organization/clia-referring-lab"
+          }
+        ],
+        "specimen": [
+          {
+            "reference": "https://example.org/fhir/Specimen/clia-serum"
+          }
+        ],
+        "result": [
+          {
+            "reference": "https://example.org/fhir/Observation/clia-potassium"
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/oo-incubator/StructureDefinition/laboratory-report-content"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/sid/report",
+            "value": "REPORT-001"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/ServiceRequest/clia-order",
+      "resource": {
+        "resourceType": "ServiceRequest",
+        "id": "clia-order",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Completed serum potassium order for Alex Example, requested by Dr. Jordan Example and performed by Example Referral Laboratory.</p></div>"
+        },
+        "status": "completed",
+        "intent": "order",
+        "code": {
+          "concept": {
+            "coding": [
+              {
+                "system": "http://loinc.org",
+                "code": "2823-3",
+                "display": "Potassium [Moles/volume] in Serum or Plasma"
+              }
+            ]
+          }
+        },
+        "subject": {
+          "reference": "https://example.org/fhir/Patient/clia-patient"
+        },
+        "requester": {
+          "reference": "https://example.org/fhir/Practitioner/clia-orderer"
+        },
+        "performer": [
+          {
+            "reference": "https://example.org/fhir/Organization/clia-referral-lab"
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/oo-incubator/StructureDefinition/laboratory-order-content"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/sid/order",
+            "value": "ORDER-001"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Specimen/clia-serum",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "clia-serum",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Serum from Alex Example, collected 22 October 2026 at 08:15 -04:00. Slightly hemolyzed; potassium may be falsely increased.</p></div>"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "119364003",
+              "display": "Serum specimen"
+            }
+          ],
+          "text": "Serum"
+        },
+        "subject": {
+          "reference": "https://example.org/fhir/Patient/clia-patient"
+        },
+        "request": [
+          {
+            "reference": "https://example.org/fhir/ServiceRequest/clia-order"
+          }
+        ],
+        "collection": {
+          "collectedDateTime": "2026-10-22T08:15:00-04:00"
+        },
+        "condition": [
+          {
+            "text": "Slightly hemolyzed"
+          }
+        ],
+        "note": [
+          {
+            "text": "Potassium may be falsely increased due to hemolysis."
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/oo-incubator/StructureDefinition/laboratory-specimen-content"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/sid/specimen",
+            "value": "SPECIMEN-001"
+          }
+        ],
+        "status": "available",
+        "receivedTime": "2026-10-22T09:00:00-04:00"
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Patient/clia-patient",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "clia-patient",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Alex Example; medical record number CLIA-001.</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "https://example.org/sid/mrn",
+            "value": "CLIA-001"
+          }
+        ],
+        "name": [
+          {
+            "family": "Example",
+            "given": [
+              "Alex"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Practitioner/clia-orderer",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "clia-orderer",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Dr. Jordan Example, ordering physician.</p></div>"
+        },
+        "name": [
+          {
+            "family": "Example",
+            "given": [
+              "Jordan"
+            ],
+            "prefix": [
+              "Dr."
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Organization/clia-referring-lab",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "clia-referring-lab",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Example Referring Laboratory; 100 Clinic Road, Baltimore, MD 21201, USA. Fictional CLIA identifier 21D0000001.</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.4.7",
+            "value": "21D0000001"
+          }
+        ],
+        "name": "Example Referring Laboratory",
+        "contact": [
+          {
+            "address": {
+              "line": [
+                "100 Clinic Road"
+              ],
+              "city": "Baltimore",
+              "state": "MD",
+              "postalCode": "21201",
+              "country": "USA"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "https://example.org/fhir/Organization/clia-referral-lab",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "clia-referral-lab",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Example Referral Laboratory; 200 Laboratory Avenue, Baltimore, MD 21201, USA. Fictional CLIA identifier 21D0000002.</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.4.7",
+            "value": "21D0000002"
+          }
+        ],
+        "name": "Example Referral Laboratory",
+        "contact": [
+          {
+            "address": {
+              "line": [
+                "200 Laboratory Avenue"
+              ],
+              "city": "Baltimore",
+              "state": "MD",
+              "postalCode": "21201",
+              "country": "USA"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

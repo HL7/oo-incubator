@@ -115,6 +115,10 @@ parameters:
 # Need to include specific reference to the resource examples otherwise 
 # they do not end up on the Examples tab on the resource page
 resources:
+  Bundle/clia-report:
+    name: CLIA Laboratory Report Example
+    description: A minimal Observation-centered laboratory report with patient, order, specimen, and referral laboratory context
+    exampleBoolean: true
   BiologicallyDerivedProduct/bdp-example:
     name: BiologicallyDerivedProduct example
     description: An example BiologicallyDerivedProduct resource
@@ -244,6 +248,10 @@ menu:
   Profiles: 
     Overview: profiles.html
     MedicalProductsOfHumanOrigin: StructureDefinition-medicalproductofhumanorigin.html
+    Laboratory Report Content: StructureDefinition-laboratory-report-content.html
+    Laboratory Result Content: StructureDefinition-laboratory-result-content.html
+    Laboratory Specimen Content: StructureDefinition-laboratory-specimen-content.html
+    Laboratory Order Content: StructureDefinition-laboratory-order-content.html
   Extensions: extensions.html
 #  Terminologies: terminologies.html
   Examples: examples.html
