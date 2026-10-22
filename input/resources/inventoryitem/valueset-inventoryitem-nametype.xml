@@ -5,6 +5,9 @@
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
     <valueCode value="oo"/>
   </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="1"/>
+  </extension>
   <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryitem-nametype"/>
   <version value="6.0.0"/>
   <name value="InventoryItemStatusCodesValueSet"/>
@@ -21,7 +24,7 @@
   <description value="InventoryItem Name Types"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/inventoryitem-nametype"/>
+      <system value="http://hl7.org/fhir/inventoryitem-nametype"/>
     </include>
   </compose>
 </ValueSet>

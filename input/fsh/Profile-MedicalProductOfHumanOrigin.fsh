@@ -69,7 +69,7 @@ Description: "This profile is designed for biologically derived products that ar
 * identifier contains MPHOUniqueIdentifier 1..1
 
 * identifier[MPHOUniqueIdentifier] ^short = "MPHO Unique Identifier"
-* identifier[MPHOUniqueIdentifier].system = "urn:oid:2.16.840.1.113883.6.18.3.1"
+* identifier[MPHOUniqueIdentifier].system = "https://www.isbt128.org/uri/mphouniqueidentifier"
 
 * identifier.system 1..1
 * identifier.system ^short = "Identity of the Issuing Agency responsible for the allocation of unique identifiers"
@@ -81,7 +81,7 @@ Description: "This profile is designed for biologically derived products that ar
 * biologicalSourceEvent ^short = "An identifier that supports traceability to the event during which material in this product from one or more biological entities was obtained or pooled. This should be an ISBT 128 Donation Identification Number."
 
 * biologicalSourceEvent.system 1..1
-* biologicalSourceEvent.system = "urn:oid:2.16.840.1.113883.6.18.2.1"
+* biologicalSourceEvent.system = "https://www.isbt128.org/uri/donationidentificationnumber"
 * biologicalSourceEvent.system ^short = "Identity of the Issuing Agency responsible for the allocation of unique identifiers"
 
 * biologicalSourceEvent.value 1..1

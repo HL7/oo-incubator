@@ -9,7 +9,7 @@
     <valueCode value="trial-use"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/>
+    <valueInteger value="1"/>
   </extension>
   <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/inventoryreport-counttype"/>
   <identifier>
@@ -37,7 +37,7 @@
   <immutable value="true"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/inventoryreport-counttype"/>
+      <system value="http://hl7.org/fhir/inventoryreport-counttype"/>
     </include>
   </compose>
 </ValueSet>

@@ -9,7 +9,7 @@
     <valueCode value="informative"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
-    <valueInteger value="0"/>
+    <valueInteger value="1"/>
   </extension>
   <url value="http://hl7.org/fhir/uv/oo-incubator/ValueSet/deviceusage-adherence-code"/>
   <identifier>
@@ -37,7 +37,7 @@
   <immutable value="true"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/deviceusage-adherence-code"/>
+      <system value="http://hl7.org/fhir/deviceusage-adherence-code"/>
     </include>
   </compose>
 </ValueSet>

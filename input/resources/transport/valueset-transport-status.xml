@@ -37,7 +37,7 @@
   <immutable value="true"/>
   <compose>
     <include>
-      <system value="http://hl7.org/fhir/uv/oo-incubator/CodeSystem/transport-status"/>
+      <system value="http://hl7.org/fhir/transport-status"/>
     </include>
   </compose>
 </ValueSet>

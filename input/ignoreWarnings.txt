@@ -7,3 +7,10 @@
 # These experimental CodeSystems are inherited from FHIR Core (6.0.0-snapshot1).
 Reference to experimental CodeSystem http://hl7.org/fhir/product-category|6.0.0-snapshot1
 Reference to experimental CodeSystem http://hl7.org/fhir/CodeSystem/fhirpath-types|6.0.0-snapshot1
+Reference to experimental CodeSystem http://hl7.org/fhir/biologicallyderived-product-status|6.0.0-snapshot1
+
+# The draft SPDX license CodeSystem reference is inherited from the FHIR Core ValueSet.
+Reference to draft CodeSystem http://hl7.org/fhir/spdx-license|84728b7 from active ValueSet http://hl7.org/fhir/ValueSet/spdx-license|6.0.0-snapshot1
+
+# Shared content may end up in THO but until Incubator content is further vetted they will remain internal code systems
+Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)

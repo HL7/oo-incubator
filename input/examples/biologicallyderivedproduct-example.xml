@@ -7,16 +7,16 @@
   </text> -->
   <productCode> 
     <coding>
-		<system value="urn:oid:2.16.840.1.113883.6.18.2.6" />
+		<system value="https://www.isbt128.org/uri/ProductDescriptionCode" />
   		<code value="E0398" />
     </coding>
   </productCode>
   <identifier>
-    <system value="urn:oid:2.16.840.1.113883.6.18.3.1" />
+    <system value="https://www.isbt128.org/uri/MPHOUniqueIdentifier" />
     <value value="A9999E0398A999921123456A00000" /> 
   </identifier>
   <biologicalSourceEvent>
-	<system value="urn:oid:2.16.840.1.113883.6.18.2.1" />
+	<system value="https://www.isbt128.org/uri/DonationIdentificationNumber" />
 	  <value value="A999921123456" />
   </biologicalSourceEvent>
   <processingFacility>
@@ -24,6 +24,7 @@
   </processingFacility>
   <division value="A00000" />
   <productStatus>
+       <system value="http://hl7.org/fhir/biologicallyderived-product-status"/>
        <code  value="available" />
   </productStatus>
   <expirationDate value="2021-08-02T23:59:00-05:00"/>
@@ -42,13 +43,13 @@
   <property>
     <type>
         <coding>
-        <system value="urn:oid:2.16.840.1.113883.6.18" />
+        <system value="https://www.isbt128.org/uri" />
             <code value="ABORhD" />
         </coding> 
     </type>
     <valueCodeableConcept>
       <coding>
-        <system value="urn:oid:2.16.840.1.113883.6.18.2.3" />
+        <system value="https://www.isbt128.org/uri/ABORhD" />
         <code value="62" />
         <display value="A RhD Positive" />
       </coding>
@@ -57,13 +58,13 @@
 	<property>
     <type>
       <coding>
-        <system value="urn:oid:2.16.840.1.113883.6.18" />
+        <system value="https://www.isbt128.org/uri" />
           <code value="Donor"/>
       </coding>
     </type>
     <valueCodeableConcept>
       <coding>
-		<system value="urn:oid:2.16.840.1.113883.6.18.2.7"/>
+		<system value="https://www.isbt128.org/uri/CollectionType"/>
 	  	  <code value="V"/>
         <display value="Volunteer"/>
       </coding>
